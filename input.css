@@ -3,3 +3,7 @@
 @theme {
   --breakpoint-xs: 30rem;
 }
+
+@theme{
+  --font-serif: "Noto Serif", serif;
+}
