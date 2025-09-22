@@ -32,17 +32,19 @@
     <!-- Tailwind Css  -->
     <link rel="stylesheet" href="./output.css" />
 
-    <!-- Swiper CSS -->
+    <!-- trig js -->
+
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      href="https://cdn.jsdelivr.net/npm/trig-js/src/trig-animations.min.css"
     />
+    <script src="https://cdn.jsdelivr.net/npm/trig-js/src/trig.min.js"></script>
 
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Satisfy&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
 
       body {
-        font-family: "Poppins", sans-serif;
+        font-family: "Josefin Sans", sans-serif;
         overflow-x: hidden;
       }
 
@@ -87,14 +89,14 @@
   </head>
 
   <body
-    class="antialiased bg-gray-900 dark:bg-gray-950 text-white dark:text-slate-100"
+    class="antialiased bg-black dark:bg-gray-950 text-white dark:text-slate-100"
   >
     <!-- Navbar  -->
 
     <header
-      class="fixed top-0 z-[500] border-b border-slate-200/10 dark:border-slate-800 backdrop-blur w-full"
+      class="fixed top-0 z-[500] border-b border-slate-200/10 dark:border-slate-800 bg-white/5 backdrop-blur w-full mx-auto"
     >
-      <div class="container mx-auto flex items-center justify-between p-4">
+      <div class="flex items-center justify-between p-3">
         <!-- Logo -->
         <a class="" href="./index.html"
           ><img class="h-10 object-cover" src="./assets/Logo.png" alt="logo"
@@ -109,7 +111,7 @@
             <!-- Parent Button -->
             <button
               id="homeToggle"
-              class="hover:text-violet-800 transition-colors focus:outline-none flex items-center gap-1 cursor-pointer"
+              class="relative inline-block text-white after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-violet-800 after:transition-all after:duration-300 hover:after:w-full cursor-pointer"
             >
               Home <i class="fa-solid fa-caret-down"></i>
             </button>
@@ -117,7 +119,7 @@
             <!-- Dropdown Menu -->
             <ul
               id="homeMenu"
-              class="absolute hidden bg-slate-900 dark:bg-slate-950 shadow-lg mt-2 rounded w-40"
+              class="absolute hidden bg-black dark:bg-slate-950 shadow-lg mt-2 rounded w-40"
             >
               <!-- <li>
                 <a
@@ -141,22 +143,41 @@
           </div>
 
           <!-- About Us -->
-          <a href="" class="hover:text-violet-800 transition-colors"
-            >About Us</a
+          <a
+            href="#"
+            class="relative inline-block text-white after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-violet-800 after:transition-all after:duration-300 hover:after:w-full"
           >
+            About Us
+          </a>
 
           <!-- Services -->
-          <a href="" class="hover:text-violet-800 transition-colors"
-            >Services</a
+          <a
+            href="#"
+            class="relative inline-block text-white after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-violet-800 after:transition-all after:duration-300 hover:after:w-full"
           >
-          <!-- Blogs -->
-          <a href="" class="hover:text-violet-800 transition-colors">Events</a>
+            Services
+          </a>
+          <!-- Events -->
+          <a
+            href="#"
+            class="relative inline-block text-white after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-violet-800 after:transition-all after:duration-300 hover:after:w-full"
+          >
+            Events
+          </a>
           <!-- Contact -->
-          <a href="" class="hover:text-violet-800 transition-colors">Contact</a>
+          <a
+            href="#"
+            class="relative inline-block text-white after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-violet-800 after:transition-all after:duration-300 hover:after:w-full"
+          >
+            Contact
+          </a>
           <!-- Dashboard -->
-          <!-- <a href="" class="hover:text-violet-800 transition-colors"
-            >Dashboard</a
-          > -->
+          <a
+            href="#"
+            class="relative inline-block text-white after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-violet-800 after:transition-all after:duration-300 hover:after:w-full"
+          >
+            Dashboard
+          </a>
         </nav>
 
         <div class="hidden lg:flex text-sm gap-4 font-medium">
@@ -271,13 +292,13 @@
             >
           </li>
           <!-- Dashboard -->
-          <!-- <li>
+          <li>
             <a
               href=""
               class="nav-link block hover:text-violet-800 transition-colors"
               >Dashboard</a
             >
-          </li> -->
+          </li>
           <li>
             <a
               href=""
@@ -346,7 +367,7 @@
           class="w-full h-full absolute inset-0 bg-gradient-to-r from-black to-black"
         >
           <img
-            class="w-full h-[100vh] object-center object-cover z-10 opacity-25"
+            class="w-full h-full object-center object-cover z-10 opacity-25"
             src="./assets/home-bg2.jpg"
             alt="background"
           />
@@ -354,15 +375,37 @@
 
         <!-- content  -->
         <div
-          class="h-[100vh] space-y-1.5 md:space-y-3 py-3 md:py-16 flex flex-col items-center w-full justify-center p-4 md:p-10 text-white dark:text-white z-50"
+          class="h-[100vh] relative space-y-1.5 md:space-y-3 py-3 md:py-16 flex flex-col items-center w-full justify-center p-4 text-white dark:text-white z-50"
         >
-          <p
+          <!-- <p
             class="px-6 py-2 rounded-full text-xs border border-[rgb(125,13,150)]"
             data-aos="fade-up-right"
             data-aos-delay="50"
           >
             Commnunity & Support
-          </p>
+          </p> -->
+          <div
+            class="flex flex-wrap items-center justify-center p-1.5 rounded-full border border-indigo-900 text-xs"
+          >
+            <div class="flex items-center">
+              <img
+                class="size-7 rounded-full border-2 border-white"
+                src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=50"
+                alt="userImage1"
+              />
+              <img
+                class="size-7 rounded-full border-2 border-white -translate-x-2"
+                src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=50"
+                alt="userImage2"
+              />
+              <img
+                class="size-7 rounded-full border-2 border-white -translate-x-4"
+                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=50&h=50&auto=format&fit=crop"
+                alt="userImage3"
+              />
+            </div>
+            <p class="-translate-x-2">Join community of 1m+ founders</p>
+          </div>
           <h1
             class="font-['Noto_Serif_Georgian'] text-3xl sm:text-4xl md:text-5xl md:leading-[60px] text-center w-full mt-5 font-bold"
             data-aos="fade-up-right"
@@ -375,7 +418,7 @@
             >
           </h1>
           <p
-            class="dark:text-white text-xs md:text-sm mt-2 w-full max-w-2xl md:max-w-xl xl:max-w-3xl text-center"
+            class="dark:text-white text-xs md:text-lg mt-2 w-full md:max-w-xl xl:max-w-3xl text-center"
             data-aos="fade-up-right"
             data-aos-delay="150"
           >
@@ -399,11 +442,738 @@
               </a>
             </div>
           </div>
+
+          <div
+            class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce"
+          >
+            <a href="#why">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="size-8"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M11.47 13.28a.75.75 0 0 0 1.06 0l7.5-7.5a.75.75 0 0 0-1.06-1.06L12 11.69 5.03 4.72a.75.75 0 0 0-1.06 1.06l7.5 7.5Z"
+                  clip-rule="evenodd"
+                />
+                <path
+                  fill-rule="evenodd"
+                  d="M11.47 19.28a.75.75 0 0 0 1.06 0l7.5-7.5a.75.75 0 1 0-1.06-1.06L12 17.69l-6.97-6.97a.75.75 0 0 0-1.06 1.06l7.5 7.5Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </main>
 
+    <!-- why us  -->
+    <section id="why" class="scroll-mt-10 relative mx-auto py-16 overflow-x-hidden">
+      <div class="space-y-2 text-center px-4">
+        <h1 class="text-3xl md:text-4xl lg:text-6xl font-bold">
+          Why Choose Us
+        </h1>
+        <p class="text-sm md:text-lg text-white/50">
+          Planning a successful event takes more than just coordination—it
+          requires creativity, precision, and trust. Here’s why leading
+          organizations and individuals choose us:
+        </p>
 
+        <ul
+          class="grid md:grid-cols-2 lg:grid-cols-3 place-items-center gap-8 text-sm md:text-lg space-y-2 mt-4 text-gray-400 pt-10"
+        >
+          <!-- card 1  -->
+          <div
+            class="p-2 bg-white/5 flex flex-col justify-center rounded-2xl space-y-2"
+          >
+            <div class="relative">
+              <img
+                class="h-[300px] w-full object-cover object-top rounded-2xl"
+                src="./assets/why-1.jpg"
+                alt="card5"
+              />
+
+              <!-- Overlay -->
+              <div class="absolute inset-0 bg-black/50 rounded-2xl"></div>
+            </div>
+            <p class="font-bold text-gray-200 text-xl md:text-2xl">
+              End-to-End Event Management
+            </p>
+            <p class="text-[16px]">
+              From the first idea to the final applause, we handle every detail
+              with care.
+            </p>
+          </div>
+          <!-- card 2  -->
+          <div
+            class="p-2 bg-white/5 flex flex-col justify-center rounded-2xl space-y-2"
+          >
+            <div class="relative">
+              <img
+                class="h-[300px] w-full object-cover object-top rounded-2xl"
+                src="./assets/why-2.jpeg"
+                alt="card2"
+              />
+
+              <!-- Overlay -->
+              <div class="absolute inset-0 bg-black/50 rounded-2xl"></div>
+            </div>
+            <p class="font-bold text-gray-200 text-xl md:text-2xl">
+              Proven Experience
+            </p>
+            <p class="text-[16px]">
+              Hundreds of successful conferences, exhibitions, and corporate
+              events delivered with excellence.
+            </p>
+          </div>
+          <!-- card 3  -->
+          <div
+            class="p-2 bg-white/5 flex flex-col justify-center rounded-2xl space-y-2"
+          >
+            <div class="relative">
+              <img
+                class="h-[300px] w-full object-cover object-top rounded-2xl"
+                src="./assets/why-3.png"
+                alt="card3"
+              />
+
+              <!-- Overlay -->
+              <div class="absolute inset-0 bg-black/50 rounded-2xl"></div>
+            </div>
+            <p class="font-bold text-gray-200 text-xl md:text-2xl">
+              Tailored Solutions
+            </p>
+            <p class="text-[16px]">
+              Every event is unique, and we design experiences that align with
+              your goals, budget, and audience.
+            </p>
+          </div>
+          <!-- card 4 -->
+          <div
+            class="p-2 bg-white/5 flex flex-col justify-center rounded-2xl space-y-2"
+          >
+            <div class="relative">
+              <img
+                class="h-[300px] w-full object-cover object-top rounded-2xl"
+                src="./assets/why-4.jpg"
+                alt="card4"
+              />
+
+              <!-- Overlay -->
+              <div class="absolute inset-0 bg-black/50 rounded-2xl"></div>
+            </div>
+            <p class="font-bold text-gray-200 text-xl md:text-2xl">
+              Creative Innovation
+            </p>
+            <p class="text-[16px]">
+              Fresh concepts, modern designs, and engaging formats that make
+              your event stand out.
+            </p>
+          </div>
+          <!-- card 5  -->
+          <div
+            class="p-2 bg-white/5 flex flex-col justify-center rounded-2xl space-y-2"
+          >
+            <div class="relative">
+              <img
+                class="h-[300px] w-full object-cover object-top rounded-2xl"
+                src="./assets/why-5.jpg"
+                alt="card5"
+              />
+
+              <!-- Overlay -->
+              <div class="absolute inset-0 bg-black/50 rounded-2xl"></div>
+            </div>
+            <p class="font-bold text-gray-200 text-xl md:text-2xl">
+              Trusted Network
+            </p>
+            <p>
+              Strong partnerships with top venues, vendors, and technology
+              providers.
+            </p>
+          </div>
+
+          <!-- card 6  -->
+          <div
+            class="p-2 bg-white/5 flex flex-col justify-center rounded-2xl space-y-2"
+          >
+            <div class="relative">
+              <img
+                class="h-[300px] w-full object-cover object-top rounded-2xl"
+                src="./assets/why-6.jpg"
+                alt="card5"
+              />
+
+              <!-- Overlay -->
+              <div class="absolute inset-0 bg-black/50 rounded-2xl"></div>
+            </div>
+            <p class="font-bold text-gray-200 text-xl md:text-2xl">
+              Stress-Free Planning
+            </p>
+            <p>
+              We manage logistics, so you can focus on what matters most—your
+              guests and message.
+            </p>
+          </div>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Upcoming Events -->
+    <section class="relative overflow-x-hidden w-full px-4">
+      <div class="text-center pb-10 space-y-4">
+        <h1 class="text-3xl md:text-4xl lg:text-6xl font-bold">
+          Upcoming Events
+        </h1>
+      </div>
+      <div class="space-y-6 md:space-y-8 lg:space-y-10 mb-16">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-6 items-center justify-around px-4 gap-8 w-full bg-white/5 rounded-2xl"
+        >
+          <div class="py-6 px-2 w-full">
+            <div class="text-left">
+              <small class="">8:00 Am - 9:00 AM</small>
+              <h4 class="">Opening Ceremony</h4>
+            </div>
+          </div>
+
+          <div class="text-start space-y-3 w-full md:col-span-4">
+            <h4>Introduce the Event</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+              tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+            </p>
+            <ul class="flex items-center text-sm text-gray-400 gap-4">
+              <li>
+                <span class="theme1">Exploration Hall</span>
+              </li>
+              <li>
+                <span class="theme1">Hall 01</span>
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="flex items-center md;justify-center gap-4 w-full lg:w-auto lg:col-span-1 py-6 px-2"
+          >
+            <img
+              src="./assets/img1.jpeg"
+              alt=""
+              class="rounded-full w-20 h-20"
+            />
+            <div class="">
+              <h6 class="">Jesus Holland</h6>
+              <small>Host &amp; Speaker</small>
+            </div>
+          </div>
+        </div>
+        <div
+          class="grid grid-cols-1 lg:grid-cols-6 items-center justify-around px-4 gap-8 w-full bg-white/5 rounded-2xl"
+        >
+          <div class="py-6 px-2 w-full">
+            <div class="text-left">
+              <small class="">8:00 Am - 9:00 AM</small>
+              <h4 class="">Opening Ceremony</h4>
+            </div>
+          </div>
+
+          <div class="text-start space-y-3 w-full md:col-span-4">
+            <h4>Introduce the Event</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+              tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+            </p>
+            <ul class="flex items-center text-sm text-gray-400 gap-4">
+              <li>
+                <span class="theme1">Exploration Hall</span>
+              </li>
+              <li>
+                <span class="theme1">Hall 01</span>
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="flex items-center md;justify-center gap-4 w-full lg:w-auto lg:col-span-1 py-6 px-2"
+          >
+            <img
+              src="./assets/img1.jpeg"
+              alt=""
+              class="rounded-full w-20 h-20"
+            />
+            <div class="">
+              <h6 class="">Jesus Holland</h6>
+              <small>Host &amp; Speaker</small>
+            </div>
+          </div>
+        </div>
+        <div
+          class="grid grid-cols-1 lg:grid-cols-6 items-center justify-around px-4 gap-8 w-full bg-white/5 rounded-2xl"
+        >
+          <div class="py-6 px-2 w-full">
+            <div class="text-left">
+              <small class="">8:00 Am - 9:00 AM</small>
+              <h4 class="">Opening Ceremony</h4>
+            </div>
+          </div>
+
+          <div class="text-start space-y-3 w-full md:col-span-4">
+            <h4>Introduce the Event</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+              tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+            </p>
+            <ul class="flex items-center text-sm text-gray-400 gap-4">
+              <li>
+                <span class="theme1">Exploration Hall</span>
+              </li>
+              <li>
+                <span class="theme1">Hall 01</span>
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="flex items-center md;justify-center gap-4 w-full lg:w-auto lg:col-span-1 py-6 px-2"
+          >
+            <img
+              src="./assets/img1.jpeg"
+              alt=""
+              class="rounded-full w-20 h-20"
+            />
+            <div class="">
+              <h6 class="">Jesus Holland</h6>
+              <small>Host &amp; Speaker</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Impact  -->
+
+    <section
+      id="impact"
+      class="py-6 md:py-12 px-4 overflow-hidden overflow-x-hidden"
+    >
+      <div class="text-center pb-10 space-y-4">
+        <h1
+          data-aos="fade-right"
+          data-aos-delay="250"
+          class="text-3xl md:text-4xl lg:text-6xl mx-auto bg-gradient-to-r from-violet-600 via-violet-500 to-violet-400 text-transparent bg-clip-text font-bold w-fit"
+        >
+          Our Impact
+        </h1>
+
+        <p class="text-sm lg:text-xl">
+          "Delivering meaningful experiences, one event at a time."
+        </p>
+      </div>
+      <div class="mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+        <!-- Client Satisfaction Card -->
+        <div
+          class="bg-white/5 shadow-lg rounded-2xl p-8 dark:bg-white/5 border border-gray-500/30"
+          data-aos="zoom-in"
+          data-aos-delay="100"
+        >
+          <h3 class="text-xl font-semibold text-gray-200 mb-2">
+            Client Satisfaction
+          </h3>
+          <span
+            class="counter text-4xl font-bold text-violet-500"
+            data-target="95"
+            >0</span
+          ><span class="text-4xl font-bold text-violet-500">%</span>
+          <p class="text-gray-400">
+            95% repeat clients who trust us for flawless execution and memorable
+            experiences.
+          </p>
+        </div>
+
+        <!-- Events Conducted Card -->
+        <div
+          class="bg-white/5 shadow-lg rounded-2xl p-8 dark:bg-white/5 border border-gray-500/30"
+          data-aos="zoom-in"
+          data-aos-delay="200"
+        >
+          <h3 class="text-xl font-semibold text-gray-200 mb-2">
+            Events Conducted
+          </h3>
+          <span
+            class="counter text-4xl font-bold text-violet-500"
+            data-target="250"
+            >0</span
+          ><span class="text-4xl font-bold text-violet-500">k</span>
+          <p class="text-gray-400">
+            Over 250k successful conferences, seminars, and exhibitions
+            organized worldwide.
+          </p>
+        </div>
+
+        <!-- Participants Engaged Card -->
+        <div
+          class="bg-white/5 shadow-lg rounded-2xl p-8 dark:bg-white/5 border border-gray-500/30"
+          data-aos="zoom-in"
+          data-aos-delay="300"
+        >
+          <h3 class="text-xl font-semibold text-gray-200 mb-2">
+            Participants Engaged
+          </h3>
+          <span
+            class="counter text-4xl font-bold text-violet-500"
+            data-target="1200"
+            >0</span
+          ><span class="text-4xl font-bold text-violet-500">+</span>
+          <p class="text-gray-400">
+            More than 1,200 professionals, leaders, and innovators have joined
+            our events.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Counter JS -->
+    <script>
+      function animateCounters() {
+        const counters = document.querySelectorAll(".counter");
+
+        counters.forEach((counter) => {
+          let target = +counter.getAttribute("data-target");
+          let count = 0;
+          let increment = target / 200; // adjust speed
+
+          function updateCounter() {
+            count += increment;
+            if (count < target) {
+              counter.innerText = Math.ceil(count);
+              requestAnimationFrame(updateCounter);
+            } else {
+              counter.innerText = target;
+            }
+          }
+
+          updateCounter();
+        });
+      }
+
+      // Trigger when section is visible
+      const section = document.querySelector("#impact");
+      const observer = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              animateCounters();
+              observer.unobserve(section); // run once
+            }
+          });
+        },
+        { threshold: 0.6 }
+      );
+
+      observer.observe(section);
+    </script>
+
+    <!-- People Imapacted -->
+    <section class="mx-auto px-4 py-16 overflow-x-hidden">
+      <div class="text-center pb-10 space-y-4 ">
+        <h1 class="text-2xl md:text-4xl lg:text-6xl font-bold">
+          Our Expert Team Members
+        </h1>
+        <p class="text-sm md:text-lg text-gray-400">
+          Behind every successful event is a team of passionate professionals
+          who bring vision to life. Our expert team blends creativity, strategy,
+          and flawless execution to deliver unforgettable experiences.
+        </p>
+      </div>
+      <div
+        class="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 items-center justify-around gap-8"
+      >
+        <div
+          class="bg-white/5 rounded-2xl flex flex-col items-center p-4 overflow-hidden border border-gray-500/30 w-full"
+        >
+          <img
+            class="w-36 h-36 object-cover object-top rounded-full"
+            src="./assets/img1.jpeg"
+            alt="userImage1"
+          />
+          <div class="flex flex-col items-center">
+            <p class="font-medium mt-3">Kelvin John</p>
+            <p class="text-gray-500 text-sm">kelvin.john@gmail.com</p>
+            <button
+              class="border text-sm text-gray-500 border-gray-500/30 w-28 h-8 rounded-full mt-5"
+            >
+              <p class="mb-1">message</p>
+            </button>
+          </div>
+        </div>
+        <div
+          class="bg-white/5 rounded-2xl flex flex-col items-center p-4 overflow-hidden border border-gray-500/30 w-full"
+        >
+          <img
+            class="w-36 h-36 object-cover object-top rounded-full"
+            src="./assets/img2.jpeg"
+            alt="userImage1"
+          />
+          <div class="flex flex-col items-center">
+            <p class="font-medium mt-3">Kelvin John</p>
+            <p class="text-gray-500 text-sm">kelvin.john@gmail.com</p>
+            <button
+              class="border text-sm text-gray-500 border-gray-500/30 w-28 h-8 rounded-full mt-5"
+            >
+              <p class="mb-1">message</p>
+            </button>
+          </div>
+        </div>
+        <div
+          class="bg-white/5 rounded-2xl flex flex-col items-center p-4 overflow-hidden border border-gray-500/30 w-full"
+        >
+          <img
+            class="w-36 h-36 object-cover object-top rounded-full"
+            src="./assets/img3.jpeg"
+            alt="userImage1"
+          />
+          <div class="flex flex-col items-center">
+            <p class="font-medium mt-3">Kelvin John</p>
+            <p class="text-gray-500 text-sm">kelvin.john@gmail.com</p>
+            <button
+              class="border text-sm text-gray-500 border-gray-500/30 w-28 h-8 rounded-full mt-5"
+            >
+              <p class="mb-1">message</p>
+            </button>
+          </div>
+        </div>
+        <div
+          class="bg-white/5 rounded-2xl flex flex-col items-center p-4 overflow-hidden border border-gray-500/30 w-full"
+        >
+          <img
+            class="w-36 h-36 object-cover object-top rounded-full"
+            src="./assets/img4.jpeg"
+            alt="userImage1"
+          />
+          <div class="flex flex-col items-center">
+            <p class="font-medium mt-3">Kelvin John</p>
+            <p class="text-gray-500 text-sm">kelvin.john@gmail.com</p>
+            <button
+              class="border text-sm text-gray-500 border-gray-500/30 w-28 h-8 rounded-full mt-5"
+            >
+              <p class="mb-1">message</p>
+            </button>
+          </div>
+        </div>
+        <div
+          class="bg-white/5 rounded-2xl flex flex-col items-center p-4 overflow-hidden border border-gray-500/30 w-full"
+        >
+          <img
+            class="w-36 h-36 object-cover object-top rounded-full"
+            src="./assets/img5.jpeg"
+            alt="userImage1"
+          />
+          <div class="flex flex-col items-center">
+            <p class="font-medium mt-3">Kelvin John</p>
+            <p class="text-gray-500 text-sm">kelvin.john@gmail.com</p>
+            <button
+              class="border text-sm text-gray-500 border-gray-500/30 w-28 h-8 rounded-full mt-5"
+            >
+              <p class="mb-1">message</p>
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="bg-white/5 rounded-2xl p-4 flex flex-col items-center overflow-hidden border border-gray-500/30 w-full"
+        >
+          <img
+            class="w-36 h-36 object-cover object-top rounded-full"
+            src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=400"
+            alt="userImage2"
+          />
+          <div class="flex flex-col items-center">
+            <p class="font-medium mt-3">Kelvin John</p>
+            <p class="text-gray-500 text-sm">kelvin.john@gmail.com</p>
+            <button
+              class="border text-sm text-gray-500 border-gray-500/30 w-28 h-8 rounded-full mt-5 flex items-center justify-center gap-1"
+            >
+              <p class="mb-1">message</p>
+            </button>
+          </div>
+        </div>
+        <div
+          class="bg-white/5 rounded-2xl p-4 flex flex-col items-center overflow-hidden border border-gray-500/30 w-full"
+        >
+          <img
+            class="w-36 h-36 object-cover object-top rounded-full"
+            src="./assets/img6.jpeg"
+            alt="userImage6"
+          />
+          <div class="flex flex-col items-center">
+            <p class="font-medium mt-3">Kelvin John</p>
+            <p class="text-gray-500 text-sm">kelvin.john@gmail.com</p>
+            <button
+              class="border text-sm text-gray-500 border-gray-500/30 w-28 h-8 rounded-full mt-5 flex items-center justify-center gap-1"
+            >
+              <p class="mb-1">message</p>
+            </button>
+          </div>
+        </div>
+        <div
+          class="bg-white/5 rounded-2xl p-4 flex flex-col items-center overflow-hidden border border-gray-500/30 w-full"
+        >
+          <img
+            class="w-36 h-36 object-cover object-top rounded-full"
+            src="./assets/img7.jpeg"
+            alt="userImage7"
+          />
+          <div class="flex flex-col items-center">
+            <p class="font-medium mt-3">Kelvin John</p>
+            <p class="text-gray-500 text-sm">kelvin.john@gmail.com</p>
+            <button
+              class="border text-sm text-gray-500 border-gray-500/30 w-28 h-8 rounded-full mt-5 flex items-center justify-center gap-1"
+            >
+              <p class="mb-1">message</p>
+            </button>
+          </div>
+        </div>
+        <div
+          class="bg-white/5 rounded-2xl p-4 flex flex-col items-center overflow-hidden border border-gray-500/30 w-full"
+        >
+          <img
+            class="w-36 h-36 object-cover object-top rounded-full"
+            src="./assets/img8.jpeg"
+            alt="userImage8"
+          />
+          <div class="flex flex-col items-center">
+            <p class="font-medium mt-3">Kelvin John</p>
+            <p class="text-gray-500 text-sm">kelvin.john@gmail.com</p>
+            <button
+              class="border text-sm text-gray-500 border-gray-500/30 w-28 h-8 rounded-full mt-5 flex items-center justify-center gap-1"
+            >
+              <p class="mb-1">message</p>
+            </button>
+          </div>
+        </div>
+        <div
+          class="bg-white/5 rounded-2xl p-4 flex flex-col items-center overflow-hidden border border-gray-500/30 w-full"
+        >
+          <img
+            class="w-36 h-36 object-cover object-top rounded-full"
+            src="./assets/img-9.jpeg"
+            alt="userImage9"
+          />
+          <div class="flex flex-col items-center">
+            <p class="font-medium mt-3">Kelvin John</p>
+            <p class="text-gray-500 text-sm">kelvin.john@gmail.com</p>
+            <button
+              class="border text-sm text-gray-500 border-gray-500/30 w-28 h-8 rounded-full mt-5 flex items-center justify-center gap-1"
+            >
+              <p class="mb-1">message</p>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+
+    <footer
+      class="px-4 pt-2 w-full text-gray-500 overflow-hidden overflow-x-hidden"
+    >
+      <div
+        class="flex justify-between flex-wrap w-full md:gap-20 gap-8 pb-6"
+        data-aos="fade-up"
+        data-aos-delay="150"
+      >
+        <div class="md:max-w-96 flex flex-col items-start space-y-2">
+          <img class="w-36 h-fit" src="../Assets/Logo.png" alt="logo" />
+          <p class="mt-2 text-sm">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s.
+          </p>
+        </div>
+
+        <div class="flex flex-col lg:items-center lg:justify-center">
+          <div class="flex flex-col text-sm space-y-2.5 md:px-8">
+            <h2 class="font-semibold mb-5 text-gray-100">Easier Acces</h2>
+            <a class="hover:text-slate-600 transition" href="#">Home</a>
+            <a class="hover:text-slate-600 transition" href="#">About us</a>
+            <a class="hover:text-slate-600 transition" href="#"
+              >Services<span
+                class="text-xs text-white bg-indigo-600 rounded-md ml-2 px-2 py-1"
+                >Added</span
+              ></a
+            >
+            <a class="hover:text-slate-600 transition" href="#">Events</a>
+            <a class="hover:text-slate-600 transition" href="#">Contact us</a>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="font-semibold text-gray-100 mb-5">
+            Subscribe to our newsletter
+          </h2>
+          <div class="text-sm space-y-6 max-w-sm">
+            <p>
+              The latest news, articles, and resources, sent to your inbox
+              weekly.
+            </p>
+            <form
+              method="get"
+              action="#"
+              class="flex items-center justify-center gap-2 p-2 rounded-md bg-indigo-50/5"
+            >
+              <input
+                class="focus:ring-0 outline-none w-full max-w-64 py-2 rounded px-2 text-gray-100"
+                type="email"
+                placeholder="Enter your email"
+              />
+              <button
+                type="submit"
+                class="bg-indigo-600 px-4 py-2 text-white rounded cursor-pointer"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="flex items-start">
+          <div class="">
+            <h2 class="font-semibold mb-5 text-gray-100">Get in touch</h2>
+            <div class="text-sm space-y-2 flex flex-col items-start">
+              <a href="#">+1-212-456-7890</a>
+              <a href="#">contact@example.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <!-- Google Map -->
+        <div
+          class="rounded-2xl bg-black/50 w-full overflow-hidden shadow-lg mb-3"
+        >
+          <iframe
+            class="opacity-50"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3907.1616097152896!2d78.1739798!3d11.682956599999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babefef7fd970bb%3A0xe11aef1a71994f9!2sStackly!5e0!3m2!1sen!2sin!4v1755667813665!5m2!1sen!2sin"
+            width="100%"
+            height="250"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+
+      <p
+        class="pt-4 text-center text-xs md:text-sm pb-5 border-t border-gray-500/30"
+      >
+        Copyright 2025 © <a href="#">Stackly</a>. All Right Reserved.
+      </p>
+    </footer>
 
     <!-- Aos Animation  -->
     <script
