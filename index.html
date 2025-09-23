@@ -41,11 +41,15 @@
     <script src="https://cdn.jsdelivr.net/npm/trig-js/src/trig.min.js"></script>
 
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+      @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
 
       body {
         font-family: "Josefin Sans", sans-serif;
         overflow-x: hidden;
+      }
+
+      .marquee-wrap:hover {
+        animation-play-state: paused;
       }
 
       /* Hamburger animation */
@@ -91,6 +95,15 @@
   <body
     class="antialiased bg-black dark:bg-gray-950 text-white dark:text-slate-100"
   >
+    <div
+      class="w-full h-full absolute inset-0 bg-gradient-to-r from-black to-black"
+    >
+      <img
+        class="w-full h-full object-center object-cover z-10 opacity-25"
+        src="./assets/home-bg3.jpg"
+        alt="background"
+      />
+    </div>
     <!-- Navbar  -->
 
     <header
@@ -363,7 +376,7 @@
     >
       <div class="flex flex-col items-center justify-center">
         <!-- Back image  -->
-        <div
+        <!-- <div
           class="w-full h-full absolute inset-0 bg-gradient-to-r from-black to-black"
         >
           <img
@@ -371,19 +384,12 @@
             src="./assets/home-bg2.jpg"
             alt="background"
           />
-        </div>
+        </div> -->
 
         <!-- content  -->
         <div
-          class="h-[100vh] relative space-y-1.5 md:space-y-3 py-3 md:py-16 flex flex-col items-center w-full justify-center p-4 text-white dark:text-white z-50"
+          class="min-h-screen relative space-y-1.5 md:space-y-3 py-3 md:py-16 flex flex-col items-center w-full justify-center p-4 text-white dark:text-white z-50"
         >
-          <!-- <p
-            class="px-6 py-2 rounded-full text-xs border border-[rgb(125,13,150)]"
-            data-aos="fade-up-right"
-            data-aos-delay="50"
-          >
-            Commnunity & Support
-          </p> -->
           <div
             class="flex flex-wrap items-center justify-center p-1.5 rounded-full border border-indigo-900 text-xs"
           >
@@ -404,10 +410,47 @@
                 alt="userImage3"
               />
             </div>
-            <p class="-translate-x-2">Join community of 1m+ founders</p>
+            <p class="-translate-x-2">Join community of 1m+ members</p>
+          </div>
+
+          <div  class="text-white py-2 md:py-6">
+            <div class="mx-auto text-center">
+              <h2
+                class="text-xl md:text-4xl font-bold mb-6 font-lora uppercase"
+              >
+                Countdown to Our Next Conference
+              </h2>
+
+              <!-- Timer -->
+              <div class="flex justify-center items-center gap-1 md:gap-6">
+                <!-- Days -->
+                <div class="bg-gray-200/10 p-2 rounded-xl">
+                  <div class="md:text-3xl font-bold" id="days">00</div>
+                  <div class="text-sm uppercase tracking-wide">Days</div>
+                </div>
+                <div>:</div>
+                <!-- Hours -->
+                <div class="bg-gray-200/10 p-2 rounded-xl">
+                  <div class="md:text-3xl font-bold" id="hours">00</div>
+                  <div class="text-sm uppercase tracking-wide">Hours</div>
+                </div>
+                <div>:</div>
+                <!-- Minutes -->
+                <div class="bg-gray-200/10 p-2 rounded-xl">
+                  <div class="md:text-3xl font-bold" id="minutes">00</div>
+                  <div class="text-sm uppercase tracking-wide">Minutes</div>
+                </div>
+                <div>:</div>
+                <!-- Seconds -->
+                <div class="bg-gray-200/10 p-2 rounded-xl">
+                  <div class="md:text-3xl font-bold" id="seconds">00</div>
+                  <div class="text-sm uppercase tracking-wide">Seconds</div>
+                </div>
+              </div>
+            </div>
           </div>
           <h1
-            class="font-serif text-3xl sm:text-4xl md:text-5xl md:leading-[60px] text-center w-full mt-5 font-bold"
+            class="font-serif text-3xl sm:text-4xl md:text-5xl md:leading-[60px] text-center w-full font-bold"
             data-aos="fade-up-right"
             data-aos-delay="100"
           >
@@ -442,38 +485,274 @@
               </a>
             </div>
           </div>
-
-          <div
-            class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce"
-          >
-            <a href="#why">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                class="size-8"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M11.47 13.28a.75.75 0 0 0 1.06 0l7.5-7.5a.75.75 0 0 0-1.06-1.06L12 11.69 5.03 4.72a.75.75 0 0 0-1.06 1.06l7.5 7.5Z"
-                  clip-rule="evenodd"
-                />
-                <path
-                  fill-rule="evenodd"
-                  d="M11.47 19.28a.75.75 0 0 0 1.06 0l7.5-7.5a.75.75 0 1 0-1.06-1.06L12 17.69l-6.97-6.97a.75.75 0 0 0-1.06 1.06l7.5 7.5Z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </a>
-          </div>
         </div>
       </div>
+
+      <script>
+        // Set event date
+        const eventDate = new Date("Oct 31, 2025 23:59:59").getTime();
+
+        const timer = setInterval(() => {
+          const now = new Date().getTime();
+          const distance = eventDate - now;
+
+          if (distance < 0) {
+            clearInterval(timer);
+            document.querySelector("#days").innerHTML = "00";
+            document.querySelector("#hours").innerHTML = "00";
+            document.querySelector("#minutes").innerHTML = "00";
+            document.querySelector("#seconds").innerHTML = "00";
+            return;
+          }
+
+          document.querySelector("#days").innerHTML = Math.floor(
+            distance / (1000 * 60 * 60 * 24)
+          );
+          document.querySelector("#hours").innerHTML = Math.floor(
+            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          );
+          document.querySelector("#minutes").innerHTML = Math.floor(
+            (distance % (1000 * 60 * 60)) / (1000 * 60)
+          );
+          document.querySelector("#seconds").innerHTML = Math.floor(
+            (distance % (1000 * 60)) / 1000
+          );
+        }, 1000);
+      </script>
     </main>
 
+    <section class="relative overflow-x-hidden">
+      <div
+        class="w-full h-full absolute inset-0 bg-gradient-to-r from-black to-black"
+      >
+        <img
+          class="w-full h-full object-center object-cover z-10 opacity-5"
+          src="./assets/home-bg5.jpg"
+          alt="background"
+        />
+      </div>
+      <!-- Scroll text  -->
+
+      <section class="mx-auto px-4 overflow-hidden overflow-x-hidden">
+        <div class="overflow-hidden whitespace-nowrap px-4 py-4 mx-auto w-full">
+          <div
+            class="inline-block animate-marquee marquee-wrap will-change-transform font-bold"
+          >
+            <span
+              class="mx-2 text-transparent text-5xl md:text-8xl transition-colors duration-500 ease-out font-lora uppercase"
+              style="-webkit-text-stroke: 1px hsla(0, 0%, 99%, 0.445)"
+              >“Upcoming Events 2025 — Register Now!”</span
+            >
+            <span
+              class="mx-2 text-transparent text-5xl md:text-8xl transition-colors duration-500 ease-out font-lora uppercase"
+              style="-webkit-text-stroke: 1px hsla(0, 0%, 99%, 0.445)"
+              >“Upcoming Events 2025 — Register Now!”</span
+            >
+          </div>
+        </div>
+        <style>
+          @keyframes marquee {
+            from {
+              transform: translateX(0);
+            }
+            to {
+              transform: translateX(-50%);
+            }
+          }
+          .animate-marquee {
+            animation: marquee 25s linear infinite;
+          }
+        </style>
+      </section>
+
+      <!-- Upcoming Events -->
+      <section class="relative overflow-x-hidden w-full px-4">
+        <div class="text-center pb-10 space-y-4">
+          <h1
+            class="text-3xl md:text-4xl lg:text-6xl font-bold bg-gradient-to-r from-[#A992F2] to-[hsl(275,78%,50%)] bg-clip-text text-transparent"
+          >
+            Upcoming Events
+          </h1>
+        </div>
+        <div class="space-y-6 md:space-y-8 lg:space-y-10 mb-16">
+          <div
+            class="grid grid-cols-1 lg:grid-cols-6 items-center justify-around px-4 gap-8 w-full bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl"
+          >
+            <div class="py-6 px-2 w-full">
+              <div class="text-left space-y-1">
+                <h1>31 <sup>st</sup> Dec , 2025</h1>
+                <p class="text-gray-300 text-sm">8:00 Am - 9:00 AM</p>
+                <h4 class="">Opening Ceremony</h4>
+              </div>
+            </div>
+
+            <div class="text-start space-y-3 w-full md:col-span-4">
+              <h4>Introduce the Event</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+                tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+              </p>
+              <ul class="flex items-center text-sm text-gray-400 gap-4">
+                <li>
+                  <p>Exploration Hall</p>
+                </li>
+                <li>
+                  <p>Hall 01</p>
+                </li>
+              </ul>
+            </div>
+
+            <div
+              class="flex items-center md;justify-center gap-4 w-full lg:w-auto lg:col-span-1 py-6 px-2"
+            >
+              <img
+                src="./assets/img1.jpeg"
+                alt=""
+                class="rounded-full w-20 h-20 object-cover object-top"
+              />
+              <div class="">
+                <h6 class="">Jesus Holland</h6>
+                <small>Host &amp; Speaker</small>
+              </div>
+            </div>
+          </div>
+          <div
+            class="grid grid-cols-1 lg:grid-cols-6 items-center justify-around px-4 gap-8 w-full bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl"
+          >
+            <div class="py-6 px-2 w-full">
+              <div class="text-left space-y-1">
+                <h1>31 <sup>st</sup> Dec , 2025</h1>
+                <p class="text-gray-300 text-sm">8:00 Am - 9:00 AM</p>
+                <h4 class="">Opening Ceremony</h4>
+              </div>
+            </div>
+
+            <div class="text-start space-y-3 w-full md:col-span-4">
+              <h4>Introduce the Event</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+                tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+              </p>
+              <ul class="flex items-center text-sm text-gray-400 gap-4">
+                <li>
+                  <span class="theme1">Exploration Hall</span>
+                </li>
+                <li>
+                  <span class="theme1">Hall 01</span>
+                </li>
+              </ul>
+            </div>
+
+            <div
+              class="flex items-center md;justify-center gap-4 w-full lg:w-auto lg:col-span-1 py-6 px-2"
+            >
+              <img
+                src="./assets/img2.jpeg"
+                alt=""
+                class="rounded-full w-20 h-20 object-cover object-top"
+              />
+              <div class="">
+                <h6 class="">Joseph Vijay</h6>
+                <small>Organizer &amp; Speaker</small>
+              </div>
+            </div>
+          </div>
+          <div
+            class="grid grid-cols-1 lg:grid-cols-6 items-center justify-around px-4 gap-8 w-full bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl"
+          >
+            <div class="py-6 px-2 w-full">
+              <div class="text-left space-y-1">
+                <h1>31 <sup>st</sup> Dec , 2025</h1>
+                <p class="text-gray-300 text-sm">8:00 Am - 9:00 AM</p>
+                <h4 class="">Opening Ceremony</h4>
+              </div>
+            </div>
+
+            <div class="text-start space-y-3 w-full md:col-span-4">
+              <h4>Introduce the Event</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+                tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+              </p>
+              <ul class="flex items-center text-sm text-gray-400 gap-4">
+                <li>
+                  <span class="theme1">Exploration Hall</span>
+                </li>
+                <li>
+                  <span class="theme1">Hall 01</span>
+                </li>
+              </ul>
+            </div>
+
+            <div
+              class="flex items-center md;justify-center gap-4 w-full lg:w-auto lg:col-span-1 py-6 px-2"
+            >
+              <img
+                src="./assets/img3.jpeg"
+                alt="person3"
+                class="rounded-full w-20 h-20 object-cover object-top"
+              />
+              <div class="">
+                <h6 class="">Imran</h6>
+                <small>Host &amp; Manager</small>
+              </div>
+            </div>
+          </div>
+          <div
+            class="grid grid-cols-1 lg:grid-cols-6 items-center justify-around px-4 gap-8 w-full bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl"
+          >
+            <div class="py-6 px-2 w-full">
+              <div class="text-left space-y-1">
+                <h1>31 <sup>st</sup> Dec , 2025</h1>
+                <p class="text-gray-300 text-sm">8:00 Am - 9:00 AM</p>
+                <h4 class="">Opening Ceremony</h4>
+              </div>
+            </div>
+
+            <div class="text-start space-y-3 w-full md:col-span-4">
+              <h4>Introduce the Event</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+                tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+              </p>
+              <ul class="flex items-center text-sm text-gray-400 gap-4">
+                <li>
+                  <span class="theme1">Exploration Hall</span>
+                </li>
+                <li>
+                  <span class="theme1">Hall 01</span>
+                </li>
+              </ul>
+            </div>
+
+            <div
+              class="flex items-center md;justify-center gap-4 w-full lg:w-auto lg:col-span-1 py-6 px-2"
+            >
+              <img
+                src="./assets/img4.jpeg"
+                alt="person4"
+                class="rounded-full w-20 h-20 object-cover object-top"
+              />
+              <div class="">
+                <h6 class="">James</h6>
+                <small>Host &amp; Speaker</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
     <!-- why us  -->
-    <section id="why" class="scroll-mt-10 relative mx-auto py-16 overflow-x-hidden">
-      <div class="space-y-2 text-center px-4">
-        <h1 class="text-3xl md:text-4xl lg:text-6xl font-bold">
+    <section
+      id="why"
+      class="scroll-mt-10 relative mx-auto py-8 overflow-x-hidden"
+    >
+
+      <div class="space-y-2 text-center px-4 z-50">
+        <h1
+          class="w-fit text-3xl md:text-4xl lg:text-6xl font-bold bg-gradient-to-br from-violet-500 to-violet-800 bg-clip-text text-transparent font-lora mx-auto py-2 uppercase "
+        >
           Why Choose Us
         </h1>
         <p class="text-sm md:text-lg text-white/50">
@@ -483,273 +762,145 @@
         </p>
 
         <ul
-          class="grid md:grid-cols-2 lg:grid-cols-3 place-items-center gap-8 text-sm md:text-lg space-y-2 mt-4 text-gray-400 pt-10"
+          class="grid grid-cols-1 md:grid-cols-2 place-items-center gap-8 text-sm md:text-lg space-y-2 mt-4 text-gray-400 pt-10"
         >
           <!-- card 1  -->
           <div
-            class="p-2 bg-white/5 flex flex-col justify-center rounded-2xl space-y-2"
+            class="p-2 bg-white/5 backdrop-blur-xl border border-white/10 grid lg:grid-cols-2 items-center justify-center gap-4 rounded-2xl"
           >
-            <div class="relative">
+            <div class="relative ">
               <img
-                class="h-[300px] w-full object-cover object-top rounded-2xl"
+                class="h-[300px] w-full lg:w-[400px] object-cover object-top rounded-2xl"
                 src="./assets/why-1.jpg"
                 alt="card5"
               />
-
-              <!-- Overlay -->
-              <div class="absolute inset-0 bg-black/50 rounded-2xl"></div>
             </div>
-            <p class="font-bold text-gray-200 text-xl md:text-2xl">
-              End-to-End Event Management
-            </p>
-            <p class="text-[16px]">
-              From the first idea to the final applause, we handle every detail
-              with care.
-            </p>
+
+            <div class="space-y-2">
+              <p class="font-bold text-gray-200 text-xl md:text-2xl">
+                End to End Management
+              </p>
+              <p class="text-[16px]">
+                From the first idea to the final applause, we handle every
+                detail with care. Choose to plan accordingly.
+              </p>
+            </div>
           </div>
           <!-- card 2  -->
           <div
-            class="p-2 bg-white/5 flex flex-col justify-center rounded-2xl space-y-2"
+            class="p-2 bg-white/5 backdrop-blur-xl border border-white/10 grid lg:grid-cols-2 items-center justify-center gap-4 rounded-2xl space-y-2"
           >
             <div class="relative">
               <img
-                class="h-[300px] w-full object-cover object-top rounded-2xl"
+                class="h-[300px] w-full lg:w-[400px] object-cover object-top rounded-2xl"
                 src="./assets/why-2.jpeg"
                 alt="card2"
               />
-
-              <!-- Overlay -->
-              <div class="absolute inset-0 bg-black/50 rounded-2xl"></div>
             </div>
-            <p class="font-bold text-gray-200 text-xl md:text-2xl">
+            <div class="space-y-2">
+              <p class="font-bold text-gray-200 text-xl md:text-2xl">
               Proven Experience
             </p>
             <p class="text-[16px]">
               Hundreds of successful conferences, exhibitions, and corporate
               events delivered with excellence.
             </p>
+            </div>
           </div>
           <!-- card 3  -->
           <div
-            class="p-2 bg-white/5 flex flex-col justify-center rounded-2xl space-y-2"
+            class="p-2 bg-white/5 backdrop-blur-xl border border-white/10 grid lg:grid-cols-2 items-center justify-center gap-4 rounded-2xl"
           >
             <div class="relative">
               <img
-                class="h-[300px] w-full object-cover object-top rounded-2xl"
+                class="h-[300px] w-full lg:w-[400px] object-cover object-top rounded-2xl"
                 src="./assets/why-3.png"
                 alt="card3"
               />
 
-              <!-- Overlay -->
-              <div class="absolute inset-0 bg-black/50 rounded-2xl"></div>
+              
             </div>
-            <p class="font-bold text-gray-200 text-xl md:text-2xl">
+            <div class="space-y-2">
+              <p class="font-bold text-gray-200 text-xl md:text-2xl">
               Tailored Solutions
             </p>
             <p class="text-[16px]">
               Every event is unique, and we design experiences that align with
               your goals, budget, and audience.
             </p>
+            </div>
           </div>
           <!-- card 4 -->
           <div
-            class="p-2 bg-white/5 flex flex-col justify-center rounded-2xl space-y-2"
+            class="p-2 bg-white/5 backdrop-blur-xl border border-white/10 grid lg:grid-cols-2 items-center justify-center gap-4 rounded-2xl"
           >
             <div class="relative">
               <img
-                class="h-[300px] w-full object-cover object-top rounded-2xl"
+                class="h-[300px] w-full lg:w-[400px] object-cover object-top rounded-2xl"
                 src="./assets/why-4.jpg"
                 alt="card4"
               />
 
-              <!-- Overlay -->
-              <div class="absolute inset-0 bg-black/50 rounded-2xl"></div>
+             
             </div>
-            <p class="font-bold text-gray-200 text-xl md:text-2xl">
+            <div class="space-y-2">
+              <p class="font-bold text-gray-200 text-xl md:text-2xl">
               Creative Innovation
             </p>
             <p class="text-[16px]">
               Fresh concepts, modern designs, and engaging formats that make
               your event stand out.
             </p>
+            </div>
           </div>
           <!-- card 5  -->
           <div
-            class="p-2 bg-white/5 flex flex-col justify-center rounded-2xl space-y-2"
+            class="p-2 bg-white/5 backdrop-blur-xl border border-white/10 grid lg:grid-cols-2 items-center justify-center gap-4 rounded-2xl"
           >
             <div class="relative">
               <img
-                class="h-[300px] w-full object-cover object-top rounded-2xl"
+                class="h-[300px] w-full lg:w-[400px] object-cover object-top rounded-2xl"
                 src="./assets/why-5.jpg"
                 alt="card5"
               />
 
-              <!-- Overlay -->
-              <div class="absolute inset-0 bg-black/50 rounded-2xl"></div>
+              
             </div>
-            <p class="font-bold text-gray-200 text-xl md:text-2xl">
+            <div class="space-y-2">
+              <p class="font-bold text-gray-200 text-xl md:text-2xl">
               Trusted Network
             </p>
             <p>
               Strong partnerships with top venues, vendors, and technology
-              providers.
+              providers. Built trust on making relationships.
             </p>
+            </div>
           </div>
 
           <!-- card 6  -->
           <div
-            class="p-2 bg-white/5 flex flex-col justify-center rounded-2xl space-y-2"
+            class="p-2 bg-white/5 backdrop-blur-xl border border-white/10 grid lg:grid-cols-2 items-center justify-center gap-4 rounded-2xl"
           >
             <div class="relative">
               <img
-                class="h-[300px] w-full object-cover object-top rounded-2xl"
+                class="h-[300px] w-full lg:w-[400px] object-cover object-top rounded-2xl"
                 src="./assets/why-6.jpg"
                 alt="card5"
               />
 
-              <!-- Overlay -->
-              <div class="absolute inset-0 bg-black/50 rounded-2xl"></div>
+      
             </div>
-            <p class="font-bold text-gray-200 text-xl md:text-2xl">
+            <div class="space-y-2">
+              <p class="font-bold text-gray-200 text-xl md:text-2xl">
               Stress-Free Planning
             </p>
             <p>
               We manage logistics, so you can focus on what matters most—your
-              guests and message.
+              message. And to us, your success is our success.
             </p>
+            </div>
           </div>
         </ul>
-      </div>
-    </section>
-
-    <!-- Upcoming Events -->
-    <section class="relative overflow-x-hidden w-full px-4">
-      <div class="text-center pb-10 space-y-4">
-        <h1 class="text-3xl md:text-4xl lg:text-6xl font-bold">
-          Upcoming Events
-        </h1>
-      </div>
-      <div class="space-y-6 md:space-y-8 lg:space-y-10 mb-16">
-        <div
-          class="grid grid-cols-1 lg:grid-cols-6 items-center justify-around px-4 gap-8 w-full bg-white/5 rounded-2xl"
-        >
-          <div class="py-6 px-2 w-full">
-            <div class="text-left">
-              <small class="">8:00 Am - 9:00 AM</small>
-              <h4 class="">Opening Ceremony</h4>
-            </div>
-          </div>
-
-          <div class="text-start space-y-3 w-full md:col-span-4">
-            <h4>Introduce the Event</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-              tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
-            </p>
-            <ul class="flex items-center text-sm text-gray-400 gap-4">
-              <li>
-                <span class="theme1">Exploration Hall</span>
-              </li>
-              <li>
-                <span class="theme1">Hall 01</span>
-              </li>
-            </ul>
-          </div>
-
-          <div
-            class="flex items-center md;justify-center gap-4 w-full lg:w-auto lg:col-span-1 py-6 px-2"
-          >
-            <img
-              src="./assets/img1.jpeg"
-              alt=""
-              class="rounded-full w-20 h-20"
-            />
-            <div class="">
-              <h6 class="">Jesus Holland</h6>
-              <small>Host &amp; Speaker</small>
-            </div>
-          </div>
-        </div>
-        <div
-          class="grid grid-cols-1 lg:grid-cols-6 items-center justify-around px-4 gap-8 w-full bg-white/5 rounded-2xl"
-        >
-          <div class="py-6 px-2 w-full">
-            <div class="text-left">
-              <small class="">8:00 Am - 9:00 AM</small>
-              <h4 class="">Opening Ceremony</h4>
-            </div>
-          </div>
-
-          <div class="text-start space-y-3 w-full md:col-span-4">
-            <h4>Introduce the Event</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-              tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
-            </p>
-            <ul class="flex items-center text-sm text-gray-400 gap-4">
-              <li>
-                <span class="theme1">Exploration Hall</span>
-              </li>
-              <li>
-                <span class="theme1">Hall 01</span>
-              </li>
-            </ul>
-          </div>
-
-          <div
-            class="flex items-center md;justify-center gap-4 w-full lg:w-auto lg:col-span-1 py-6 px-2"
-          >
-            <img
-              src="./assets/img1.jpeg"
-              alt=""
-              class="rounded-full w-20 h-20"
-            />
-            <div class="">
-              <h6 class="">Jesus Holland</h6>
-              <small>Host &amp; Speaker</small>
-            </div>
-          </div>
-        </div>
-        <div
-          class="grid grid-cols-1 lg:grid-cols-6 items-center justify-around px-4 gap-8 w-full bg-white/5 rounded-2xl"
-        >
-          <div class="py-6 px-2 w-full">
-            <div class="text-left">
-              <small class="">8:00 Am - 9:00 AM</small>
-              <h4 class="">Opening Ceremony</h4>
-            </div>
-          </div>
-
-          <div class="text-start space-y-3 w-full md:col-span-4">
-            <h4>Introduce the Event</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-              tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
-            </p>
-            <ul class="flex items-center text-sm text-gray-400 gap-4">
-              <li>
-                <span class="theme1">Exploration Hall</span>
-              </li>
-              <li>
-                <span class="theme1">Hall 01</span>
-              </li>
-            </ul>
-          </div>
-
-          <div
-            class="flex items-center md;justify-center gap-4 w-full lg:w-auto lg:col-span-1 py-6 px-2"
-          >
-            <img
-              src="./assets/img1.jpeg"
-              alt=""
-              class="rounded-full w-20 h-20"
-            />
-            <div class="">
-              <h6 class="">Jesus Holland</h6>
-              <small>Host &amp; Speaker</small>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -877,8 +1028,9 @@
     </script>
 
     <!-- People Imapacted -->
-    <section class="mx-auto px-4 py-16 overflow-x-hidden">
-      <div class="text-center pb-10 space-y-4 ">
+    <section class="relative mx-auto px-4 py-16 overflow-x-hidden">
+      
+      <div class="text-center pb-10 space-y-4 z-50">
         <h1 class="text-2xl md:text-4xl lg:text-6xl font-bold">
           Our Expert Team Members
         </h1>
@@ -889,7 +1041,7 @@
         </p>
       </div>
       <div
-        class="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 items-center justify-around gap-8"
+        class="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 items-center justify-around gap-8 z-50"
       >
         <div
           class="bg-white/5 rounded-2xl flex flex-col items-center p-4 overflow-hidden border border-gray-500/30 w-full"
@@ -1073,6 +1225,7 @@
           </div>
         </div>
       </div>
+
     </section>
 
     <!-- footer -->
@@ -1101,8 +1254,8 @@
             <a class="hover:text-slate-600 transition" href="#">About us</a>
             <a class="hover:text-slate-600 transition" href="#"
               >Services<span
-                class="text-xs text-white bg-indigo-600 rounded-md ml-2 px-2 py-1"
-                >Added</span
+                class="text-xs text-white bg-indigo-600 rounded-bl-xl rounded-tr-xl ml-2 px-2 py-1"
+                >New</span
               ></a
             >
             <a class="hover:text-slate-600 transition" href="#">Events</a>
