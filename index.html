@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>NGO</title>
+    <title>EVENT</title>
 
     <!-- Font Awesome Cdn Link -->
     <link
@@ -95,6 +95,8 @@
   <body
     class="antialiased bg-black dark:bg-gray-950 text-white dark:text-slate-100"
   >
+    <!-- Back image  -->
+
     <div
       class="w-full h-full absolute inset-0 bg-gradient-to-r from-black to-black"
     >
@@ -372,9 +374,9 @@
     <!-- Home  -->
 
     <main
-      class="relative text-white dark:text-white overflow-hidden overflow-x-hidden"
+      class="relative text-white dark:text-white overflow-hidden overflow-x-hidden trig-grow enable-trig"
     >
-      <div class="flex flex-col items-center justify-center">
+      <div class="flex flex-col items-center justify-center w-full">
         <!-- Back image  -->
         <!-- <div
           class="w-full h-full absolute inset-0 bg-gradient-to-r from-black to-black"
@@ -389,8 +391,12 @@
         <!-- content  -->
         <div
           class="min-h-screen relative space-y-1.5 md:space-y-3 py-3 md:py-16 flex flex-col items-center w-full justify-center p-4 text-white dark:text-white z-50"
+          
         >
-          <div
+        <!-- top image  -->
+          <div class="trig-target"
+          style="--trig-delay:0.5s; --trig-duration:0.5s; --trig-blend:ease-in-out; ">
+            <div
             class="flex flex-wrap items-center justify-center p-1.5 rounded-full border border-indigo-900 text-xs"
           >
             <div class="flex items-center">
@@ -412,8 +418,11 @@
             </div>
             <p class="-translate-x-2">Join community of 1m+ members</p>
           </div>
+          </div>
 
-          <div  class="text-white py-2 md:py-6">
+          <!-- count  -->
+          <div  class="text-white py-2 md:py-6 trig-target"
+          style="--trig-delay:0.5s; --trig-duration:1s; --trig-blend:ease-in-out; ">
             <div class="mx-auto text-center">
               <h2
                 class="text-xl md:text-4xl font-bold mb-6 font-lora uppercase"
@@ -449,10 +458,11 @@
               </div>
             </div>
           </div>
+
           <h1
-            class="font-serif text-3xl sm:text-4xl md:text-5xl md:leading-[60px] text-center w-full font-bold"
-            data-aos="fade-up-right"
-            data-aos-delay="100"
+            class="font-serif text-3xl sm:text-4xl md:text-5xl md:leading-[60px] text-center w-full font-bold trig-target"
+            style="--trig-delay:0.5s; --trig-duration:2s; --trig-blend:ease-in-out; "
+            
           >
             "Where Ideas
             <span
@@ -461,15 +471,16 @@
             >
           </h1>
           <p
-            class="dark:text-white text-xs md:text-lg mt-2 w-full md:max-w-xl xl:max-w-3xl text-center"
-            data-aos="fade-up-right"
-            data-aos-delay="150"
+            class="dark:text-white text-xs md:text-lg mt-2 w-full md:max-w-xl xl:max-w-3xl text-center trig-target"
+            style="--trig-delay:0.5s; --trig-duration:3s; --trig-blend:ease-in-out; "
+            
           >
             Seamless conference & event management that transforms your vision
             into reality. From planning to execution, we make your events
             unforgettable.
           </p>
-          <div data-aos="fade-up-right" data-aos-delay="200">
+          <div class="trig-target"
+          style="--trig-delay:0.5s; --trig-duration:4s; --trig-blend:ease-in-out; ">
             <div class="flex items-center gap-6 mt-4 md:mt-8 z-10">
               <a
                 href=""
@@ -521,13 +532,15 @@
       </script>
     </main>
 
+    <!-- upcoming events -->
+
     <section class="relative overflow-x-hidden">
       <div
         class="w-full h-full absolute inset-0 bg-gradient-to-r from-black to-black"
       >
         <img
           class="w-full h-full object-center object-cover z-10 opacity-5"
-          src="./assets/home-bg5.jpg"
+          src="./assets/home-bg4.jpg"
           alt="background"
         />
       </div>
@@ -575,7 +588,9 @@
           </h1>
         </div>
         <div class="space-y-6 md:space-y-8 lg:space-y-10 mb-16">
-          <div
+          <!-- card 1  -->
+          <div data-aos="zoom-in-right" data-aos-delay="100">
+            <div
             class="grid grid-cols-1 lg:grid-cols-6 items-center justify-around px-4 gap-8 w-full bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl"
           >
             <div class="py-6 px-2 w-full">
@@ -616,7 +631,10 @@
               </div>
             </div>
           </div>
-          <div
+          </div>
+          <!-- card 2 -->
+          <div data-aos="zoom-in-left" data-aos-delay="200">
+            <div
             class="grid grid-cols-1 lg:grid-cols-6 items-center justify-around px-4 gap-8 w-full bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl"
           >
             <div class="py-6 px-2 w-full">
@@ -657,7 +675,10 @@
               </div>
             </div>
           </div>
-          <div
+          </div>
+          <!-- card 3  -->
+          <div data-aos="zoom-in-right" data-aos-delay="300">
+            <div
             class="grid grid-cols-1 lg:grid-cols-6 items-center justify-around px-4 gap-8 w-full bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl"
           >
             <div class="py-6 px-2 w-full">
@@ -698,7 +719,10 @@
               </div>
             </div>
           </div>
-          <div
+          </div>
+          <!-- card 4  -->
+          <div data-aos="zoom-in-left" data-aos-delay="400">
+            <div
             class="grid grid-cols-1 lg:grid-cols-6 items-center justify-around px-4 gap-8 w-full bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl"
           >
             <div class="py-6 px-2 w-full">
@@ -739,6 +763,7 @@
               </div>
             </div>
           </div>
+          </div>
         </div>
       </section>
     </section>
@@ -765,7 +790,7 @@
           class="grid grid-cols-1 md:grid-cols-2 place-items-center gap-8 text-sm md:text-lg space-y-2 mt-4 text-gray-400 pt-10"
         >
           <!-- card 1  -->
-          <div
+          <div data-aos="fade-right" data-aos-delay="100"
             class="p-2 bg-white/5 backdrop-blur-xl border border-white/10 grid lg:grid-cols-2 items-center justify-center gap-4 rounded-2xl"
           >
             <div class="relative ">
@@ -787,7 +812,7 @@
             </div>
           </div>
           <!-- card 2  -->
-          <div
+          <div data-aos="fade-left" data-aos-delay="200"
             class="p-2 bg-white/5 backdrop-blur-xl border border-white/10 grid lg:grid-cols-2 items-center justify-center gap-4 rounded-2xl space-y-2"
           >
             <div class="relative">
@@ -808,7 +833,7 @@
             </div>
           </div>
           <!-- card 3  -->
-          <div
+          <div data-aos="fade-right" data-aos-delay="300"
             class="p-2 bg-white/5 backdrop-blur-xl border border-white/10 grid lg:grid-cols-2 items-center justify-center gap-4 rounded-2xl"
           >
             <div class="relative">
@@ -831,7 +856,7 @@
             </div>
           </div>
           <!-- card 4 -->
-          <div
+          <div data-aos="fade-left" data-aos-delay="400"
             class="p-2 bg-white/5 backdrop-blur-xl border border-white/10 grid lg:grid-cols-2 items-center justify-center gap-4 rounded-2xl"
           >
             <div class="relative">
@@ -854,7 +879,7 @@
             </div>
           </div>
           <!-- card 5  -->
-          <div
+          <div data-aos="fade-right" data-aos-delay="500"
             class="p-2 bg-white/5 backdrop-blur-xl border border-white/10 grid lg:grid-cols-2 items-center justify-center gap-4 rounded-2xl"
           >
             <div class="relative">
@@ -878,7 +903,7 @@
           </div>
 
           <!-- card 6  -->
-          <div
+          <div data-aos="fade-left" data-aos-delay="600"
             class="p-2 bg-white/5 backdrop-blur-xl border border-white/10 grid lg:grid-cols-2 items-center justify-center gap-4 rounded-2xl"
           >
             <div class="relative">
