@@ -94,14 +94,20 @@
 
   <body class="antialiased bg-black text-white">
 
-    <div class="absolute inset-0 w-full h-full">
-        <img class="w-full h-full object-cover" src="../assets/home-bg2.jpg" alt="">
+    <div
+      class="w-full h-full absolute inset-0 bg-gradient-to-r from-black to-black z-[-1]"
+    >
+      <img
+        class="w-full h-[300px] object-center object-cover brightness-15"
+        src="../assets/home-bg3.jpg"
+        alt="background"
+      />
     </div>
 
     <!-- Navbar  -->
 
     <header
-      class="fixed top-0 z-[500] border-b border-slate-200/10 bg-white/5 backdrop-blur w-full mx-auto"
+      class="fixed top-0 z-[500px] border-b border-slate-200/10 bg-white/5 backdrop-blur w-full mx-auto"
     >
       <div class="flex items-center justify-between p-3">
         <!-- Logo -->
@@ -363,7 +369,7 @@
       </script>
     </header>
 
-    <section class="pt-20">
+    <section class="pt-20 z-50">
       <div class="flex items-center gap-1.5">
         <a href="../index.html">
           Home
