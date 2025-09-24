@@ -1,23 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-  <link rel="stylesheet" href="./output.css">
-</head>
-<body>
-        <div class="flex items-center justify-between border-t border-gray-500/30">
-        <p class="pt-4 text-xs md:text-sm pb-5 ">
-          Copyright 2025 © <a href="#">Stackly</a>. All Right Reserved.
-        </p>
-        <div class="flex items-center gap-16 ">
-          <a class="p-4 "  href="#"><i class="fab fa-facebook-f text-black"></i></a>
-          <a class="p-4 " href="#"><i class="fab fa-twitter text-black"></i></a>
-          <a class="p-4 " href="#"><i class="fab fa-pinterest-p text-black"></i></a>
-          <a class="p-4 " href="#"><i class="fas fa-wifi text-black"></i></a>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <link rel="stylesheet" href="./output.css" />
+    <style>
+      .bg {
+        background-color: blue;
+        height: 500px;
+      }
+      .bg1 {
+        opacity: 0;
+      }
+      .btn {
+        background-color: blueviolet;
+        border: none;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+      <div class="bg">
+        
       </div>
+      <button class="btn">toggle</button>
+
+      <script>
+        const div = document.querySelector(".bg");
+        const btn = document.querySelector(".btn");
+
+        btn.addEventListener('click' , function(){
+          div.classList.toggle("bg1");
+        })
+      </script>
 </body>
+
+  <!-- <body>
+    <div class="bg-black w-56 h-56 bg"></div>
+    <button class="btn">toggle</button>
+
+    <script>
+      const div = document.querySelector(".bg");
+      const btn = document.querySelector(".btn");
+
+      btn.addEventListener("click", function () {
+        div.classList.toggle("bg-white");
+      });
+    </script>
+  </body> -->
 </html>
