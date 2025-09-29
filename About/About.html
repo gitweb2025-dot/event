@@ -92,9 +92,18 @@
     </style>
   </head>
 
-  <body class="antialiased bg-black text-white">
-    <!-- Navbar  -->
+  <body class="antialiased bg-black text-white relative">
 
+    <div class="absolute inset-0 z-[-1] overflow-hidden">
+        <img
+          class="w-full h-full object-cover blur-3xl brightness-30"
+          src="../assets/ab-fil-5.jpg"
+          alt="bg-image"
+        />
+      </div>
+
+
+    <!-- Navbar  -->
     <header
       class="fixed top-0 z-[500] border-b border-slate-200/10 bg-white/5 backdrop-blur w-full mx-auto"
     >
@@ -362,17 +371,7 @@
     <main
       class="z-50 overflow-x-hidden px-4 py-10 md:py-20 relative overflow-hidden"
     >
-      <div
-        class="absolute inset-0 w-full h-full bg-gradient-to-r from-gray-700/30 to-gray-900/30 z-[-1]"
-      >
-        <div>
-          <img
-            class="w-full h-screen object-cover object-right md:object-bottom brightness-5 rounded-2xl border border-white/20"
-            src="../assets/ab-fil-5.jpg"
-            alt="main"
-          />
-        </div>
-      </div>
+   
       <!-- bread crumb -->
       <div class="pt-16">
         <div class="flex items-start gap-2">
@@ -441,13 +440,7 @@
 
     <!-- Our Creative Event Speakers -->
     <section class="z-50 overflow-x-hidden px-4 py-8 relative">
-      <div class="absolute inset-0 z-[-1] overflow-hidden">
-        <img
-          class="w-full h-full object-cover blur-3xl brightness-15"
-          src="../assets/ab-fil-5.jpg"
-          alt="bg-image"
-        />
-      </div>
+      
       <div class="text-center space-y-3 pb-6">
         <h1
           class="text-3xl md:text-4xl lg:text-6xl font-bold bg-gradient-to-r from-gray-200 to-gray-800 bg-clip-text text-transparent w-fit mx-auto"
@@ -653,16 +646,7 @@
 
     <!-- Our latest Event -->
     <section class="z-50 overflow-x-hidden px-4 py-8 relative">
-      <!-- background -->
-      <div
-        class="absolute inset-0 w-full h-full bg-gradient-to-r from-gray-700/30 to-gray-900/30 z-[-1] overflow-hidden"
-      >
-        <img
-          class="w-full h-full object-cover blur-3xl brightness-15 rotate-180"
-          src="../assets/ab-fil-5.jpg"
-          alt="bg-image"
-        />
-      </div>
+
 
       <div class="text-center space-y-2 py-4">
         <h1
@@ -907,16 +891,7 @@
 
     <!-- What Our Client's Feedback  -->
     <section class="z-50 overflow-x-hidden px-4 py-8 md:py-12 relative">
-      <!-- background -->
-      <div
-        class="absolute inset-0 w-full h-full bg-gradient-to-r from-gray-700/30 to-gray-900/30 z-[-1] overflow-hidden"
-      >
-        <img
-          class="w-full h-full object-cover blur-3xl brightness-15 rotate-180"
-          src="../assets/ab-fil-5.jpg"
-          alt="bg-image"
-        />
-      </div>
+
 
       <div class="space-y-3 md:py-6 font-lora leading-tight mb-6 text-center md:text-left">
         <h1 class="text-2xl md:text-4xl lg:text-5xl">What Our Client's</h1>
