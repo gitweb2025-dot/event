@@ -89,6 +89,36 @@
         opacity: 1;
         transform: translateY(0);
       }
+
+      .pop {
+        animation: popup 0.5s linear forwards;
+      }
+
+      @keyframes popup {
+        from {
+          transform: scale(0);
+          opacity: 0;
+        }
+        to {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+
+      .popout {
+        animation: popout 0.5s linear backwards;
+      }
+
+      @keyframes popout {
+        from {
+          transform: scale(1);
+          opacity: 1;
+        }
+        to {
+          transform: scale(0.7);
+          opacity: 0;
+        }
+      }
     </style>
   </head>
 
@@ -374,95 +404,95 @@
     <main
       class="relative text-white dark:text-white overflow-hidden overflow-x-hidden trig-grow enable-trig"
     >
-      <div id="bookform" class="hidden">
-        <div
-          class="absolute inset-0 flex justify-center items-center backdrop-blur-3xl z-100 px-4"
+      <div
+        hidden
+        id="bookform"
+        class="absolute inset-0 flex justify-center items-center backdrop-blur-3xl z-100 px-4"
+      >
+        <form
+          action="../404.html"
+          method="get"
+          class="w-full max-w-3xl relative mx-auto flex flex-col items-center justify-center text-sm dark:text-white text-gray-600 px-4 py-8 rounded-2xl border-2 border-gray-400/50"
+          data-aos="fade-up-left"
+          data-aos-delay="200"
         >
-          <form
-            action="../404.html"
-            method="get"
-            class="w-full max-w-3xl relative mx-auto flex flex-col items-center justify-center text-sm dark:text-white text-gray-600 px-4 py-8 rounded-2xl border-2 border-gray-400/50"
-            data-aos="fade-up-left"
-            data-aos-delay="200"
-          >
-          <div id="closex" class="absolute top-5 right-5  p-3 rounded-full">
+          <div id="closex" class="absolute top-5 right-5 p-3 rounded-full">
             <i class="fa-solid fa-xmark"></i>
           </div>
-            <div>
-              <h1 class="text-xl md:text-3xl font-bold">
-                Book
-                <span
-                  class="bg-gradient-to-r from-white to-gray-600 bg-clip-text text-transparent"
-                  >Now</span
-                >
-              </h1>
-            </div>
-            <div class="w-full mt-5">
-              <label class="font-medium">Full Name</label>
-              <div
-                class="flex items-center mt-2 mb-4 h-10 pl-3 border border-slate-400 rounded-xl focus-within:ring-2 focus-within:ring-violet-400 transition-all overflow-hidden"
+          <div>
+            <h1 class="text-xl md:text-3xl font-bold">
+              Book
+              <span
+                class="bg-gradient-to-r from-white to-gray-600 bg-clip-text text-transparent"
+                >Now</span
               >
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M18.311 16.406a9.64 9.64 0 0 0-4.748-4.158 5.938 5.938 0 1 0-7.125 0 9.64 9.64 0 0 0-4.749 4.158.937.937 0 1 0 1.623.938c1.416-2.447 3.916-3.906 6.688-3.906 2.773 0 5.273 1.46 6.689 3.906a.938.938 0 0 0 1.622-.938M5.938 7.5a4.063 4.063 0 1 1 8.125 0 4.063 4.063 0 0 1-8.125 0"
-                    fill="#475569"
-                  />
-                </svg>
-                <input
-                  type="text"
-                  class="h-full px-2 w-full outline-none bg-transparent text-black dark:text-gray-300"
-                  placeholder="Enter your full name"
-                  required
-                />
-              </div>
-
-              <label class="font-medium mt-4">Email Address</label>
-              <div
-                class="flex items-center mt-2 mb-4 h-10 pl-3 border border-slate-400 rounded-xl focus-within:ring-2 focus-within:ring-violet-400 transition-all overflow-hidden"
+            </h1>
+          </div>
+          <div class="w-full mt-5">
+            <label class="font-medium">Full Name</label>
+            <div
+              class="flex items-center mt-2 mb-4 h-10 pl-3 border border-slate-400 rounded-xl focus-within:ring-2 focus-within:ring-violet-400 transition-all overflow-hidden"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M17.5 3.438h-15a.937.937 0 0 0-.937.937V15a1.563 1.563 0 0 0 1.562 1.563h13.75A1.563 1.563 0 0 0 18.438 15V4.375a.94.94 0 0 0-.938-.937m-2.41 1.874L10 9.979 4.91 5.313zM3.438 14.688v-8.18l5.928 5.434a.937.937 0 0 0 1.268 0l5.929-5.435v8.182z"
-                    fill="#475569"
-                  />
-                </svg>
-                <input
-                  type="email"
-                  class="h-full px-2 w-full outline-none bg-transparent text-black dark:text-gray-300"
-                  placeholder="Enter your email address"
-                  required
+                <path
+                  d="M18.311 16.406a9.64 9.64 0 0 0-4.748-4.158 5.938 5.938 0 1 0-7.125 0 9.64 9.64 0 0 0-4.749 4.158.937.937 0 1 0 1.623.938c1.416-2.447 3.916-3.906 6.688-3.906 2.773 0 5.273 1.46 6.689 3.906a.938.938 0 0 0 1.622-.938M5.938 7.5a4.063 4.063 0 1 1 8.125 0 4.063 4.063 0 0 1-8.125 0"
+                  fill="#475569"
                 />
-              </div>
-
-              <label class="font-medium mt-4">Message</label>
-              <textarea
-                rows="4"
-                class="w-full mt-2 p-2 bg-transparent text-black dark:text-gray-300 border border-slate-400 rounded-lg outline-none focus:ring-2 focus-within:ring-violet-400 transition-all"
-                placeholder="Enter your message"
-                required
-              ></textarea>
-
+              </svg>
               <input
-                class="px-6 bg-violet-500 hover:bg-violet-600 text-white py-2.5 w-fit rounded-full mt-5"
-                type="submit"
-                value="Submit"
-                href="../404.html"
+                type="text"
+                class="h-full px-2 w-full outline-none bg-transparent text-black dark:text-gray-300"
+                placeholder="Enter your full name"
+                required
               />
             </div>
-          </form>
-        </div>
+
+            <label class="font-medium mt-4">Email Address</label>
+            <div
+              class="flex items-center mt-2 mb-4 h-10 pl-3 border border-slate-400 rounded-xl focus-within:ring-2 focus-within:ring-violet-400 transition-all overflow-hidden"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.5 3.438h-15a.937.937 0 0 0-.937.937V15a1.563 1.563 0 0 0 1.562 1.563h13.75A1.563 1.563 0 0 0 18.438 15V4.375a.94.94 0 0 0-.938-.937m-2.41 1.874L10 9.979 4.91 5.313zM3.438 14.688v-8.18l5.928 5.434a.937.937 0 0 0 1.268 0l5.929-5.435v8.182z"
+                  fill="#475569"
+                />
+              </svg>
+              <input
+                type="email"
+                class="h-full px-2 w-full outline-none bg-transparent text-black dark:text-gray-300"
+                placeholder="Enter your email address"
+                required
+              />
+            </div>
+
+            <label class="font-medium mt-4">Message</label>
+            <textarea
+              rows="4"
+              class="w-full mt-2 p-2 bg-transparent text-black dark:text-gray-300 border border-slate-400 rounded-lg outline-none focus:ring-2 focus-within:ring-violet-400 transition-all"
+              placeholder="Enter your message"
+              required
+            ></textarea>
+
+            <input
+              class="px-6 bg-violet-500 hover:bg-violet-600 text-white py-2.5 w-fit rounded-full mt-5"
+              type="submit"
+              value="Submit"
+              href="../404.html"
+            />
+          </div>
+        </form>
       </div>
 
       <div class="flex flex-col items-center justify-center w-full">
@@ -616,15 +646,27 @@
         const bookform = document.querySelector("#bookform");
         const closex = document.querySelector("#closex");
 
+        book.addEventListener("click", function () {
+          bookform.hidden = false;
+          bookform.classList.add("pop");
+        });
 
-        book.addEventListener('click', function(){
-          bookform.classList.remove('hidden');
-        })
+        closex.addEventListener("click", function () {
+          bookform.classList.remove("pop");
+          bookform.classList.add("popout");
 
-        closex.addEventListener('click', function(){
-          bookform.classList.add('hidden');
-        })
-
+          // Wait for animation to finish before hiding
+          bookform.addEventListener(
+            "animationend",
+            () => {
+              if (bookform.classList.contains("popout")) {
+                bookform.hidden = true;
+              }
+              bookform.classList.remove("popout");
+            },
+            { once: true }
+          );
+        });
       </script>
 
       <script>
