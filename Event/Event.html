@@ -13,8 +13,6 @@
       content="event management, wedding planner, corporate events, party planning, exhibition management, event organizer, conferences, celebrations"
     />
 
-    <base href="../assets" />
-
     <!-- Font Awesome Cdn Link -->
     <link
       rel="stylesheet"
@@ -40,7 +38,7 @@
     />
 
     <!-- Tailwind Css  -->
-    <link rel="stylesheet" href="../output.css" />
+   <link rel="stylesheet" href="../output.css">
 
     <!-- trig js -->
 
@@ -782,7 +780,7 @@
           card.className =
             "fade-in bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl shadow-xl ";
           card.innerHTML = `
-          <img src="${e.img}" class="rounded-t-2xl mb-4 w-full h-72 object-cover ">
+          <img src="${e.img}" alt="${e.title}" class="rounded-t-2xl mb-4 w-full h-72 object-cover ">
           <div class="p-4">
           <span class="text-sm font-medium text-indigo-400">${e.date}</span>
           <h3 class="text-2xl font-bold text-white mt-2">${e.title}</h3>
