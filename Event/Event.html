@@ -38,7 +38,7 @@
     />
 
     <!-- Tailwind Css  -->
-   <link rel="stylesheet" href="../output.css">
+    <link rel="stylesheet" href="../output.css" />
 
     <!-- trig js -->
 
@@ -662,13 +662,15 @@
             Confirm
           </button>
 
-          <button
-            type="reset"
-            id="closeModal"
-            class="w-fit p-2 rounded-full text-white font-medium transition absolute right-2 top-2 cursor-pointer"
-          >
-            <i class="fa-solid fa-xmark"></i>
-          </button>
+          <div class="absolute right-2 top-2">
+            <button
+              type="reset"
+              id="closeModal"
+              class="w-fit p-2 rounded-full text-white font-medium transition cursor-pointer"
+            >
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
         </form>
       </div>
     </div>
@@ -780,8 +782,8 @@
           card.className =
             "fade-in bg-white/5 backdrop-blur-lg border border-white/20 rounded-3xl shadow-xl ";
           card.innerHTML = `
-          <img src="${e.img}" alt="${e.title}" class="rounded-t-2xl mb-4 w-full h-72 object-cover ">
-          <div class="p-4">
+          <img src="${e.img}" alt="${e.title}" class="rounded-3xl mb-4 w-full h-full object-cover brightness-30">
+          <div class="p-4 absolute inset-0 h-full flex flex-col justify-end">
           <span class="text-sm font-medium text-indigo-400">${e.date}</span>
           <h3 class="text-2xl font-bold text-white mt-2">${e.title}</h3>
           <p class="text-gray-300 mt-2 mb-4">${e.desc}</p>
