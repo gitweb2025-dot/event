@@ -12,3 +12,7 @@
   --font-sans: "Josefin Sans", sans-serif;
   --font-lora: "Lora", serif;
 }
+
+@utility flex-center{
+  @apply flex flex-col items-center text-center;
+}
