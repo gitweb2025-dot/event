@@ -631,7 +631,7 @@
     <!-- Popup Modal -->
     <div
       id="modal"
-      class="hidden fixed inset-0 items-center justify-center bg-black/90 backdrop-blur-sm z-50"
+      class="hidden fixed inset-0 items-center justify-center bg-black/90 backdrop-blur-sm z-50 px-4"
     >
       <div class="flex flex-col gap-4 relative">
         <form
@@ -780,7 +780,7 @@
         list.forEach((e) => {
           const card = document.createElement("div");
           card.className =
-            "fade-in bg-white/5 backdrop-blur-lg border border-white/20 rounded-3xl shadow-xl ";
+            "fade-in bg-white/5 backdrop-blur-lg border border-white/20 rounded-3xl shadow-xl h-[400px]";
           card.innerHTML = `
           <img src="${e.img}" alt="${e.title}" class="rounded-3xl mb-4 w-full h-full object-cover brightness-30">
           <div class="p-4 absolute inset-0 h-full flex flex-col justify-end">

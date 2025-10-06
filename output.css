@@ -439,6 +439,9 @@
   .h-\[2500px\] {
     height: 2500px;
   }
+  .h-\[full\] {
+    height: full;
+  }
   .h-full {
     height: 100%;
   }
