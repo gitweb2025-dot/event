@@ -568,7 +568,7 @@
       <!-- Heading -->
       <div class="relative text-center py-10">
         <h2
-          class="text-5xl font-extrabold bg-gradient-to-r from-gray-400 to-gary-400 bg-clip-text text-transparent"
+          class="text-5xl font-extrabold bg-gradient-to-r from-gray-400 to-gray-600 bg-clip-text text-transparent"
         >
           Explore Our Events
         </h2>
@@ -637,7 +637,7 @@
         <form
           method="get"
           action="../404.html"
-          class="bg-white/5 border border-white/10 p-8 rounded-3xl shadow-2xl transform scale-75 opacity-0 transition-all duration-500 w-96"
+          class="bg-white/5 mt-4 border border-white/10 p-8 rounded-3xl shadow-2xl transform scale-75 opacity-0 transition-all duration-500 w-96"
         >
           <h3 class="text-3xl font-bold text-white mb-4" id="modalTitle">
             Event Registration
@@ -665,7 +665,7 @@
           <button
             type="reset"
             id="closeModal"
-            class="w-fit p-2 mt-4 rounded-full text-white font-medium transition absolute right-5 top-0 cursor-pointer"
+            class="w-fit p-2 rounded-full text-white font-medium transition absolute right-2 top-2 cursor-pointer"
           >
             <i class="fa-solid fa-xmark"></i>
           </button>
@@ -695,7 +695,7 @@
             title: "Jazz Evening",
             date: "Dec 8, 2025",
             img: "../assets/jazz.jpeg",
-            desc: "Smooth jazz under starlit skies.",
+            desc: "Smooth jazz under starlit skies to dive on it.",
             modal: "Register for Jazz Evening night.",
           },
         ],
@@ -708,14 +708,14 @@
             modal: "Join Tech Innovators Summit.",
           },
           {
-            title: "Future of AI Forum",
+            title: "Future of Mega AI Forum",
             date: "Dec 1, 2025",
             img: "../assets/Future.jpg",
             desc: "The future of AI in one place.",
             modal: "Register for Future of AI Forum.",
           },
           {
-            title: "Startup Pitch Day",
+            title: "Startup with Exotic Day",
             date: "Jan 10, 2026",
             img: "../assets/Startup.jpg",
             desc: "Pitch your ideas to investors.",
@@ -724,7 +724,7 @@
         ],
         workshops: [
           {
-            title: "Creative Art Workshop",
+            title: "Creative Art with Workshop",
             date: "Dec 12, 2025",
             img: "../assets/Creative.jpeg",
             desc: "Hands-on creative journey.",
@@ -738,7 +738,7 @@
             modal: "Register for Photography Masterclass.",
           },
           {
-            title: "Culinary Skills Lab",
+            title: "Culinary Skills Lab on Cook",
             date: "Feb 14, 2026",
             img: "../assets/Culinary.jpg",
             desc: "Cook like a master chef.",
@@ -778,7 +778,7 @@
         list.forEach((e) => {
           const card = document.createElement("div");
           card.className =
-            "fade-in bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl shadow-xl ";
+            "fade-in bg-white/5 backdrop-blur-lg border border-white/20 rounded-3xl shadow-xl ";
           card.innerHTML = `
           <img src="${e.img}" alt="${e.title}" class="rounded-t-2xl mb-4 w-full h-72 object-cover ">
           <div class="p-4">
