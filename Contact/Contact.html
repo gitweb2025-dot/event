@@ -147,13 +147,13 @@
 
   <body class="antialiased bg-black text-white relative">
     <!-- back image -->
-    <!-- <div class="absolute inset-0 z-[-1] overflow-hidden">
+    <div class="absolute inset-0 z-[-1] overflow-hidden">
       <img
         class="w-full h-full object-cover blur-3xl brightness-20"
         src="../assets/Luxury Weddings.jpg"
         alt="bg-image"
       />
-    </div> -->
+    </div>
 
     <!-- form -->
     <div
@@ -514,7 +514,8 @@
       </script>
     </header>
 
-    <section class="px-4 py-10">
+    <!-- MAIN SECTION  -->
+    <section class="px-4 py-10 overflow-x-hidden">
       <!-- bread crumb -->
       <div class="pt-16">
         <div class="flex items-start gap-2">
@@ -563,7 +564,7 @@
       </div>
 
       <div class="w-full mx-auto py-10">
-        <div class="w-full flex-center ">
+        <div class="w-full flex-center">
           <span class="px-2 py-1 text-xs border border-gray-300 rounded-full"
             >Reach Out To Us</span
           >
@@ -653,51 +654,63 @@
           </div>
         </div>
       </div>
+    </section>
 
-      <form class="flex flex-col items-center text-sm py-8">
-        <p class="text-xl text-gray-300 font-bold pb-10 text-center">
-          How We Can Help
-        </p>
-
-        <div
-          class="flex flex-col md:flex-row items-center gap-8 w-[350px] md:w-[700px]"
-        >
-          <div class="w-full">
-            <label class="text-white/70">Your Name</label>
-            <input
-              placeholder="Enter your Name"
-              class="h-12 p-2 mt-2 w-full border border-gray-500/30 rounded outline-none focus:border-gray-300"
-              type="text"
-              required
-            />
-          </div>
-          <div class="w-full">
-            <label class="text-white/70">Your Email</label>
-            <input
-              placeholder="Enter your E-mail"
-              class="h-12 p-2 mt-2 w-full border border-gray-500/30 rounded outline-none focus:border-gray-300"
-              type="email"
-              required
-            />
-          </div>
+    <!-- FORM -->
+    <section class="mb-10 overflow-x-hidden px-4">
+      <div class="grid grid-cols-1 xl:grid-cols-2">
+        <div>
+          <img class="w-full h-full object-cover aspect-auto" src="../assets/contact.jpg" alt="contact" />
         </div>
-
-        <div class="mt-6 w-[350px] md:w-[700px]">
-          <label class="text-white/70">Message</label>
-          <textarea
-            placeholder="Enter your Message"
-            class="w-full mt-2 p-2 h-40 border border-gray-500/30 rounded resize-none outline-none focus:border-gray-300"
-            required
-          ></textarea>
-        </div>
-
-        <button
-          type="submit"
-          class="mt-5 bg-gray-600 text-white h-12 w-56 px-4 rounded active:scale-95 transition"
+        <form
+          method="get"
+          action="../404.html"
+          class="flex flex-col items-center text-sm p-10 bg-white/5"
         >
-          Send Message
-        </button>
-      </form>
+          <p class="text-xl text-gray-300 font-bold pb-10 text-center">
+            How We Can Help
+          </p>
+
+          <div
+            class="flex flex-col md:flex-row items-center gap-8 w-[350px] md:w-[700px]"
+          >
+            <div class="w-full">
+              <label class="text-white/70">Your Name</label>
+              <input
+                placeholder="Enter your Name"
+                class="h-12 p-2 mt-2 w-full border border-gray-500/30 rounded outline-none focus:border-gray-300"
+                type="text"
+                required
+              />
+            </div>
+            <div class="w-full">
+              <label class="text-white/70">Your Email</label>
+              <input
+                placeholder="Enter your E-mail"
+                class="h-12 p-2 mt-2 w-full border border-gray-500/30 rounded outline-none focus:border-gray-300"
+                type="email"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="mt-6 w-[350px] md:w-[700px]">
+            <label class="text-white/70">Message</label>
+            <textarea
+              placeholder="Enter your Message"
+              class="w-full mt-2 p-2 h-40 border border-gray-500/30 rounded resize-none outline-none focus:border-gray-300"
+              required
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="mt-5 bg-gray-600 text-white h-12 w-56 px-4 rounded active:scale-95 transition"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
     </section>
 
     <!-- footer -->
@@ -823,22 +836,22 @@
       book.forEach((el) => {
         el.addEventListener("click", function () {
           bookform.hidden = false;
-          bookform.classList.add("pop");
+          bookform.querySelector("form").classList.add("pop");
         });
       });
 
       closex.addEventListener("click", function () {
-        bookform.classList.remove("pop");
-        bookform.classList.add("popout");
+        bookform.querySelector("form").classList.remove("pop");
+        bookform.querySelector("form").classList.add("popout");
 
         // Wait for animation to finish before hiding
         bookform.addEventListener(
           "animationend",
           () => {
-            if (bookform.classList.contains("popout")) {
+            if (bookform.querySelector("form").classList.contains("popout")) {
               bookform.hidden = true;
             }
-            bookform.classList.remove("popout");
+            bookform.querySelector("form").classList.remove("popout");
           },
           { once: true }
         );

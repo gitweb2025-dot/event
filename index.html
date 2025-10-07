@@ -653,37 +653,6 @@
         </div>
       </div>
 
-      <!-- Book Now Js -->
-      <script>
-        const book = document.querySelectorAll("#book");
-        const bookform = document.querySelector("#bookform");
-        const closex = document.querySelector("#closex");
-
-        book.forEach((el) => {
-          el.addEventListener("click", function () {
-            bookform.hidden = false;
-            bookform.classList.add("pop");
-          });
-        });
-
-        closex.addEventListener("click", function () {
-          bookform.classList.remove("pop");
-          bookform.classList.add("popout");
-
-          // Wait for animation to finish before hiding
-          bookform.addEventListener(
-            "animationend",
-            () => {
-              if (bookform.classList.contains("popout")) {
-                bookform.hidden = true;
-              }
-              bookform.classList.remove("popout");
-            },
-            { once: true }
-          );
-        });
-      </script>
-
       <!-- Date Js  -->
       <script>
         // Set event date
@@ -1123,7 +1092,6 @@
     </section>
 
     <!-- Our Impact  -->
-
     <section
       id="impact"
       class="py-6 md:py-12 px-4 overflow-hidden overflow-x-hidden"
@@ -1614,6 +1582,37 @@
         </div>
       </div>
     </footer>
+
+    <!-- Book Now Js -->
+    <script>
+      const book = document.querySelectorAll("#book");
+      const bookform = document.querySelector("#bookform");
+      const closex = document.querySelector("#closex");
+
+      book.forEach((el) => {
+        el.addEventListener("click", function () {
+          bookform.hidden = false;
+          bookform.querySelector("form").classList.add("pop");
+        });
+      });
+
+      closex.addEventListener("click", function () {
+        bookform.querySelector("form").classList.remove("pop");
+        bookform.querySelector("form").classList.add("popout");
+
+        // Wait for animation to finish before hiding
+        bookform.addEventListener(
+          "animationend",
+          () => {
+            if (bookform.querySelector("form").classList.contains("popout")) {
+              bookform.hidden = true;
+            }
+            bookform.querySelector("form").classList.remove("popout");
+          },
+          { once: true }
+        );
+      });
+    </script>
 
     <!-- Aos Animation  -->
     <script

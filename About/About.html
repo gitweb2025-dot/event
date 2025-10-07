@@ -132,13 +132,13 @@
 
   <body class="antialiased bg-black text-white relative">
     <!-- back image -->
-    <div class="absolute inset-0 z-[-1] overflow-hidden">
+    <!-- <div class="absolute inset-0 z-[-1] overflow-hidden">
       <img
         class="w-full h-full object-cover blur-3xl brightness-30"
         src="../assets/ser-bg-1.jpeg"
         alt="bg-image"
       />
-    </div>
+    </div> -->
 
     <!-- form -->
     <div
@@ -837,12 +837,12 @@
         >
           <div
             id="event-card"
-            class="bg-white/5 border border-white/10 rounded-xl p-2 shadow-lg space-y-3 backdrop-blur-3xl"
+            class="bg-white/3 border border-white/10 rounded-xl p-2 shadow-lg space-y-3 backdrop-blur-3xl"
             aria-live="polite"
           >
             <h3
               id="event-title"
-              class="text-2xl lg:text-4xl font-lora transition-opacity duration-300"
+              class="text-2xl lg:text-4xl uppercase font-sans transition-opacity duration-300"
             ></h3>
             <p
               id="event-desc"
@@ -860,9 +860,9 @@
             </div>
             <div>
               <form
-                action="#"
+                action="../404.html"
                 method="get"
-                class="bg-white/5 flex flex-col w-full p-4 rounded-2xl py-8"
+                class="bg-white/3 border border-white/10 flex flex-col w-full p-4 rounded-2xl py-8"
               >
                 <div class="grid md:grid-cols-2 gap-6 w-full">
                   <input
@@ -912,19 +912,19 @@
             src: "../assets/ab-fil-2.jpg",
             alt: "Inspiring Music",
             title: "Inspiring Music",
-            desc: "Designed for professionals, creators, and innovators, our networking gala offers the ideal environment to build meaningful connections. Share ideas, discover new opportunities, and engage in conversations that could spark collaborations for the future—all while enjoying a relaxed and elegant atmosphere. A spectacular closing night with live music and theatrical visuals. It was a joyful community celebration that wrapped the event in high energy and lasting memories.",
+            desc: "Designed for professionals, creators, and innovators, our networking gala offers the ideal environment to build meaningful connections. Share ideas, discover new opportunities, and engage in conversations that could spark collaborations for the future—all while enjoying a relaxed and elegant atmosphere. A spectacular closing night with live music and theatrical visuals. It was a joyful community celebration that wrapped the event in high energy and lasting memories, participants engaged directly walk away with practical skills.",
           },
           {
             src: "../assets/ab-fil-3.jpg",
             alt: "Live Show",
             title: "Live Show",
-            desc: "Hands-on workshops encouraged collaboration and learning. From design sprints to creative labs, participants engaged directly with experts to build real solutions and walk away with practical skills. Gain valuable insights from industry leaders and visionaries during our keynote sessions. These talks will dive deep into emerging trends, innovative strategies, and powerful stories that inspire growth. Whether you’re here to learn, adapt, or get motivated, these sessions will leave you with actionable takeaways.",
+            desc: "Hands-on workshops encouraged collaboration and learning. From design sprints to creative labs, participants engaged directly with experts to build real solutions and walk away with practical skills. Gain valuable insights from industry leaders and visionaries during our keynote sessions. These talks will dive deep into emerging trends, innovative strategies, and powerful stories that inspire growth. Whether you’re here to learn, adapt, or get motivated, these sessions will leave you with actionable takeaways, engaged directly walk away with practical skills.",
           },
           {
             src: "../assets/ab-fil-4.jpg",
             alt: "Grand Finale",
             title: "Grand Finale",
-            desc: "A spectacular closing night with live music and theatrical visuals. It was a joyful community celebration that wrapped the event in high energy and lasting memories. End the day on a high note with an unforgettable entertainment lineup. From live bands and electrifying singers to DJs who will keep the energy flowing, the evening show promises nonstop fun. It’s not just a performance—it’s a celebration of creativity, culture, and community.",
+            desc: "A spectacular closing night with live music and theatrical visuals. It was a joyful community celebration that wrapped the event in high energy and lasting memories. End the day on a high note with an unforgettable entertainment lineup. From live bands and electrifying singers to DJs who will keep the energy flowing, the evening show promises nonstop fun. It’s not just a performance—it’s a celebration of creativity, culture, and community. participants engaged directly with experts to build real solutions and walk away with practical skills.",
           },
         ];
         // ======================================
@@ -1288,22 +1288,22 @@
       book.forEach((el) => {
         el.addEventListener("click", function () {
           bookform.hidden = false;
-          bookform.classList.add("pop");
+          bookform.querySelector('form').classList.add('pop');
         });
       });
 
       closex.addEventListener("click", function () {
-        bookform.classList.remove("pop");
-        bookform.classList.add("popout");
+        bookform.querySelector('form').classList.remove("pop");
+        bookform.querySelector('form').classList.add("popout");
 
         // Wait for animation to finish before hiding
         bookform.addEventListener(
           "animationend",
           () => {
-            if (bookform.classList.contains("popout")) {
+            if (bookform.querySelector('form').classList.contains("popout")) {
               bookform.hidden = true;
             }
-            bookform.classList.remove("popout");
+            bookform.querySelector('form').classList.remove("popout");
           },
           { once: true }
         );

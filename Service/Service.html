@@ -500,7 +500,7 @@
       </script>
     </header>
 
-    <main class="px-4 py-10">
+    <main class="px-4 py-10 overflow-x-hidden">
       <!-- bread crumb -->
       <div class="pt-16">
         <div class="flex items-start gap-2">
@@ -804,18 +804,20 @@
             <a class="hover:text-slate-600 transition" href="../index.html"
               >Home</a
             >
-            <a class="hover:text-slate-600 transition" href="../About/About.html"
-              >About us</a
-            >
             <a
               class="hover:text-slate-600 transition"
-              href="./Service.html"
+              href="../About/About.html"
+              >About us</a
+            >
+            <a class="hover:text-slate-600 transition" href="./Service.html"
               >Services<span
                 class="text-xs text-white bg-gray-600 rounded-bl-xl rounded-tr-xl ml-2 px-2 py-1"
                 >New</span
               ></a
             >
-            <a class="hover:text-slate-600 transition" href="../Event/Event.html"
+            <a
+              class="hover:text-slate-600 transition"
+              href="../Event/Event.html"
               >Events</a
             >
             <a class="hover:text-slate-600 transition" href="../404.html"
@@ -1117,27 +1119,27 @@
     <!-- ================= JS ================= -->
     <script>
       function openModal(id) {
+        const div = document.getElementById(id);
         document.getElementById(id).classList.remove("hidden");
         document.getElementById(id).classList.add("flex");
-        document.getElementById(id).classList.add("pop");
+        div.querySelector("div").classList.add("pop");
       }
       function closeModal(id) {
+        const close = document.getElementById(id);
         document.getElementById(id).classList.remove("pop");
-        document.getElementById(id).classList.add("popout");
+        close.querySelector("div").classList.add("popout");
 
         document.getElementById(id).addEventListener(
           "animationend",
           () => {
-            if (document.getElementById(id).classList.contains("popout")) {
+            if (close.querySelector("div").classList.contains("popout")) {
               document.getElementById(id).classList.add("hidden");
             }
-            document.getElementById(id).classList.remove("flex");
-        document.getElementById(id).classList.remove("popout");
+            close.classList.remove("flex");
+            close.querySelector("div").classList.remove("popout");
           },
           { once: true }
         );
-        
-
       }
     </script>
 
@@ -1150,22 +1152,22 @@
       book.forEach((el) => {
         el.addEventListener("click", function () {
           bookform.hidden = false;
-          bookform.classList.add("pop");
+          bookform.querySelector('form').classList.add('pop');
         });
       });
 
       closex.addEventListener("click", function () {
-        bookform.classList.remove("pop");
-        bookform.classList.add("popout");
+        bookform.querySelector('form').classList.remove("pop");
+        bookform.querySelector('form').classList.add("popout");
 
         // Wait for animation to finish before hiding
         bookform.addEventListener(
           "animationend",
           () => {
-            if (bookform.classList.contains("popout")) {
+            if (bookform.querySelector('form').classList.contains("popout")) {
               bookform.hidden = true;
             }
-            bookform.classList.remove("popout");
+            bookform.querySelector('form').classList.remove("popout");
           },
           { once: true }
         );

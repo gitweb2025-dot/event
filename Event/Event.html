@@ -517,7 +517,7 @@
     </header>
 
     <!-- Event Section -->
-    <section class="py-10 px-4 relative">
+    <section class="py-10 px-4 relative overflow-x-hidden">
       <!-- bread crumb -->
       <div class="pt-16">
         <div class="flex items-start gap-2">
@@ -568,13 +568,15 @@
       <!-- Heading -->
       <div class="relative text-center py-10">
         <h2
-          class="text-5xl font-extrabold bg-gradient-to-r from-gray-400 to-gray-600 bg-clip-text text-transparent"
+          class="text-5xl font-extrabold bg-gradient-to-r from-gray-300 to-gray-400 w-fit mx-auto bg-clip-text text-transparent uppercase"
         >
           Explore Our Events
         </h2>
-        <p class="text-gray-400 max-w-2xl mx-auto mt-4">
-          Browse concerts, conferences, and workshops. Search or filter to find
-          what excites you.
+        <p class="text-gray-400 max-w-5xl mx-auto mt-4">
+          At Eventiz, we don’t just manage events — we craft experiences that
+          inspire, connect, and celebrate life’s most meaningful moments. From
+          small private functions to large-scale corporate gatherings with
+          creativity, precision, and care.
         </p>
       </div>
 
@@ -637,7 +639,7 @@
         <form
           method="get"
           action="../404.html"
-          class="bg-white/5 mt-4 border border-white/10 p-8 rounded-3xl shadow-2xl transform scale-75 opacity-0 transition-all duration-500 w-96"
+          class="bg-white/5 mt-4 border border-white/10 p-8 rounded-3xl shadow-2xl transform scale-75 opacity-0 transition-all duration-500 max-w-2xl"
         >
           <h3 class="text-3xl font-bold text-white mb-4" id="modalTitle">
             Event Registration
@@ -782,12 +784,14 @@
           card.className =
             "fade-in bg-white/5 backdrop-blur-lg border border-white/20 rounded-3xl shadow-xl h-[400px]  hover:scale-[1.05] transition duration-500 ease-out";
           card.innerHTML = `
-          <img src="${e.img}" alt="${e.title}" class="rounded-3xl mb-4 w-full h-full object-cover brightness-30">
-          <div class="p-4 absolute inset-0 h-full flex flex-col justify-end">
+          <img src="${e.img}" alt="${e.title}" class="rounded-3xl mb-4 w-full h-full object-cover brightness-20">
+          <div class="p-4 absolute inset-0 h-full flex flex-col justify-end rounded-3xl transition duration-500 ease-out">
           <span class="text-sm font-medium text-indigo-400">${e.date}</span>
           <h3 class="text-2xl font-bold text-white mt-2">${e.title}</h3>
           <p class="text-gray-300 mt-2 mb-4">${e.desc}</p>
-          <button class="openModal w-full py-3 rounded-xl bg-gradient-to-r from-gray-600 to-gray-600 hover:opacity-90 transition font-semibold cursor-pointer" data-title="${e.title}" data-desc="${e.modal}">Register</button>
+          <div>
+            <button class="openModal w-fit py-3 px-6 rounded-xl bg-gradient-to-r from-gray-600 to-gray-600 hover:opacity-90 transition font-semibold cursor-pointer" data-title="${e.title}" data-desc="${e.modal}">Register</button>
+          </div>
           </div>
         `;
           eventGrid.appendChild(card);
@@ -977,22 +981,22 @@
       book.forEach((el) => {
         el.addEventListener("click", function () {
           bookform.hidden = false;
-          bookform.classList.add("pop");
+          bookform.querySelector('form').classList.add('pop');
         });
       });
 
       closex.addEventListener("click", function () {
-        bookform.classList.remove("pop");
-        bookform.classList.add("popout");
+        bookform.querySelector('form').classList.remove("pop");
+        bookform.querySelector('form').classList.add("popout");
 
         // Wait for animation to finish before hiding
         bookform.addEventListener(
           "animationend",
           () => {
-            if (bookform.classList.contains("popout")) {
+            if (bookform.querySelector('form').classList.contains("popout")) {
               bookform.hidden = true;
             }
-            bookform.classList.remove("popout");
+            bookform.querySelector('form').classList.remove("popout");
           },
           { once: true }
         );
