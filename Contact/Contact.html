@@ -147,13 +147,13 @@
 
   <body class="antialiased bg-black text-white relative">
     <!-- back image -->
-    <div class="absolute inset-0 z-[-1] overflow-hidden">
+    <!-- <div class="absolute inset-0 z-[-1] overflow-hidden">
       <img
         class="w-full h-full object-cover blur-3xl brightness-20"
-        src="../assets/Luxury Weddings.jpg"
+        src="../assets/ab-bg-3.jpg"
         alt="bg-image"
       />
-    </div>
+    </div> -->
 
     <!-- form -->
     <div
@@ -564,28 +564,37 @@
       </div>
 
       <div class="w-full mx-auto py-10">
-        <div class="w-full flex-center">
+        <div class="w-full flex-center space-y-5">
           <span class="px-2 py-1 text-xs border border-gray-300 rounded-full"
             >Reach Out To Us</span
           >
-          <h1 class="text-4xl font-bold text-center mt-4">
+          <h1 class="text-4xl font-bold text-center">
             We'd love to Hear From You.
           </h1>
-          <p class="text-center mt-4">
+          <p class="text-center">
             Or just reach out manually to
-            <a
-              href="mailto:contact@prebuiltui.com"
-              class="text-gray-600 hover:underline"
-              >contact@prebuiltui.com</a
+            <a href="../404.html" class="text-gray-600 hover:underline"
+              >contact@eventiz.com</a
             >
           </p>
+          <p class="text-white/50">
+            We’d love to hear from you. Whether you’re planning a wedding,
+            corporate function, birthday party, or any special occasion — our
+            team is here to bring your vision to life.
+          </p>
         </div>
+      </div>
+    </section>
+
+    <!-- FORM -->
+    <section class="mb-10 overflow-x-hidden px-4">
+      <div class="grid grid-cols-1 xl:grid-cols-4 gap-4 place-items-center">
         <div
-          class="flex flex-wrap justify-between items-center lg:text-center gap-6 mt-8 py-6"
+          class="flex flex-wrap justify-between items-start gap-6 xl:col-span-1 bg-white/5 py-4 p-4 lg:px-8 rounded-2xl w-full"
         >
-          <div class="flex flex-col lg:items-center">
+          <div class="flex flex-col items-start">
             <svg
-              class="text-gray-500 bg-gray-500/20 p-2.5 aspect-square rounded-full size-10"
+              class="text-gray-300 bg-gray-500/20 p-2.5 aspect-square rounded-full size-10"
               width="24"
               height="24"
               viewBox="0 0 24 24"
@@ -598,19 +607,16 @@
               />
             </svg>
             <p class="text-lg font-bold mt-2">Email Support</p>
-            <p class="text-gray-500 mt-1 mb-4">
+            <p class="text-gray-400 mt-1 mb-4">
               Our team can respond in real time.
             </p>
-            <a
-              href="contact@prebuiltui.com"
-              class="text-gray-600 font-semibold"
-            >
-              contact@prebuiltui.com
+            <a href="../404.html" class="text-gray-500 font-semibold">
+              contact@eventiz.com
             </a>
           </div>
-          <div class="flex flex-col lg:items-center">
+          <div class="flex flex-col items-start">
             <svg
-              class="text-gray-500 bg-gray-500/20 p-2.5 aspect-square rounded-full size-10"
+              class="text-gray-300 bg-gray-500/20 p-2.5 aspect-square rounded-full size-10"
               width="24"
               height="24"
               viewBox="0 0 24 24"
@@ -623,16 +629,16 @@
               />
             </svg>
             <p class="text-lg font-bold mt-2">Visit Our Office</p>
-            <p class="text-gray-500 mt-1 mb-4">
+            <p class="text-gray-400 mt-1 mb-4">
               Visit our location in real life.
             </p>
-            <span class="text-gray-600 font-semibold">
+            <span class="text-gray-500 font-semibold">
               221b Elementary Avenue, NY
             </span>
           </div>
-          <div class="flex flex-col lg:items-center">
+          <div class="flex flex-col items-start">
             <svg
-              class="text-gray-500 bg-gray-500/20 p-2.5 aspect-square rounded-full size-10"
+              class="text-gray-300 bg-gray-500/20 p-2.5 aspect-square rounded-full size-10"
               width="21"
               height="21"
               viewBox="0 0 21 21"
@@ -645,41 +651,41 @@
               />
             </svg>
             <p class="text-lg font-bold mt-2">Call Us Directly</p>
-            <p class="text-gray-500 mt-1 mb-4">
+            <p class="text-gray-400 mt-1 mb-4">
               Available during working hours.
             </p>
-            <span class="text-gray-600 font-semibold">
+            <a href="../404.html" class="text-gray-500 font-semibold">
               (+1) 234 - 4567 - 789
-            </span>
+            </a>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- FORM -->
-    <section class="mb-10 overflow-x-hidden px-4">
-      <div class="grid grid-cols-1 xl:grid-cols-2">
-        <div>
-          <img class="w-full h-full object-cover aspect-auto" src="../assets/contact.jpg" alt="contact" />
-        </div>
         <form
           method="get"
           action="../404.html"
-          class="flex flex-col items-center text-sm p-10 bg-white/5"
+          class="flex flex-col items-start text-sm px-4 bg-white/5 py-10 w-full xl:col-span-3 rounded-2xl"
         >
-          <p class="text-xl text-gray-300 font-bold pb-10 text-center">
+          <p class="text-xl uppercase text-gray-300 font-bold pb-10 text-left">
             How We Can Help
           </p>
 
-          <div
-            class="flex flex-col md:flex-row items-center gap-8 w-[350px] md:w-[700px]"
-          >
+          <div class="flex flex-col md:flex-row items-center gap-8 w-full">
             <div class="w-full">
-              <label class="text-white/70">Your Name</label>
+              <label class="text-white/70">Name</label>
               <input
                 placeholder="Enter your Name"
                 class="h-12 p-2 mt-2 w-full border border-gray-500/30 rounded outline-none focus:border-gray-300"
                 type="text"
+                required
+              />
+            </div>
+            <div class="w-full">
+              <label class="text-white/70">Phone</label>
+              <input
+                placeholder="123-456-7890"
+                class="h-12 p-2 mt-2 w-full border border-gray-500/30 rounded outline-none focus:border-gray-300"
+                type="tel"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                 required
               />
             </div>
@@ -689,12 +695,13 @@
                 placeholder="Enter your E-mail"
                 class="h-12 p-2 mt-2 w-full border border-gray-500/30 rounded outline-none focus:border-gray-300"
                 type="email"
+                
                 required
               />
             </div>
           </div>
 
-          <div class="mt-6 w-[350px] md:w-[700px]">
+          <div class="mt-6 w-full">
             <label class="text-white/70">Message</label>
             <textarea
               placeholder="Enter your Message"
@@ -705,12 +712,129 @@
 
           <button
             type="submit"
-            class="mt-5 bg-gray-600 text-white h-12 w-56 px-4 rounded active:scale-95 transition"
+            class="mt-5 bg-gray-600 text-white h-12 w-56 px-4 rounded active:scale-95 transition cursor-pointer"
           >
             Send Message
           </button>
         </form>
       </div>
+    </section>
+
+    <!-- faq section -->
+    <section class="overflow-x-hidden px-4 py-8">
+      <div class="w-full mx-auto text-center space-y-4">
+        <p class="text-indigo-600 text-sm font-medium">FAQ's</p>
+        <h1 class="text-2xl md:text-4xl font-semibold">Looking for answer?</h1>
+        <p class="text-sm md:text-lg text-gray-400">
+          Ship Beautiful Frontends Without the Overhead — Customizable, Scalable
+          and Developer-Friendly UI Components.
+        </p>
+      </div>
+
+      <div class="mx-auto grid md:grid-cols-2 gap-8 py-10">
+        <div>
+          <img
+            class="w-full md:h-[500px] rounded-xl object-cover"
+            src="../assets//contact.jpg"
+            alt=""
+          />
+        </div>
+        <div>
+          <!-- FAQ Items -->
+          <div id="faqContainer"></div>
+        </div>
+      </div>
+
+      <!-- faq Script  -->
+      <script>
+        const faqs = [
+          {
+            question: "What services do you offer?",
+            answer:
+              "We provide end-to-end event management services including wedding planning, corporate events, birthday parties, exhibitions, destination events, concerts, and theme décor design. From concept creation to final execution — we handle it all.",
+          },
+          {
+            question: "Do you manage both small and large events?",
+            answer:
+              "Yes! We handle events of all sizes — from intimate private gatherings to large corporate functions and grand weddings. Every event receives our full attention and expertise.",
+          },
+          {
+            question:
+              "Can you customize an event according to our theme or budget?",
+            answer:
+              "Absolutely. We specialize in tailor-made events. Our team works closely with you to understand your vision, theme, and budget, ensuring a personalized and cost-effective experience.",
+          },
+          {
+            question: "How early should we contact you before the event?",
+            answer:
+              "Ideally, 4–6 weeks in advance gives us ample time to plan and coordinate every detail. However, we also manage last-minute events depending on availability.",
+          },
+          {
+            question: "Do you provide on-site coordination on the event day?",
+            answer:
+              "Yes! Our dedicated on-site team ensures everything runs smoothly — from setup and guest management to vendor coordination and final wrap-up.",
+          },
+        ];
+
+        const container = document.getElementById("faqContainer");
+
+        faqs.forEach((faq, index) => {
+          const wrapper = document.createElement("div");
+          wrapper.className =
+            "border-b border-slate-200 py-6 md:py-8 cursor-pointer";
+
+          const header = document.createElement("div");
+          header.className = "flex items-center justify-between";
+          header.innerHTML = `
+            <h3 class="text-lg md:text-xl font-medium">${faq.question}</h3>
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="transition-all duration-500 ease-in-out icon">
+                <path d="m4.5 7.2 3.793 3.793a1 1 0 0 0 1.414 0L13.5 7.2"
+                    stroke="#1D293D" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        `;
+
+          const answer = document.createElement("p");
+          answer.className =
+            "text-sm md:text-lg text-slate-300 transition-all duration-500 ease-in-out opacity-0 max-h-0 -translate-y-2 pt-0 answer";
+          answer.textContent = faq.answer;
+
+          wrapper.appendChild(header);
+          wrapper.appendChild(answer);
+          container.appendChild(wrapper);
+
+          header.addEventListener("click", () => {
+            const allAnswers = document.querySelectorAll(".answer");
+            const allIcons = document.querySelectorAll(".icon");
+
+            allAnswers.forEach((el, i) => {
+              if (i === index) {
+                const isOpen = el.classList.contains("opacity-100");
+                el.classList.toggle("opacity-100", !isOpen);
+                el.classList.toggle("max-h-[300px]", !isOpen);
+                el.classList.toggle("translate-y-0", !isOpen);
+                el.classList.toggle("pt-4", !isOpen);
+                el.classList.toggle("opacity-0", isOpen);
+                el.classList.toggle("max-h-0", isOpen);
+                el.classList.toggle("-translate-y-2", isOpen);
+
+                allIcons[i].classList.toggle("rotate-180", !isOpen);
+              } else {
+                el.classList.remove(
+                  "opacity-100",
+                  "max-h-[300px]",
+                  "translate-y-0",
+                  "pt-4"
+                );
+                el.classList.add("opacity-0", "max-h-0", "-translate-y-2");
+                allIcons[i].classList.remove("rotate-180");
+              }
+            });
+          });
+        });
+      </script>
     </section>
 
     <!-- footer -->
