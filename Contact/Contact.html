@@ -565,9 +565,9 @@
 
       <div class="w-full mx-auto py-10">
         <div class="w-full flex-center space-y-5">
-          <span class="px-2 py-1 text-xs border border-gray-300 rounded-full"
-            >Reach Out To Us</span
-          >
+          <p class="px-2 py-1 text-xs border border-gray-300 rounded-full">
+            Reach Out To Us
+          </p>
           <h1 class="text-4xl font-bold text-center">
             We'd love to Hear From You.
           </h1>
@@ -588,11 +588,11 @@
 
     <!-- FORM -->
     <section class="mb-10 overflow-x-hidden px-4">
-      <div class="grid grid-cols-1 xl:grid-cols-4 gap-4 place-items-center">
+      <div class="grid grid-cols-1 gap-4 w-full">
         <div
-          class="flex flex-wrap justify-between items-start gap-6 xl:col-span-1 bg-white/5 py-4 p-4 lg:px-8 rounded-2xl w-full"
+          class="flex flex-wrap justify-between items-start md:items-center gap-6 bg-white/5 py-4 p-4 lg:px-8 rounded-2xl w-full"
         >
-          <div class="flex flex-col items-start">
+          <div class="flex flex-col items-start md:items-center">
             <svg
               class="text-gray-300 bg-gray-500/20 p-2.5 aspect-square rounded-full size-10"
               width="24"
@@ -614,7 +614,7 @@
               contact@eventiz.com
             </a>
           </div>
-          <div class="flex flex-col items-start">
+          <div class="flex flex-col items-start md:items-center">
             <svg
               class="text-gray-300 bg-gray-500/20 p-2.5 aspect-square rounded-full size-10"
               width="24"
@@ -636,7 +636,7 @@
               221b Elementary Avenue, NY
             </span>
           </div>
-          <div class="flex flex-col items-start">
+          <div class="flex flex-col items-start md:items-center">
             <svg
               class="text-gray-300 bg-gray-500/20 p-2.5 aspect-square rounded-full size-10"
               width="21"
@@ -660,63 +660,70 @@
           </div>
         </div>
 
-        <form
-          method="get"
-          action="../404.html"
-          class="flex flex-col items-start text-sm px-4 bg-white/5 py-10 w-full xl:col-span-3 rounded-2xl"
-        >
-          <p class="text-xl uppercase text-gray-300 font-bold pb-10 text-left">
-            How We Can Help
-          </p>
+        <div class="grid lg:grid-cols-2 gap-6 mt-10">
 
-          <div class="flex flex-col md:flex-row items-center gap-8 w-full">
-            <div class="w-full">
-              <label class="text-white/70">Name</label>
-              <input
-                placeholder="Enter your Name"
-                class="h-12 p-2 mt-2 w-full border border-gray-500/30 rounded outline-none focus:border-gray-300"
-                type="text"
-                required
-              />
-            </div>
-            <div class="w-full">
-              <label class="text-white/70">Phone</label>
-              <input
-                placeholder="123-456-7890"
-                class="h-12 p-2 mt-2 w-full border border-gray-500/30 rounded outline-none focus:border-gray-300"
-                type="tel"
-                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                required
-              />
-            </div>
-            <div class="w-full">
-              <label class="text-white/70">Your Email</label>
-              <input
-                placeholder="Enter your E-mail"
-                class="h-12 p-2 mt-2 w-full border border-gray-500/30 rounded outline-none focus:border-gray-300"
-                type="email"
-                
-                required
-              />
-            </div>
-          </div>
-
-          <div class="mt-6 w-full">
-            <label class="text-white/70">Message</label>
-            <textarea
-              placeholder="Enter your Message"
-              class="w-full mt-2 p-2 h-40 border border-gray-500/30 rounded resize-none outline-none focus:border-gray-300"
-              required
-            ></textarea>
-          </div>
-
-          <button
-            type="submit"
-            class="mt-5 bg-gray-600 text-white h-12 w-56 px-4 rounded active:scale-95 transition cursor-pointer"
+          <form
+            method="get"
+            action="../404.html"
+            class="flex flex-col items-start text-sm px-4 bg-white/3 border border-white/10 py-10 w-full rounded-2xl"
           >
-            Send Message
-          </button>
-        </form>
+            <p
+              class="text-xl uppercase text-gray-300 font-bold pb-10 text-left"
+            >
+              How We Can Help
+            </p>
+
+            <div class="flex flex-col md:flex-row items-center gap-8 w-full">
+              <div class="w-full">
+                <label class="text-white/70">Name</label>
+                <input
+                  placeholder="Enter your Name"
+                  class="h-12 p-2 mt-2 w-full border border-gray-500/30 rounded outline-none focus:border-gray-300"
+                  type="text"
+                  required
+                />
+              </div>
+              <div class="w-full">
+                <label class="text-white/70">Phone</label>
+                <input
+                  placeholder="123-456-7890"
+                  class="h-12 p-2 mt-2 w-full border border-gray-500/30 rounded outline-none focus:border-gray-300"
+                  type="tel"
+                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                  required
+                />
+              </div>
+              <div class="w-full">
+                <label class="text-white/70">Your Email</label>
+                <input
+                  placeholder="Enter your E-mail"
+                  class="h-12 p-2 mt-2 w-full border border-gray-500/30 rounded outline-none focus:border-gray-300"
+                  type="email"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="mt-6 w-full">
+              <label class="text-white/70">Message</label>
+              <textarea
+                placeholder="Enter your Message"
+                class="w-full mt-2 p-2 h-40 border border-gray-500/30 rounded resize-none outline-none focus:border-gray-300"
+                required
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              class="mt-5 bg-gray-600 text-white h-12 w-56 px-4 rounded active:scale-95 transition cursor-pointer"
+            >
+              Send Message
+            </button>
+          </form>
+          <div class="w-full">
+            <img class="w-full h-full object-cover rounded-2xl" src="../assets/contact1.jpg" alt="">
+          </div>
+        </div>
       </div>
     </section>
 
@@ -731,7 +738,7 @@
         </p>
       </div>
 
-      <div class="mx-auto grid md:grid-cols-2 gap-8 py-10">
+      <div class="mx-auto grid lg:grid-cols-2 gap-8 py-10">
         <div>
           <img
             class="w-full md:h-[500px] rounded-xl object-cover"
@@ -781,7 +788,7 @@
         faqs.forEach((faq, index) => {
           const wrapper = document.createElement("div");
           wrapper.className =
-            "border-b border-slate-200 py-6 md:py-8 cursor-pointer";
+            "border-b border-slate-200 py-3 md:py-8 cursor-pointer";
 
           const header = document.createElement("div");
           header.className = "flex items-center justify-between";
