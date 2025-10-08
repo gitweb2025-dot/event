@@ -11,7 +11,6 @@
       body {
         font-family: "Josefin Sans", sans-serif;
         overflow-x: hidden;
-        background: #121212;
       }
 
       /* Animations */
@@ -24,21 +23,6 @@
         }
         to {
           transform: scale(1.01);
-        }
-      }
-      .float-shape {
-        position: absolute;
-        border-radius: 50%;
-        filter: blur(80px);
-        opacity: 0.2;
-        animation: float 12s infinite alternate;
-      }
-      @keyframes float {
-        0% {
-          transform: translateY(0px) translateX(0px);
-        }
-        100% {
-          transform: translateY(-50px) translateX(50px);
         }
       }
 
@@ -57,14 +41,10 @@
 
     <!-- Sign In Card -->
     <div
-      class=" max-w-2xl w-full px-4 py-8 md:p-10 bg-white/5 border border-white/10 rounded-3xl shadow-xl fade-in relative z-10"
+      class="max-w-[400px] w-full px-4 py-8  bg-white/5 border border-white/10 rounded-3xl shadow-xl fade-in z-10"
     >
-
-    <div class="absolute -top-10 -right-10 w-20 h-20 bg-green-400 rounded-full blur-3xl z-[-1]">
-
-    </div>
-      <h1 class="text-4xl font-bold text-gray-100 text-center mb-2">
-        Event Manager
+      <h1 class="text-2xl md:text-4xl font-bold text-gray-100 text-center mb-2 uppercase">
+        Sign in
       </h1>
       <p class="text-gray-400 text-center mb-8 text-sm">
         Sign in to manage your events
@@ -92,20 +72,19 @@
         </div>
 
         <div class="flex justify-between items-center text-sm text-gray-400">
-          <label class="flex items-center gap-2 cursor-pointer">
+          <div class="flex items-start gap-2 cursor-pointer h-full">
             <input type="checkbox" class="accent-gray-500" />
-            Remember me
-          </label>
-          <a href="#" class="hover:text-gray-300 transition"
+            <p>Remember me</p>
+          </div>
+          <a href="./Forgotpassword.html" class="hover:text-gray-300 transition"
             >Forgot password?</a
           >
         </div>
 
-        <div class="flex items-center gap-4">
-            <button class="w-full py-3 border border-white text-gray-100 font-semibold rounded-xl transition shadow-md" type="reset">Clear</button>
+        <div class="flex items-center">
           <button
             type="submit"
-            class="w-full py-3 border border-gray-800 bg-gray-800 hover:bg-gray-700 text-gray-100 font-semibold rounded-xl transition shadow-md"
+            class="w-full py-3 border border-white/10 bg-white/5 text-gray-100 font-semibold rounded-xl transform hover:scale-95 transition duration-300 ease-out shadow-md cursor-pointer"
           >
             Sign In
           </button>
@@ -122,12 +101,12 @@
       <!-- Social Buttons -->
       <div class="flex flex-col sm:flex-row gap-3">
         <button
-          class="flex items-center justify-center w-full py-2 bg-gray-800 hover:bg-gray-700 text-gray-200 rounded-xl transition"
+          class="flex items-center justify-center w-full py-2 bg-gray-300/50 text-gray-200 rounded-xl transform hover:scale-95 transition duration-300 ease-out cursor-pointer "
         >
           Google
         </button>
         <button
-          class="flex items-center justify-center w-full py-2 bg-gray-800 hover:bg-gray-700 text-gray-200 rounded-xl transition"
+          class="flex items-center justify-center w-full py-2 bg-gray-300/50 text-gray-200 rounded-xl transform hover:scale-95 transition duration-300 ease-out cursor-pointer"
         >
           Facebook
         </button>
@@ -136,7 +115,7 @@
       <!-- Footer -->
       <p class="text-gray-400 text-center text-sm mt-6">
         Don't have an account?
-        <a href="#" class="hover:underline text-gray-200">Sign Up</a>
+        <a href="./Signup.html" class="hover:underline text-gray-200">Sign Up</a>
       </p>
     </div>
   </body>
