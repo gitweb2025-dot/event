@@ -16,7 +16,7 @@
         animation: fadeIn 1s ease forwards;
         opacity: 0;
       }
-      
+
       @keyframes fadeIn {
         from {
           transform: scale(0);
@@ -43,12 +43,35 @@
     <div
       class="w-full max-w-md rounded-3xl shadow-xl fade-in relative z-10 bg-white/5 px-4 py-10 backdrop-blur-3xl my-6"
     >
-      <h1 class="text-2xl md:text-4xl font-bold text-gray-100 text-center mb-2 uppercase">
+      <h1
+        class="text-2xl md:text-4xl font-bold text-gray-100 text-center mb-2 uppercase"
+      >
         Sign up
       </h1>
       <p class="text-gray-400 text-center mb-8 text-sm">
         Create your account to manage your events
       </p>
+
+      <!-- Social Buttons -->
+      <div class="flex flex-col sm:flex-row gap-3">
+        <button
+          class="flex items-center justify-center w-full py-2 bg-gray-800 hover:bg-gray-700 text-gray-200 rounded-xl transition cursor-pointer"
+        >
+          Google
+        </button>
+        <button
+          class="flex items-center justify-center w-full py-2 bg-gray-800 hover:bg-gray-700 text-gray-200 rounded-xl transition cursor-pointer"
+        >
+          Facebook
+        </button>
+      </div>
+
+      <!-- Divider -->
+      <div class="flex items-center my-6 text-gray-500">
+        <span class="flex-grow border-t border-gray-700"></span>
+        <span class="px-3">OR</span>
+        <span class="flex-grow border-t border-gray-700"></span>
+      </div>
 
       <!-- Form -->
       <form method="get" action="./404.html" class="space-y-6" id="signupForm">
@@ -101,37 +124,18 @@
 
         <button
           type="submit"
-          class="w-full py-3 bg-white/5 text-gray-100 font-semibold rounded-xl transform hover:scale-95 transition duration-300 ease-out cursor-pointer shadow-md"
+          class="w-full py-3 bg-white/50 text-gray-100 font-semibold rounded-xl transform hover:scale-95 transition duration-300 ease-out cursor-pointer shadow-md"
         >
           Sign Up
         </button>
       </form>
 
-      <!-- Divider -->
-      <div class="flex items-center my-6 text-gray-500">
-        <span class="flex-grow border-t border-gray-700"></span>
-        <span class="px-3">OR</span>
-        <span class="flex-grow border-t border-gray-700"></span>
-      </div>
-
-      <!-- Social Buttons -->
-      <div class="flex flex-col sm:flex-row gap-3">
-        <button
-          class="flex items-center justify-center w-full py-2 bg-gray-800 hover:bg-gray-700 text-gray-200 rounded-xl transition cursor-pointer"
-        >
-          Google
-        </button>
-        <button
-          class="flex items-center justify-center w-full py-2 bg-gray-800 hover:bg-gray-700 text-gray-200 rounded-xl transition cursor-pointer"
-        >
-          Facebook
-        </button>
-      </div>
-
       <!-- Footer -->
       <p class="text-gray-400 text-center text-sm mt-6">
         Already have an account?
-        <a href="./Signin.html" class="hover:underline text-gray-200">Sign In</a>
+        <a href="./Signin.html" class="hover:underline text-gray-200"
+          >Sign In</a
+        >
       </p>
     </div>
   </body>
