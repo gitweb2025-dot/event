@@ -132,7 +132,6 @@
   </head>
 
   <body class="antialiased bg-black text-white relative">
-
     <!-- forms -->
     <div
       hidden
@@ -217,10 +216,10 @@
           <div class="relative">
             <!-- Parent Button -->
             <button
-              id="homeToggle"
               class="relative inline-block text-white after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-gray-200 after:transition-all after:duration-300 hover:after:w-full cursor-pointer"
             >
-              Home <i class="fa-solid fa-caret-down"></i>
+              <a href="../index.html">Home</a>
+              <i id="homeToggle" class="fa-solid fa-caret-down"></i>
             </button>
 
             <!-- Dropdown Menu -->
@@ -231,7 +230,7 @@
               <!-- <li>
                 <a
                   href="./index.html"
-                  class="block px-4 py-2 hover:bg-gray-50 hover:text-gray-800"
+                  class="block px-4 py-2 hover:bg-gray-50"
                 >
                   Home 1
                 </a>
@@ -241,7 +240,7 @@
               <li>
                 <a
                   href="../404.html"
-                  class="block px-4 py-2 text-white hover:bg-gray-50 hover:text-gray-800 tr"
+                  class="block px-4 py-2 text-white"
                 >
                   Home 2
                 </a>
@@ -336,10 +335,9 @@
           <!-- Home dropDown  -->
           <div class="relative">
             <button
-              id="mobileToggle"
-              class="flex items-center gap-1 w-full text-left hover:text-gray-800 transition-colors lg:hidden"
+              class="flex items-center gap-1 w-full text-left transition-colors lg:hidden"
             >
-              Home <i class="fa-solid fa-caret-down"></i>
+              <a href="../index.html">Home</a> <i id="mobileToggle" class="fa-solid fa-caret-down"></i>
             </button>
 
             <!-- Dropdown Menu -->
@@ -350,7 +348,7 @@
               <!-- <li>
                 <a
                   href="../404.html"
-                  class="block px-2 py-2 hover:bg-gray-50 hover:text-gray-800"
+                  class="block px-2 py-2 hover:bg-gray-50"
                 >
                   Home 1
                 </a>
@@ -359,7 +357,7 @@
               <li>
                 <a
                   href="../404.html"
-                  class="block px-2 py-2 hover:bg-gray-50 hover:text-gray-800"
+                  class="block px-2 py-2"
                 >
                   Home 2
                 </a>
@@ -370,7 +368,7 @@
           <li>
             <a
               href="../About/About.html"
-              class="nav-link block hover:text-gray-800 transition-colors"
+              class="nav-link block transition-colors"
               >About Us</a
             >
           </li>
@@ -378,7 +376,7 @@
           <li>
             <a
               href="../Service/Service.html"
-              class="nav-link block hover:text-gray-800 transition-colors"
+              class="nav-link block transition-colors"
               >Services</a
             >
           </li>
@@ -386,7 +384,7 @@
           <li>
             <a
               href="../Event/Event.html"
-              class="nav-link block hover:text-gray-800 transition-colors"
+              class="nav-link block transition-colors"
               >Events</a
             >
           </li>
@@ -394,7 +392,7 @@
           <li>
             <a
               href="./Contact.html"
-              class="nav-link block hover:text-gray-800 transition-colors"
+              class="nav-link block transition-colors"
               >Contact</a
             >
           </li>
@@ -402,14 +400,14 @@
           <li>
             <a
               href="../Dashboard/Dashboard.html"
-              class="nav-link block hover:text-gray-800 transition-colors"
+              class="nav-link block transition-colors"
               >Dashboard</a
             >
           </li>
           <li>
             <button
               id="book"
-              class="nav-link text-gray-500 block hover:text-gray-800 transition-colors"
+              class="nav-link text-gray-500 block transition-colors"
             >
               Book Now
             </button>
@@ -417,7 +415,7 @@
           <li>
             <a
               href="../Signin.html"
-              class="flex items-center gap-2 nav-link hover:text-gray-800 transition-colors"
+              class="flex items-center gap-2 nav-link transition-colors"
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -515,10 +513,18 @@
 
       <div class="w-full mx-auto py-10 overflow-hidden">
         <div class="w-full flex-center space-y-5">
-          <p data-aos="zoom-in-up" data-aos-delay="50" class="px-2 py-1 text-xs border border-gray-300 rounded-full">
+          <p
+            data-aos="zoom-in-up"
+            data-aos-delay="50"
+            class="px-2 py-1 text-xs border border-gray-300 rounded-full"
+          >
             Reach Out To Us
           </p>
-          <h1 data-aos="zoom-in-up" data-aos-delay="100" class="text-4xl font-bold text-center">
+          <h1
+            data-aos="zoom-in-up"
+            data-aos-delay="100"
+            class="text-4xl font-bold text-center"
+          >
             We'd love to Hear From You.
           </h1>
           <p data-aos="zoom-in-up" data-aos-delay="150" class="text-center">
@@ -542,7 +548,11 @@
         <div
           class="flex flex-wrap justify-between items-start md:items-center gap-6 bg-white/5 py-4 p-4 lg:px-8 rounded-2xl w-full overflow-hidden"
         >
-          <div data-aos="zoom-in" data-aos-delay="50" class="flex flex-col items-start md:items-center">
+          <div
+            data-aos="zoom-in"
+            data-aos-delay="50"
+            class="flex flex-col items-start md:items-center"
+          >
             <svg
               class="text-gray-300 bg-gray-500/20 p-2.5 aspect-square rounded-full size-10"
               width="24"
@@ -564,7 +574,11 @@
               contact@eventiz.com
             </a>
           </div>
-          <div data-aos="zoom-in" data-aos-delay="150" class="flex flex-col items-start md:items-center">
+          <div
+            data-aos="zoom-in"
+            data-aos-delay="150"
+            class="flex flex-col items-start md:items-center"
+          >
             <svg
               class="text-gray-300 bg-gray-500/20 p-2.5 aspect-square rounded-full size-10"
               width="24"
@@ -586,7 +600,11 @@
               221b Elementary Avenue, NY
             </span>
           </div>
-          <div data-aos="zoom-in" data-aos-delay="250" class="flex flex-col items-start md:items-center">
+          <div
+            data-aos="zoom-in"
+            data-aos-delay="250"
+            class="flex flex-col items-start md:items-center"
+          >
             <svg
               class="text-gray-300 bg-gray-500/20 p-2.5 aspect-square rounded-full size-10"
               width="21"
@@ -611,8 +629,9 @@
         </div>
 
         <div class="grid lg:grid-cols-2 gap-6 mt-10">
-
-          <form data-aos="zoom-in-right" data-aos-delay="100"
+          <form
+            data-aos="zoom-in-right"
+            data-aos-delay="100"
             method="get"
             action="../404.html"
             class="flex flex-col items-start text-sm px-4 bg-white/3 border border-white/10 py-10 w-full rounded-2xl"
@@ -671,7 +690,11 @@
             </button>
           </form>
           <div class="w-full" data-aos="zoom-in-left" data-aos-delay="200">
-            <img class="w-full h-full object-cover rounded-2xl" src="../assets/contact1.jpg" alt="">
+            <img
+              class="w-full h-full object-cover rounded-2xl"
+              src="../assets/contact1.jpg"
+              alt=""
+            />
           </div>
         </div>
       </div>
@@ -680,9 +703,25 @@
     <!-- faq section -->
     <section class="overflow-x-hidden px-4 py-8">
       <div class="w-full mx-auto text-center space-y-4 overflow-hidden">
-        <p data-aos="fade-up" data-aos-delay="100" class="text-indigo-600 text-sm font-medium">FAQ's</p>
-        <h1 data-aos="fade-up" data-aos-delay="150" class="text-2xl md:text-4xl font-semibold">Looking for answer?</h1>
-        <p data-aos="fade-up" data-aos-delay="200" class="text-sm md:text-lg text-gray-400">
+        <p
+          data-aos="fade-up"
+          data-aos-delay="100"
+          class="text-indigo-600 text-sm font-medium"
+        >
+          FAQ's
+        </p>
+        <h1
+          data-aos="fade-up"
+          data-aos-delay="150"
+          class="text-2xl md:text-4xl font-semibold"
+        >
+          Looking for answer?
+        </h1>
+        <p
+          data-aos="fade-up"
+          data-aos-delay="200"
+          class="text-sm md:text-lg text-gray-400"
+        >
           Ship Beautiful Frontends Without the Overhead — Customizable, Scalable
           and Developer-Friendly UI Components.
         </p>
@@ -797,7 +836,8 @@
     <!-- footer -->
 
     <footer
-    data-aos="zoom-in-up" data-aos-delay="50"
+      data-aos="zoom-in-up"
+      data-aos-delay="50"
       class="px-4 pt-2 w-full text-gray-500 overflow-hidden overflow-x-hidden"
     >
       <div class="flex justify-between flex-wrap w-full md:gap-20 gap-8 pb-6">

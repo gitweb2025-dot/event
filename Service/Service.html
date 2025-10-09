@@ -210,10 +210,10 @@
           <div class="relative">
             <!-- Parent Button -->
             <button
-              id="homeToggle"
               class="relative inline-block text-white after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-gray-200 after:transition-all after:duration-300 hover:after:w-full cursor-pointer"
             >
-              Home <i class="fa-solid fa-caret-down"></i>
+              <a href="../index.html">Home</a>
+              <i id="homeToggle" class="fa-solid fa-caret-down"></i>
             </button>
 
             <!-- Dropdown Menu -->
@@ -224,7 +224,7 @@
               <!-- <li>
                 <a
                   href="./index.html"
-                  class="block px-4 py-2 hover:bg-gray-50 hover:text-gray-800"
+                  class="block px-4 py-2 hover:bg-gray-50 "
                 >
                   Home 1
                 </a>
@@ -234,7 +234,7 @@
               <li>
                 <a
                   href="../404.html"
-                  class="block px-4 py-2 text-white hover:bg-gray-50 hover:text-gray-800 tr"
+                  class="block px-4 py-2 text-white transition"
                 >
                   Home 2
                 </a>
@@ -329,10 +329,10 @@
           <!-- Home dropDown  -->
           <div class="relative">
             <button
-              id="mobileToggle"
-              class="flex items-center gap-1 w-full text-left hover:text-gray-800 transition-colors lg:hidden"
+              class="flex items-center gap-1 w-full text-left  transition-colors lg:hidden"
             >
-              Home <i class="fa-solid fa-caret-down"></i>
+              <a href="../index.html">Home</a>
+              <i id="mobileToggle" class="fa-solid fa-caret-down"></i>
             </button>
 
             <!-- Dropdown Menu -->
@@ -343,7 +343,7 @@
               <!-- <li>
                 <a
                   href="../404.html"
-                  class="block px-2 py-2 hover:bg-gray-50 hover:text-gray-800"
+                  class="block px-2 py-2 hover:bg-gray-50 "
                 >
                   Home 1
                 </a>
@@ -352,7 +352,7 @@
               <li>
                 <a
                   href="../404.html"
-                  class="block px-2 py-2 hover:bg-gray-50 hover:text-gray-800"
+                  class="block px-2 py-2 transition"
                 >
                   Home 2
                 </a>
@@ -363,7 +363,7 @@
           <li>
             <a
               href="../About/About.html"
-              class="nav-link block hover:text-gray-800 transition-colors"
+              class="nav-link block  transition-colors"
               >About Us</a
             >
           </li>
@@ -371,7 +371,7 @@
           <li>
             <a
               href="./Service.html"
-              class="nav-link block hover:text-gray-800 transition-colors"
+              class="nav-link block  transition-colors"
               >Services</a
             >
           </li>
@@ -379,7 +379,7 @@
           <li>
             <a
               href="../Event/Event.html"
-              class="nav-link block hover:text-gray-800 transition-colors"
+              class="nav-link block  transition-colors"
               >Events</a
             >
           </li>
@@ -387,7 +387,7 @@
           <li>
             <a
               href="../Contact/Contact.html"
-              class="nav-link block hover:text-gray-800 transition-colors"
+              class="nav-link block  transition-colors"
               >Contact</a
             >
           </li>
@@ -395,14 +395,14 @@
           <li>
             <a
               href="../Dashboard/Dashboard.html"
-              class="nav-link block hover:text-gray-800 transition-colors"
+              class="nav-link block  transition-colors"
               >Dashboard</a
             >
           </li>
           <li>
             <button
               id="book"
-              class="nav-link text-gray-500 block hover:text-gray-800 transition-colors"
+              class="nav-link text-gray-500 block  transition-colors"
             >
               Book Now
             </button>
@@ -410,7 +410,7 @@
           <li>
             <a
               href="../Signin.html"
-              class="flex items-center gap-2 nav-link hover:text-gray-800 transition-colors"
+              class="flex items-center gap-2 nav-link  transition-colors"
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -509,16 +509,25 @@
       <div class="relative mx-auto">
         <!-- Section Intro -->
         <div class="text-center py-10">
-          <p data-aos="zoom-in-up" data-aos-delay="50"
-            class="text-sm tracking-widest uppercase text-purple-400 font-semibold"
-            >Our Services</p
+          <p
+            data-aos="zoom-in-up"
+            data-aos-delay="50"
+            class="text-sm tracking-widest uppercase text-gray-400 font-semibold"
           >
-          <h2 data-aos="zoom-in-up" data-aos-delay="100"
+            Our Services
+          </p>
+          <h2
+            data-aos="zoom-in-up"
+            data-aos-delay="100"
             class="mt-4 text-3xl md:text-4xl xl:text-6xl font-extrabold text-white leading-tight uppercase"
           >
             Comprehensive Event Solutions
           </h2>
-          <p data-aos="zoom-in-up" data-aos-delay="150" class="mt-6 text-lg text-gray-400 max-w-3xl mx-auto">
+          <p
+            data-aos="zoom-in-up"
+            data-aos-delay="150"
+            class="mt-6 text-lg text-gray-400 max-w-3xl mx-auto"
+          >
             From corporate summits to private celebrations, we provide
             full-spectrum event management services designed to impress and
             inspire.
@@ -900,7 +909,7 @@
         <div class="text-right">
           <button
             id="book"
-            class="px-6 py-3 rounded-full bg-purple-600 text-white hover:bg-purple-500 transition cursor-pointer"
+            class="px-6 py-3 rounded-full bg-gray-600 text-white hover:bg-gray-500 transition cursor-pointer"
           >
             Book Now
           </button>
@@ -936,7 +945,7 @@
         <div class="text-right">
           <button
             id="book"
-            class="px-6 py-3 rounded-full bg-purple-600 text-white hover:bg-purple-500 transition cursor-pointer"
+            class="px-6 py-3 rounded-full bg-gray-600 text-white hover:bg-gray-500 transition cursor-pointer"
           >
             Book Now
           </button>
@@ -972,7 +981,7 @@
         <div class="text-right">
           <button
             id="book"
-            class="px-6 py-3 rounded-full bg-purple-600 text-white hover:bg-purple-500 transition cursor-pointer"
+            class="px-6 py-3 rounded-full bg-gray-600 text-white hover:bg-gray-500 transition cursor-pointer"
           >
             Book Now
           </button>
@@ -1046,7 +1055,7 @@
         <div class="text-right">
           <button
             id="book"
-            class="px-6 py-3 rounded-full bg-purple-600 text-white hover:bg-purple-500 transition cursor-pointer"
+            class="px-6 py-3 rounded-full bg-gray-600 text-white hover:bg-gray-500 transition cursor-pointer"
           >
             Book Now
           </button>
@@ -1082,7 +1091,7 @@
         <div class="text-right">
           <button
             id="book"
-            class="px-6 py-3 rounded-full bg-purple-600 text-white hover:bg-purple-500 transition cursor-pointer"
+            class="px-6 py-3 rounded-full bg-gray-600 text-white hover:bg-gray-500 transition cursor-pointer"
           >
             Book Now
           </button>
