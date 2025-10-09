@@ -255,7 +255,7 @@
           </a>
           <!-- Events -->
           <a
-            href="./Event.html"
+            href="../Event/Event.html"
             class="relative inline-block text-white after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-gray-200 after:transition-all after:duration-300 hover:after:w-full"
           >
             Events
@@ -270,50 +270,52 @@
           <!-- Dashboard -->
           <button
             id="book"
-            class="relative inline-block text-white after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-gray-200 after:transition-all after:duration-300 hover:after:w-full"
+            class="relative inline-block text-white after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-gray-200 after:transition-all after:duration-300 hover:after:w-full cursor-pointer"
           >
             Book Now
           </button>
         </nav>
 
         <div class="flex text-sm gap-4 font-medium">
-          <!-- Hamburger -->
-          <button
-            id="hamburger"
-            class="hamburger cursor-pointer lg:hidden focus:outline-none"
-            aria-label="Menu"
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
           <!-- Profile -->
           <div class="relative">
-            <button
-              id="profileBtn"
-              class="flex items-center gap-2 focus:outline-none cursor-pointer"
-            >
-              <img
-                src="../assets/img6.jpeg"
-                class="w-10 h-10 rounded-full object-cover object-top border border-gray-700"
-              />
-              <span class="text-gray-300 hidden sm:block">Alex ▾</span>
-            </button>
+            <div>
+              <button
+                id="profileBtn"
+                class="flex items-center gap-2 focus:outline-none cursor-pointer"
+              >
+                <img
+                  src="../assets/img6.jpeg"
+                  class="w-10 h-10 rounded-full object-cover object-top border border-gray-700"
+                />
+                <span class="text-gray-300 hidden sm:block">Alex ▾</span>
+              </button>
+            </div>
 
             <div
               id="dropdownMenu"
-              class="hidden absolute right-0 mt-3 w-48 glass rounded-xl dropdown-enter"
+              class="hidden absolute right-0 top-14 glass rounded-xl dropdown-enter"
             >
               <div class="flex flex-col py-2">
                 <a
                   href="../index.html"
-                  class="px-4 py-2 text-left text-sm text-red-400 hover:bg-gray-800 transition cursor-pointer"
+                  class="px-4 py-2 w-full text-left text-sm text-red-400 hover:bg-gray-800 transition cursor-pointer"
                 >
                   Logout
                 </a>
               </div>
             </div>
           </div>
+          <!-- Hamburger -->
+          <button
+            id="hamburger"
+            class="hamburger cursor-pointer md:hidden focus:outline-none"
+            aria-label="Menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
       </div>
 
@@ -375,7 +377,7 @@
           <!-- Blogs -->
           <li>
             <a
-              href="./Event.html"
+              href="../Event/Event.html"
               class="nav-link block hover:text-gray-800 transition-colors"
               >Events</a
             >
@@ -436,32 +438,32 @@
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
         <div
-          class="glass rounded-xl p-6 text-center hover:bg-gray-800 transition"
+          class="glass rounded-xl p-6 text-center hover:bg-gray-800 transition space-y-1.5"
         >
-          <p class="text-gray-400 text-sm">Active Events</p>
+          <p class="text-gray-400 text-lg">Active Events</p>
           <h2 class="text-3xl font-bold text-gray-100">38</h2>
-          <p class="text-gray-500 text-xs">+6 this month</p>
+          <p class="text-gray-500">+6 this month</p>
         </div>
         <div
-          class="glass rounded-xl p-6 text-center hover:bg-gray-800 transition"
+          class="glass rounded-xl p-6 text-center hover:bg-gray-800 transition space-y-1.5"
         >
-          <p class="text-gray-400 text-sm">Tickets Sold</p>
+          <p class="text-gray-400 text-lg">Tickets Sold</p>
           <h2 class="text-3xl font-bold text-gray-100">14,205</h2>
-          <p class="text-gray-500 text-xs">↑ 14% growth</p>
+          <p class="text-gray-500">↑ 14% growth</p>
         </div>
         <div
-          class="glass rounded-xl p-6 text-center hover:bg-gray-800 transition"
+          class="glass rounded-xl p-6 text-center hover:bg-gray-800 transition space-y-1.5"
         >
-          <p class="text-gray-400 text-sm">Revenue ($)</p>
+          <p class="text-gray-400 text-lg">Revenue ($)</p>
           <h2 class="text-3xl font-bold text-gray-100">$189,430</h2>
-          <p class="text-gray-500 text-xs">This Quarter</p>
+          <p class="text-gray-500">This Quarter</p>
         </div>
         <div
-          class="glass rounded-xl p-6 text-center hover:bg-gray-800 transition"
+          class="glass rounded-xl p-6 text-center hover:bg-gray-800 transition space-y-1.5"
         >
-          <p class="text-gray-400 text-sm">New Clients</p>
+          <p class="text-gray-400 text-lg">New Clients</p>
           <h2 class="text-3xl font-bold text-gray-100">92</h2>
-          <p class="text-gray-500 text-xs">This week</p>
+          <p class="text-gray-500">This week</p>
         </div>
       </div>
     </section>
@@ -491,9 +493,7 @@
           </div>
         </div>
 
-        <div
-          class="bg-white/5 p-6 rounded-2xl w-full"
-        >
+        <div class="bg-white/5 p-6 rounded-2xl w-full">
           <h3 class="text-lg font-semibold mb-4">Top Sponsors</h3>
           <ul class="space-y-4">
             <li class="flex items-center justify-between">
@@ -666,42 +666,54 @@
 
     <!-- RECENT ACTIVITY -->
     <section class="px-4 py-8">
-      <div class="glass rounded-2xl p-6">
+      <div class="glass rounded-2xl px-4 py-6">
         <h3 class="text-lg font-semibold mb-4 text-gray-100">
           Recent Activities
         </h3>
         <ul
-          class="flex flex-wrap items-center justify-between space-y-3 text-sm text-gray-300"
+          class="grid xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 items-center gap-6 text-sm text-gray-300"
         >
-          <li class="flex flex-col justify-center space-y-3 bg-white/10 p-4 rounded-2xl">
-            <b>SoundFest</b> 
+          <li
+            class="flex flex-col justify-center space-y-3 bg-white/10 p-4 rounded-2xl"
+          >
+            <h1 class="text-lg font-bold">Sound Fest</h1>
             <p>sold 1,200 tickets</p>
-            <span class="text-gray-500">2h ago</span>
+            <p class="text-gray-500">2h ago</p>
           </li>
-          <li class="flex flex-col justify-center space-y-3 bg-white/10 p-4 rounded-2xl">
-            <b>Startup Meet</b>
+          <li
+            class="flex flex-col justify-center space-y-3 bg-white/10 p-4 rounded-2xl"
+          >
+            <h1 class="text-lg font-bold">Startup Meet</h1>
             <p>added 3 new sponsors</p>
-            <span class="text-gray-500">5h ago</span>
+            <p class="text-gray-500">5h ago</p>
           </li>
-          <li class="flex flex-col justify-center space-y-3 bg-white/10 p-4 rounded-2xl">
-            <b>Workshop 2025</b> 
+          <li
+            class="flex flex-col justify-center space-y-3 bg-white/10 p-4 rounded-2xl"
+          >
+            <h1 class="text-lg font-bold">Workshop 2025</h1>
             <p>registration opened</p>
-            <span class="text-gray-500">1d ago</span>
+            <p class="text-gray-500">1d ago</p>
           </li>
-          <li class="flex flex-col justify-center space-y-3 bg-white/10 p-4 rounded-2xl">
-            <b>Music Gala</b> 
+          <li
+            class="flex flex-col justify-center space-y-3 bg-white/10 p-4 rounded-2xl"
+          >
+            <h1 class="text-lg font-bold">Music Gala</h1>
             <p>reached full capacity</p>
-            <span class="text-gray-500">2d ago</span>
+            <p class="text-gray-500">2d ago</p>
           </li>
-          <li class="flex flex-col justify-center space-y-3 bg-white/10 p-4 rounded-2xl">
-            <b>Music Gala</b> 
-            <p>reached full capacity</p>
-            <span class="text-gray-500">2d ago</span>
+          <li
+            class="flex flex-col justify-center space-y-3 bg-white/10 p-4 rounded-2xl"
+          >
+            <h1 class="text-lg font-bold">Conference</h1>
+            <p>reached 1000+ people</p>
+            <p class="text-gray-500">2d ago</p>
           </li>
-          <li class="flex flex-col justify-center space-y-3 bg-white/10 p-4 rounded-2xl">
-            <b>Music Gala</b> 
-            <p>reached full capacity</p>
-            <span class="text-gray-500">2d ago</span>
+          <li
+            class="flex flex-col justify-center space-y-3 bg-white/10 p-4 rounded-2xl"
+          >
+            <h1 class="text-lg font-bold">Music ConcertX</h1>
+            <p>Booked 50k</p>
+            <p class="text-gray-500">2d ago</p>
           </li>
         </ul>
       </div>
@@ -711,7 +723,7 @@
     <footer
       class="text-center text-gray-500 py-6 border-t border-gray-800 text-sm"
     >
-      © 2025 EventSphere — Simplifying Event Management.
+      © 2025 Stackly — Simplifying Event Management.
     </footer>
 
     <!-- Book Now Js -->

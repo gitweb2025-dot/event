@@ -31,22 +31,8 @@
       referrerpolicy="no-referrer"
     />
 
-    <!-- swiper js cdn link -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-
     <!-- Tailwind Css  -->
     <link rel="stylesheet" href="../output.css" />
-
-    <!-- trig js -->
-
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/trig-js/src/trig-animations.min.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/trig-js/src/trig.min.js"></script>
 
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
@@ -146,14 +132,6 @@
   </head>
 
   <body class="antialiased bg-black text-white relative">
-    <!-- back image -->
-    <!-- <div class="absolute inset-0 z-[-1] overflow-hidden">
-      <img
-        class="w-full h-full object-cover blur-3xl brightness-20"
-        src="../assets/ab-bg-3.jpg"
-        alt="bg-image"
-      />
-    </div> -->
 
     <!-- forms -->
     <div
@@ -302,7 +280,7 @@
           </a>
           <!-- Dashboard -->
           <a
-            href="../404.html"
+            href="../Dashboard/Dashboard.html"
             class="relative inline-block text-white after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-gray-200 after:transition-all after:duration-300 hover:after:w-full"
           >
             Dashboard
@@ -423,7 +401,7 @@
           <!-- Dashboard -->
           <li>
             <a
-              href="../404.html"
+              href="../Dashboard/Dashboard.html"
               class="nav-link block hover:text-gray-800 transition-colors"
               >Dashboard</a
             >
@@ -535,21 +513,21 @@
         </div>
       </div>
 
-      <div class="w-full mx-auto py-10">
+      <div class="w-full mx-auto py-10 overflow-hidden">
         <div class="w-full flex-center space-y-5">
-          <p class="px-2 py-1 text-xs border border-gray-300 rounded-full">
+          <p data-aos="zoom-in-up" data-aos-delay="50" class="px-2 py-1 text-xs border border-gray-300 rounded-full">
             Reach Out To Us
           </p>
-          <h1 class="text-4xl font-bold text-center">
+          <h1 data-aos="zoom-in-up" data-aos-delay="100" class="text-4xl font-bold text-center">
             We'd love to Hear From You.
           </h1>
-          <p class="text-center">
+          <p data-aos="zoom-in-up" data-aos-delay="150" class="text-center">
             Or just reach out manually to
             <a href="../404.html" class="text-gray-600 hover:underline"
               >contact@eventiz.com</a
             >
           </p>
-          <p class="text-white/50">
+          <p data-aos="zoom-in-up" data-aos-delay="200" class="text-white/50">
             We’d love to hear from you. Whether you’re planning a wedding,
             corporate function, birthday party, or any special occasion — our
             team is here to bring your vision to life.
@@ -562,9 +540,9 @@
     <section class="mb-10 overflow-x-hidden px-4">
       <div class="grid grid-cols-1 gap-4 w-full">
         <div
-          class="flex flex-wrap justify-between items-start md:items-center gap-6 bg-white/5 py-4 p-4 lg:px-8 rounded-2xl w-full"
+          class="flex flex-wrap justify-between items-start md:items-center gap-6 bg-white/5 py-4 p-4 lg:px-8 rounded-2xl w-full overflow-hidden"
         >
-          <div class="flex flex-col items-start md:items-center">
+          <div data-aos="zoom-in" data-aos-delay="50" class="flex flex-col items-start md:items-center">
             <svg
               class="text-gray-300 bg-gray-500/20 p-2.5 aspect-square rounded-full size-10"
               width="24"
@@ -586,7 +564,7 @@
               contact@eventiz.com
             </a>
           </div>
-          <div class="flex flex-col items-start md:items-center">
+          <div data-aos="zoom-in" data-aos-delay="150" class="flex flex-col items-start md:items-center">
             <svg
               class="text-gray-300 bg-gray-500/20 p-2.5 aspect-square rounded-full size-10"
               width="24"
@@ -608,7 +586,7 @@
               221b Elementary Avenue, NY
             </span>
           </div>
-          <div class="flex flex-col items-start md:items-center">
+          <div data-aos="zoom-in" data-aos-delay="250" class="flex flex-col items-start md:items-center">
             <svg
               class="text-gray-300 bg-gray-500/20 p-2.5 aspect-square rounded-full size-10"
               width="21"
@@ -634,7 +612,7 @@
 
         <div class="grid lg:grid-cols-2 gap-6 mt-10">
 
-          <form
+          <form data-aos="zoom-in-right" data-aos-delay="100"
             method="get"
             action="../404.html"
             class="flex flex-col items-start text-sm px-4 bg-white/3 border border-white/10 py-10 w-full rounded-2xl"
@@ -692,7 +670,7 @@
               Send Message
             </button>
           </form>
-          <div class="w-full">
+          <div class="w-full" data-aos="zoom-in-left" data-aos-delay="200">
             <img class="w-full h-full object-cover rounded-2xl" src="../assets/contact1.jpg" alt="">
           </div>
         </div>
@@ -701,24 +679,24 @@
 
     <!-- faq section -->
     <section class="overflow-x-hidden px-4 py-8">
-      <div class="w-full mx-auto text-center space-y-4">
-        <p class="text-indigo-600 text-sm font-medium">FAQ's</p>
-        <h1 class="text-2xl md:text-4xl font-semibold">Looking for answer?</h1>
-        <p class="text-sm md:text-lg text-gray-400">
+      <div class="w-full mx-auto text-center space-y-4 overflow-hidden">
+        <p data-aos="fade-up" data-aos-delay="100" class="text-indigo-600 text-sm font-medium">FAQ's</p>
+        <h1 data-aos="fade-up" data-aos-delay="150" class="text-2xl md:text-4xl font-semibold">Looking for answer?</h1>
+        <p data-aos="fade-up" data-aos-delay="200" class="text-sm md:text-lg text-gray-400">
           Ship Beautiful Frontends Without the Overhead — Customizable, Scalable
           and Developer-Friendly UI Components.
         </p>
       </div>
 
       <div class="mx-auto grid lg:grid-cols-2 gap-8 py-10">
-        <div>
+        <div data-aos="zoom-in-right" data-aos-delay="150">
           <img
             class="w-full md:h-[500px] rounded-xl object-cover"
             src="../assets//contact.jpg"
             alt=""
           />
         </div>
-        <div>
+        <div data-aos="zoom-in-left" data-aos-delay="300">
           <!-- FAQ Items -->
           <div id="faqContainer"></div>
         </div>
@@ -819,6 +797,7 @@
     <!-- footer -->
 
     <footer
+    data-aos="zoom-in-up" data-aos-delay="50"
       class="px-4 pt-2 w-full text-gray-500 overflow-hidden overflow-x-hidden"
     >
       <div class="flex justify-between flex-wrap w-full md:gap-20 gap-8 pb-6">

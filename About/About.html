@@ -31,22 +31,8 @@
       referrerpolicy="no-referrer"
     />
 
-    <!-- swiper js cdn link -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-
     <!-- Tailwind Css  -->
     <link rel="stylesheet" href="../output.css" />
-
-    <!-- trig js -->
-
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/trig-js/src/trig-animations.min.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/trig-js/src/trig.min.js"></script>
 
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
@@ -131,15 +117,6 @@
   </head>
 
   <body class="antialiased bg-black text-white relative">
-    <!-- back image -->
-    <!-- <div class="absolute inset-0 z-[-1] overflow-hidden">
-      <img
-        class="w-full h-full object-cover blur-3xl brightness-30"
-        src="../assets/ser-bg-1.jpeg"
-        alt="bg-image"
-      />
-    </div> -->
-
     <!-- forms -->
     <div
       hidden
@@ -287,7 +264,7 @@
           </a>
           <!-- Dashboard -->
           <a
-            href="../404.html"
+            href="../Dashboard/Dashboard.html"
             class="relative inline-block text-white after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-gray-200 after:transition-all after:duration-300 hover:after:w-full"
           >
             Dashboard
@@ -408,7 +385,7 @@
           <!-- Dashboard -->
           <li>
             <a
-              href="../404.html"
+              href="../Dashboard/Dashboard.html"
               class="nav-link block hover:text-gray-800 transition-colors"
               >Dashboard</a
             >
@@ -523,11 +500,11 @@
       <div class="flex flex-col items-center justify-center gap-8 py-10 w-full">
         <div class="space-y-6 text-center">
           <h1
-            class="text-3xl md:text-6xl font-bold bg-gradient-to-r from-gray-200 to-gray-800 bg-clip-text text-transparent w-fit mx-auto"
+            class="text-3xl md:text-6xl font-bold bg-gradient-to-r from-gray-200 to-gray-800 bg-clip-text text-transparent w-fit mx-auto uppercase"
           >
             About Us
           </h1>
-          <p class="text-sm md:text-lg max-w-5xl">
+          <p class="text-sm md:text-lg ">
             We are a dedicated team of event planners, designers, and
             coordinators who thrive on transforming ideas into memorable
             celebrations. From corporate conferences to grand weddings, product
@@ -547,7 +524,7 @@
         >
           Our Creative Event Speakers
         </h1>
-        <p class="text-sm md:text-lg">
+        <p class="text-sm md:text-lg max-w-7xl mx-auto">
           We collaborate with some of the most inspiring speakers and talented
           singers who make every event extraordinary. From motivational talks
           that energize audiences to live performances that create unforgettable
@@ -858,7 +835,7 @@
                     class="appearance-none w-full p-2 outline-none ring-2 ring-white/50 rounded-lg focus:ring-white resize-none"
                   ></textarea>
                   <button
-                    class="px-6 py-2 bg-white/50 rounded-lg w-full"
+                    class="px-6 py-2 bg-gray-600/80 rounded-lg w-full cursor-pointer"
                     type="submit"
                   >
                     Submit
@@ -1009,126 +986,137 @@
         class="space-y-3 md:py-6 font-lora leading-tight mb-6 text-center md:text-left"
       >
         <h1 class="text-2xl md:text-4xl lg:text-5xl">What Our Client's</h1>
-        <h2 class="text-xl md:text-2xl lg:text-4xl text-gray-400">"Feedback"</h2>
+        <h2 class="text-xl md:text-2xl lg:text-4xl text-gray-400">
+          "Feedback"
+        </h2>
       </div>
 
       <div
         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 place-items-center"
       >
-        <div
-          class="flex flex-col items-center bg-white/5 border border-white/20 p-4 space-y-8 rounded-2xl relative overflow-hidden group hover:scale-105 transition-all duration-600 ease-in-out"
-        >
+        <!-- card 1 -->
+        <div data-aos="zoom-in" data-aos-delay="50">
           <div
-            class="focus:bg-amber-300 w-full h-full absolute inset-0 tranform translate-y-full bg-gradient-to-r from-gray-700 to-gray-900 group-hover:translate-y-0 hover:scale-105 transition-all duration-600 ease-in-out z-[-1]"
-          ></div>
-          <div class="flex items-center justify-between w-full">
-            <div class="text-xl text-yellow-500">
-              <span class="fas fa-star"></span>
-              <span class="fas fa-star"></span>
-              <span class="fas fa-star"></span>
-              <span class="fas fa-star"></span>
-              <span class="fas fa-star-half-stroke"></span>
+            class="flex flex-col items-center bg-white/5 border border-white/20 p-4 space-y-8 rounded-2xl relative overflow-hidden group hover:scale-105 transition-all duration-600 ease-in-out"
+          >
+            <div
+              class="focus:bg-amber-300 w-full h-full absolute inset-0 tranform translate-y-full bg-gradient-to-r from-gray-700 to-gray-900 group-hover:translate-y-0 hover:scale-105 transition-all duration-600 ease-in-out z-[-1]"
+            ></div>
+            <div class="flex items-center justify-between w-full">
+              <div class="text-xl text-yellow-500">
+                <span class="fas fa-star"></span>
+                <span class="fas fa-star"></span>
+                <span class="fas fa-star"></span>
+                <span class="fas fa-star"></span>
+                <span class="fas fa-star-half-stroke"></span>
+              </div>
+              <div class="text-2xl">
+                <span class="fas fa-quote-right"></span>
+              </div>
             </div>
-            <div class="text-2xl">
-              <span class="fas fa-quote-right"></span>
-            </div>
-          </div>
-          <p class="">
-            There are many variations of passages of available but the majority
-            have to sufferedes alteratiosn in some form, by injected hums
-            randomised words which don't slightly. City governments have various
-            depar ments that can handles to forward...
-          </p>
+            <p class="">
+              There are many variations of passages of available but the
+              majority have to sufferedes alteratiosn in some form, by injected
+              hums randomised words which don't slightly. City governments have
+              various depar ments that can handles to forward...
+            </p>
 
-          <div class="flex items-center gap-6 w-full">
-            <div class="">
-              <img
-                class="h-12 w-12 rounded-full object-cover object-top"
-                src="../assets/ab-f-1.jpeg"
-                alt="about"
-              />
-            </div>
-            <div class="flex flex-col items-start">
-              <h3><a href="">Rohit Sharma</a></h3>
-              <p>Visitor Canada</p>
+            <div class="flex items-center gap-6 w-full">
+              <div class="">
+                <img
+                  class="h-12 w-12 rounded-full object-cover object-top"
+                  src="../assets/ab-f-1.jpeg"
+                  alt="about"
+                />
+              </div>
+              <div class="flex flex-col items-start">
+                <h3><a href="">Rohit Sharma</a></h3>
+                <p>Visitor Canada</p>
+              </div>
             </div>
           </div>
         </div>
-        <div
-          class="flex flex-col items-center bg-white/5 border border-white/20 p-4 space-y-8 rounded-2xl relative overflow-hidden group hover:scale-105 transition-all duration-600 ease-in-out"
-        >
+        <!-- card 2 -->
+        <div data-aos="zoom-in" data-aos-delay="100">
           <div
-            class="w-full h-full absolute inset-0 tranform translate-y-full bg-gradient-to-r from-gray-700 to-gray-900 group-hover:translate-y-0 hover:scale-105 transition-all duration-600 ease-in-out z-[-1]"
-          ></div>
-          <div class="flex items-center justify-between w-full">
-            <div class="text-xl text-yellow-500">
-              <span class="fas fa-star"></span>
-              <span class="fas fa-star"></span>
-              <span class="fas fa-star"></span>
-              <span class="fas fa-star"></span>
-              <span class="fas fa-star"></span>
+            class="flex flex-col items-center bg-white/5 border border-white/20 p-4 space-y-8 rounded-2xl relative overflow-hidden group hover:scale-105 transition-all duration-600 ease-in-out"
+          >
+            <div
+              class="w-full h-full absolute inset-0 tranform translate-y-full bg-gradient-to-r from-gray-700 to-gray-900 group-hover:translate-y-0 hover:scale-105 transition-all duration-600 ease-in-out z-[-1]"
+            ></div>
+            <div class="flex items-center justify-between w-full">
+              <div class="text-xl text-yellow-500">
+                <span class="fas fa-star"></span>
+                <span class="fas fa-star"></span>
+                <span class="fas fa-star"></span>
+                <span class="fas fa-star"></span>
+                <span class="fas fa-star"></span>
+              </div>
+              <div class="text-2xl">
+                <span class="fas fa-quote-right"></span>
+              </div>
             </div>
-            <div class="text-2xl">
-              <span class="fas fa-quote-right"></span>
-            </div>
-          </div>
-          <p class="">
-            There are many variations of passages of available but the majority
-            have to sufferedes alteratiosn in some form, by injected hums
-            randomised words which don't slightly. City governments have various
-            depar ments that can handles to forward...
-          </p>
+            <p class="">
+              There are many variations of passages of available but the
+              majority have to sufferedes alteratiosn in some form, by injected
+              hums randomised words which don't slightly. City governments have
+              various depar ments that can handles to forward...
+            </p>
 
-          <div class="flex items-center gap-6 w-full">
-            <div class="">
-              <img
-                class="h-12 w-12 rounded-full object-cover object-top"
-                src="../assets/ab-f-1.jpeg"
-                alt="about"
-              />
-            </div>
-            <div class="flex flex-col items-start">
-              <h3><a href="">Rohit Sharma</a></h3>
-              <p>Visitor Canada</p>
+            <div class="flex items-center gap-6 w-full">
+              <div class="">
+                <img
+                  class="h-12 w-12 rounded-full object-cover object-top"
+                  src="../assets/ab-f-1.jpeg"
+                  alt="about"
+                />
+              </div>
+              <div class="flex flex-col items-start">
+                <h3><a href="">Rohit Sharma</a></h3>
+                <p>Visitor Canada</p>
+              </div>
             </div>
           </div>
         </div>
-        <div
-          class="flex flex-col items-center bg-white/5 border border-white/20 p-4 space-y-8 rounded-2xl relative overflow-hidden group hover:scale-105 transition-all duration-600 ease-in-out"
-        >
+        <!-- card 3 -->
+        <div data-aos="zoom-in" data-aos-delay="150">
           <div
-            class="w-full h-full absolute inset-0 tranform translate-y-full bg-gradient-to-r from-gray-700 to-gray-900 group-hover:translate-y-0 hover:scale-105 transition-all duration-600 ease-in-out z-[-1]"
-          ></div>
-          <div class="flex items-center justify-between w-full">
-            <div class="text-xl text-yellow-500">
-              <span class="fas fa-star"></span>
-              <span class="fas fa-star"></span>
-              <span class="fas fa-star"></span>
-              <span class="fas fa-star"></span>
-              <span class="fas fa-star-half-stroke"></span>
+            class="flex flex-col items-center bg-white/5 border border-white/20 p-4 space-y-8 rounded-2xl relative overflow-hidden group hover:scale-105 transition-all duration-600 ease-in-out"
+          >
+            <div
+              class="w-full h-full absolute inset-0 tranform translate-y-full bg-gradient-to-r from-gray-700 to-gray-900 group-hover:translate-y-0 hover:scale-105 transition-all duration-600 ease-in-out z-[-1]"
+            ></div>
+            <div class="flex items-center justify-between w-full">
+              <div class="text-xl text-yellow-500">
+                <span class="fas fa-star"></span>
+                <span class="fas fa-star"></span>
+                <span class="fas fa-star"></span>
+                <span class="fas fa-star"></span>
+                <span class="fas fa-star-half-stroke"></span>
+              </div>
+              <div class="text-2xl">
+                <span class="fas fa-quote-right"></span>
+              </div>
             </div>
-            <div class="text-2xl">
-              <span class="fas fa-quote-right"></span>
-            </div>
-          </div>
-          <p class="">
-            There are many variations of passages of available but the majority
-            have to sufferedes alteratiosn in some form, by injected hums
-            randomised words which don't slightly. City governments have various
-            depar ments that can handles to forward...
-          </p>
+            <p class="">
+              There are many variations of passages of available but the
+              majority have to sufferedes alteratiosn in some form, by injected
+              hums randomised words which don't slightly. City governments have
+              various depar ments that can handles to forward...
+            </p>
 
-          <div class="flex items-center gap-6 w-full">
-            <div class="">
-              <img
-                class="h-12 w-12 rounded-full object-cover object-top"
-                src="../assets/ab-f-1.jpeg"
-                alt="about"
-              />
-            </div>
-            <div class="flex flex-col items-start">
-              <h3><a href="">Rohit Sharma</a></h3>
-              <p>Visitor Canada</p>
+            <div class="flex items-center gap-6 w-full">
+              <div class="">
+                <img
+                  class="h-12 w-12 rounded-full object-cover object-top"
+                  src="../assets/ab-f-1.jpeg"
+                  alt="about"
+                />
+              </div>
+              <div class="flex flex-col items-start">
+                <h3><a href="">Rohit Sharma</a></h3>
+                <p>Visitor Canada</p>
+              </div>
             </div>
           </div>
         </div>
@@ -1170,10 +1158,14 @@
                 >New</span
               ></a
             >
-            <a class="hover:text-slate-600 transition" href="../Event/Event.html"
+            <a
+              class="hover:text-slate-600 transition"
+              href="../Event/Event.html"
               >Events</a
             >
-            <a class="hover:text-slate-600 transition" href="../Contact/Contact.html"
+            <a
+              class="hover:text-slate-600 transition"
+              href="../Contact/Contact.html"
               >Contact us</a
             >
           </div>
@@ -1259,22 +1251,22 @@
       book.forEach((el) => {
         el.addEventListener("click", function () {
           bookform.hidden = false;
-          bookform.querySelector('form').classList.add('pop');
+          bookform.querySelector("form").classList.add("pop");
         });
       });
 
       closex.addEventListener("click", function () {
-        bookform.querySelector('form').classList.remove("pop");
-        bookform.querySelector('form').classList.add("popout");
+        bookform.querySelector("form").classList.remove("pop");
+        bookform.querySelector("form").classList.add("popout");
 
         // Wait for animation to finish before hiding
         bookform.addEventListener(
           "animationend",
           () => {
-            if (bookform.querySelector('form').classList.contains("popout")) {
+            if (bookform.querySelector("form").classList.contains("popout")) {
               bookform.hidden = true;
             }
-            bookform.querySelector('form').classList.remove("popout");
+            bookform.querySelector("form").classList.remove("popout");
           },
           { once: true }
         );
