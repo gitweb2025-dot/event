@@ -79,6 +79,19 @@
         opacity: 1;
         transform: translateY(0);
       }
+      .slide {
+        animation: slide 8s linear infinite;
+      }
+
+      @keyframes slide {
+        0% {
+          transform: translateX(100%);
+        }
+
+        100% {
+          transform: translateX(-100%);
+        }
+      }
     </style>
   </head>
 
@@ -348,15 +361,566 @@
       </script>
     </header>
 
-    <div class="z-[-1] absolute inset-0">
-      <img class="w-full h-screen object-cover brightness-40" src="../assets/Home1/bg1.jpg" alt="">
-    </div>
-
     <!-- Home Section -->
 
-    <main class="px-4 overflow-x-hidden">
+    <main class="min-h-screen px-4 overflow-x-hidden relative">
+      <div class="z-[-1] absolute inset-0">
+        <img
+          class="w-full h-full object-cover object-right brightness-40"
+          src="../assets/Home1/bg3-1.jpg"
+          alt=""
+        />
+      </div>
 
+      <div class="h-screen flex flex-col items-center">
+        <!-- contents -->
+        <div
+          class="text-white dark:text-white flex flex-col justify-center items-start space-y-2.5 md:space-y-6 w-full h-full"
+        >
+          <h1
+            class="text-2xl md:text-4xl xl:text-6xl pb-4 font-bold max-w-4xl"
+            data-aos="fade-up"
+            data-aos-delay="0"
+          >
+            Turning Your Moments Into Unforgettable Memories
+          </h1>
+          <p
+            class="text-[15px] md:text-2xl pb-4 max-w-2xl"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            From weddings and corporate events to grand celebrations — we plan,
+            design, and deliver experiences that inspire and delight.
+          </p>
+          <div class="flex items-center gap-6 z-10">
+            <div data-aos="fade-up" data-aos-delay="150">
+              <button
+                id="book"
+                class="flex items-center justify-center gap-2 px-6 py-3 rounded-full text-xs md:text-sm font-medium border-2 bg-gray-700 border-gray-700 text-white dark:text-white transform hover:scale-95 transition duration-200 ease-out z-10 cursor-pointer"
+              >
+                Book Now
+              </button>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="150">
+              <a
+                href="./Service/Service.html"
+                class="flex items-center justify-center gap-2 px-6 py-3 rounded-full text-xs md:text-sm font-medium border-2 border-gray-700 text-white dark:text-white transform hover:scale-95 transition duration-200 ease-out z-10"
+              >
+                Explore Our Services
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
+
+    <!-- Our Impact  -->
+    <section
+      id="impact"
+      class="py-6 md:py-12 px-4 overflow-hidden overflow-x-hidden"
+    >
+      <div class="py-4 space-y-6 text-center mx-auto">
+        <p
+          class="px-6 py-1.5 rounded-full border border-white/50 w-fit mx-auto mt-4"
+        >
+          Uniting Creative Minds
+        </p>
+        <h1 class="text-2xl lg:text-4xl xl:text-6xl font-bold">
+          Pioneering the future of innovation and design. Where creativity meets
+          collaboration at global forums.
+        </h1>
+        <h4 class="text-xl text-gray-400">
+          Let me know if you’d like any refinements!
+        </h4>
+      </div>
+
+      <div class="text-center py-10 space-y-4">
+        <p data-aos="fade-left" data-aos-delay="200" class="text-sm lg:text-xl">
+          "Delivering meaningful experiences, one event at a time."
+        </p>
+
+        <div class="flex items-center justify-center gap-6 z-10  mx-auto w-full">
+          <div data-aos="fade-up" data-aos-delay="150">
+            <a
+              href="./Service/Service.html"
+              class="flex items-center justify-center gap-2 px-6 py-3 rounded-full text-xs md:text-sm font-medium border-2 border-gray-700 text-white dark:text-white transform hover:scale-95 transition duration-200 ease-out z-10"
+            >
+              Explore More
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+        <!-- Client Satisfaction Card -->
+        <div
+          class="bg-white/5 shadow-lg rounded-2xl space-y-6 px-4 py-16 border border-gray-500/30"
+          data-aos="zoom-in"
+          data-aos-delay="100"
+        >
+          <h3 class="text-xl md:text-3xl font-semibold text-gray-300 mb-2">
+            Client Satisfaction
+          </h3>
+          <span
+            class="counter text-6xl font-bold text-gray-200"
+            data-target="95"
+            >0</span
+          ><span class="text-6xl font-bold">%</span>
+          <p class="text-gray-400">
+            95% repeat clients who trust us for flawless execution and memorable
+            experiences.
+          </p>
+        </div>
+
+        <!-- Events Conducted Card -->
+        <div
+          class="bg-white/5 shadow-lg rounded-2xl space-y-6 px-4 py-16 border border-gray-500/30"
+          data-aos="zoom-in"
+          data-aos-delay="200"
+        >
+          <h3 class="text-xl md:text-3xl font-semibold text-gray-300 mb-2">
+            Events to Conducted
+          </h3>
+          <span
+            class="counter text-6xl font-bold text-gray-200"
+            data-target="250"
+            >0</span
+          ><span class="text-6xl font-bold">k</span>
+          <p class="text-gray-400">
+            Over 250k successful conferences, seminars, and exhibitions
+            organized worldwide.
+          </p>
+        </div>
+
+        <!-- Participants Engaged Card -->
+        <div
+          class="bg-white/5 shadow-lg rounded-2xl space-y-6 px-4 py-16 border border-gray-500/30"
+          data-aos="zoom-in"
+          data-aos-delay="300"
+        >
+          <h3 class="text-xl md:text-3xl font-semibold text-gray-300 mb-2">
+            Participants Engaged
+          </h3>
+          <span
+            class="counter text-6xl font-bold text-gray-200"
+            data-target="1200"
+            >0</span
+          ><span class="text-6xl font-bold">+</span>
+          <p class="text-gray-400">
+            More than 1,200 professionals, leaders, and innovators have joined
+            our events.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-4 py-8 overflow-x-hidden">
+      <div class="space-y-3 text-center py-6">
+        <h1 class="text-3xl lg:text-6xl font-bold">Our Speakers</h1>
+        <p class="text-lg text-white/55">Meet Our World’s Leading Speakers</p>
+      </div>
+      <div class="grid grid-cols-1 xl:grid-cols-2 gap-12">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full items-center bg-white/5 border border-white/10 px-4 py-8 rounded-2xl"
+        >
+          <div class="relative w-full flex items-center justify-center">
+            <img src="../assets/Home1/01-per.png" alt="" />
+            <div
+              class="absolute bottom-0 flex items-center justify-center w-72 h-72 rounded-full bg-gradient-to-br from-slate-950/40 to-gray-900/50 z-[-1]"
+            ></div>
+          </div>
+          <div class="flex flex-col justify-center h-full space-y-2.5">
+            <h1 class="text-3xl font-normal">Pooja Tej</h1>
+            <p class="text-lg text-white/80">Speaker</p>
+            <p class="text-white/50">
+              Completey conceplua high quality nice markes rather than long term
+              impact human capital
+            </p>
+            <ul class="text-gray-400 flex items-center gap-6 text-xl pt-4">
+              <li
+                class="transform hover:text-white hover:scale-125 transition-all duration-500 ease-out"
+              >
+                <a href="../404.html"><i class="fab fa-instagram"></i></a>
+              </li>
+              <li
+                class="transform hover:text-white hover:scale-125 transition-all duration-500 ease-out"
+              >
+                <a href="../404.html"><i class="fab fa-facebook"></i></a>
+              </li>
+              <li
+                class="transform hover:text-white hover:scale-125 transition-all duration-500 ease-out"
+              >
+                <a href="../404.html"><i class="fab fa-linkedin"></i></a>
+              </li>
+              <li
+                class="transform hover:text-white hover:scale-125 transition-all duration-500 ease-out"
+              >
+                <a href="../404.html"><i class="fab fa-pinterest"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full items-center bg-white/5 border border-white/10 px-4 py-8 rounded-2xl"
+        >
+          <div class="relative w-full flex items-center justify-center">
+            <img src="../assets/Home1/02-per.png" alt="" />
+            <div
+              class="absolute bottom-0 flex items-center justify-center w-72 h-72 rounded-full bg-gradient-to-br from-slate-950/40 to-gray-900/50 z-[-1]"
+            ></div>
+          </div>
+          <div class="flex flex-col justify-center h-full space-y-2.5">
+            <h1 class="text-3xl font-normal">Ravi Tej</h1>
+            <p class="text-lg text-white/80">Singer</p>
+            <p class="text-white/50">
+              Completey conceplua high quality nice markes rather than long term
+              impact human capital
+            </p>
+            <ul class="text-gray-400 flex items-center gap-6 text-xl pt-4">
+              <li
+                class="transform hover:text-white hover:scale-125 transition-all duration-500 ease-out"
+              >
+                <a href="../404.html"><i class="fab fa-instagram"></i></a>
+              </li>
+              <li
+                class="transform hover:text-white hover:scale-125 transition-all duration-500 ease-out"
+              >
+                <a href="../404.html"><i class="fab fa-facebook"></i></a>
+              </li>
+              <li
+                class="transform hover:text-white hover:scale-125 transition-all duration-500 ease-out"
+              >
+                <a href="../404.html"><i class="fab fa-linkedin"></i></a>
+              </li>
+              <li
+                class="transform hover:text-white hover:scale-125 transition-all duration-500 ease-out"
+              >
+                <a href="../404.html"><i class="fab fa-pinterest"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full items-center bg-white/5 border border-white/10 px-4 py-8 rounded-2xl"
+        >
+          <div class="relative w-full flex items-center justify-center">
+            <img src="../assets/Home1/03-per.png" alt="" />
+            <div
+              class="absolute bottom-0 flex items-center justify-center w-72 h-72 rounded-full bg-gradient-to-br from-slate-950/40 to-gray-900/50 z-[-1]"
+            ></div>
+          </div>
+          <div class="flex flex-col justify-center h-full space-y-2.5">
+            <h1 class="text-3xl font-normal">Edwin Mayor</h1>
+            <p class="text-lg text-white/80">Speaker</p>
+            <p class="text-white/50">
+              Completey conceplua high quality nice markes rather than long term
+              impact human capital
+            </p>
+            <ul class="text-gray-400 flex items-center gap-6 text-xl pt-4">
+              <li
+                class="transform hover:text-white hover:scale-125 transition-all duration-500 ease-out"
+              >
+                <a href="../404.html"><i class="fab fa-instagram"></i></a>
+              </li>
+              <li
+                class="transform hover:text-white hover:scale-125 transition-all duration-500 ease-out"
+              >
+                <a href="../404.html"><i class="fab fa-facebook"></i></a>
+              </li>
+              <li
+                class="transform hover:text-white hover:scale-125 transition-all duration-500 ease-out"
+              >
+                <a href="../404.html"><i class="fab fa-linkedin"></i></a>
+              </li>
+              <li
+                class="transform hover:text-white hover:scale-125 transition-all duration-500 ease-out"
+              >
+                <a href="../404.html"><i class="fab fa-pinterest"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full items-center bg-white/5 border border-white/10 px-4 py-8 rounded-2xl"
+        >
+          <div class="relative w-full flex items-center justify-center">
+            <img src="../assets/Home1/04-per.png" alt="" />
+            <div
+              class="absolute bottom-0 flex items-center justify-center w-72 h-72 rounded-full bg-gradient-to-br from-slate-950/40 to-gray-900/50 z-[-1]"
+            ></div>
+          </div>
+          <div class="flex flex-col justify-center h-full space-y-2.5">
+            <h1 class="text-3xl font-normal">Sandy Tej</h1>
+            <p class="text-lg text-white/80">Management</p>
+            <p class="text-white/50">
+              Completey conceplua high quality nice markes rather than long term
+              impact human capital
+            </p>
+            <ul class="text-gray-400 flex items-center gap-6 text-xl pt-4">
+              <li
+                class="transform hover:text-white hover:scale-125 transition-all duration-500 ease-out"
+              >
+                <a href="../404.html"><i class="fab fa-instagram"></i></a>
+              </li>
+              <li
+                class="transform hover:text-white hover:scale-125 transition-all duration-500 ease-out"
+              >
+                <a href="../404.html"><i class="fab fa-facebook"></i></a>
+              </li>
+              <li
+                class="transform hover:text-white hover:scale-125 transition-all duration-500 ease-out"
+              >
+                <a href="../404.html"><i class="fab fa-linkedin"></i></a>
+              </li>
+              <li
+                class="transform hover:text-white hover:scale-125 transition-all duration-500 ease-out"
+              >
+                <a href="../404.html"><i class="fab fa-pinterest"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full items-center bg-white/5 border border-white/10 px-4 py-8 rounded-2xl"
+        >
+          <div class="relative w-full flex items-center justify-center">
+            <img src="../assets/Home1/05-per.png" alt="" />
+            <div
+              class="absolute bottom-0 flex items-center justify-center w-72 h-72 rounded-full bg-gradient-to-br from-slate-950/40 to-gray-900/50 z-[-1]"
+            ></div>
+          </div>
+          <div class="flex flex-col justify-center h-full space-y-2.5">
+            <h1 class="text-3xl font-normal">Andreya Rao</h1>
+            <p class="text-lg text-white/80">Speaker</p>
+            <p class="text-white/50">
+              Completey conceplua high quality nice markes rather than long term
+              impact human capital
+            </p>
+            <ul class="text-gray-400 flex items-center gap-6 text-xl pt-4">
+              <li
+                class="transform hover:text-white hover:scale-125 transition-all duration-500 ease-out"
+              >
+                <a href="../404.html"><i class="fab fa-instagram"></i></a>
+              </li>
+              <li
+                class="transform hover:text-white hover:scale-125 transition-all duration-500 ease-out"
+              >
+                <a href="../404.html"><i class="fab fa-facebook"></i></a>
+              </li>
+              <li
+                class="transform hover:text-white hover:scale-125 transition-all duration-500 ease-out"
+              >
+                <a href="../404.html"><i class="fab fa-linkedin"></i></a>
+              </li>
+              <li
+                class="transform hover:text-white hover:scale-125 transition-all duration-500 ease-out"
+              >
+                <a href="../404.html"><i class="fab fa-pinterest"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full items-center bg-white/5 border border-white/10 px-4 py-8 rounded-2xl"
+        >
+          <div class="relative w-full flex items-center justify-center">
+            <img src="../assets/Home1/06-per.png" alt="" />
+            <div
+              class="absolute bottom-0 flex items-center justify-center w-72 h-72 rounded-full bg-gradient-to-br from-slate-950/40 to-gray-900/50 z-[-1]"
+            ></div>
+          </div>
+          <div class="flex flex-col justify-center h-full space-y-2.5">
+            <h1 class="text-3xl font-normal">Alex dev</h1>
+            <p class="text-lg text-white/80">Speaker</p>
+            <p class="text-white/50">
+              Completey conceplua high quality nice markes rather than long term
+              impact human capital
+            </p>
+            <ul class="text-gray-400 flex items-center gap-6 text-xl pt-4">
+              <li
+                class="transform hover:text-white hover:scale-125 transition-all duration-500 ease-out"
+              >
+                <a href="../404.html"><i class="fab fa-instagram"></i></a>
+              </li>
+              <li
+                class="transform hover:text-white hover:scale-125 transition-all duration-500 ease-out"
+              >
+                <a href="../404.html"><i class="fab fa-facebook"></i></a>
+              </li>
+              <li
+                class="transform hover:text-white hover:scale-125 transition-all duration-500 ease-out"
+              >
+                <a href="../404.html"><i class="fab fa-linkedin"></i></a>
+              </li>
+              <li
+                class="transform hover:text-white hover:scale-125 transition-all duration-500 ease-out"
+              >
+                <a href="../404.html"><i class="fab fa-pinterest"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer
+      class="px-4 pt-2 w-full text-gray-500 overflow-hidden overflow-x-hidden"
+    >
+      <div
+        class="flex justify-between flex-wrap w-full md:gap-20 gap-8 pb-6"
+        data-aos="fade-up"
+        data-aos-delay="150"
+      >
+        <div class="md:max-w-96 flex flex-col items-start space-y-2">
+          <img class="h-12" src="../assets/Logo1.png" alt="logo" />
+          <p class="mt-2 text-sm">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s.
+          </p>
+        </div>
+
+        <div class="flex flex-col lg:items-center lg:justify-center">
+          <div class="flex flex-col text-sm space-y-2.5 md:px-8">
+            <h2 class="font-semibold mb-5 text-gray-100">Easier Acces</h2>
+            <a class="hover:text-slate-600 transition" href="./Home1.html"
+              >Home</a
+            >
+            <a class="hover:text-slate-600 transition" href="./About.html"
+              >About us</a
+            >
+            <a
+              class="hover:text-slate-600 transition"
+              href="../Service/Service.html"
+              >Services<span
+                class="text-xs text-white bg-gray-600 rounded-bl-xl rounded-tr-xl ml-2 px-2 py-1"
+                >New</span
+              ></a
+            >
+            <a
+              class="hover:text-slate-600 transition"
+              href="../Event/Event.html"
+              >Events</a
+            >
+            <a
+              class="hover:text-slate-600 transition"
+              href="../Contact/Contact.html"
+              >Contact us</a
+            >
+          </div>
+        </div>
+
+        <div>
+          <h2 class="font-semibold text-gray-100 mb-5">
+            Subscribe to our newsletter
+          </h2>
+          <div class="text-sm space-y-6 max-w-sm">
+            <p>
+              The latest news, articles, and resources, sent to your inbox
+              weekly.
+            </p>
+            <form
+              method="get"
+              action="../404.html"
+              class="flex items-center justify-center gap-2 p-2 rounded-md bg-gray-50/5"
+            >
+              <input
+                class="focus:ring-0 outline-none w-full max-w-64 py-2 rounded px-2 text-gray-100"
+                type="email"
+                required
+                placeholder="Enter your email"
+              />
+              <button
+                type="submit"
+                class="bg-gray-600 px-4 py-2 text-white rounded cursor-pointer"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="flex items-start">
+          <div class="">
+            <h2 class="font-semibold mb-5 text-gray-100">Get in touch</h2>
+            <div class="text-sm space-y-2 flex flex-col items-start">
+              <a href="../404.html">+1-212-456-7890</a>
+              <a href="../404.html">contact@example.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <!-- Google Map -->
+        <div
+          data-aos="fade-up"
+          data-aos-delay="200"
+          class="rounded-2xl bg-black/50 w-full overflow-hidden shadow-lg mb-3"
+        >
+          <iframe
+            class="opacity-50"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3907.1616097152896!2d78.1739798!3d11.682956599999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babefef7fd970bb%3A0xe11aef1a71994f9!2sStackly!5e0!3m2!1sen!2sin!4v1755667813665!5m2!1sen!2sin"
+            width="100%"
+            height="250"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-center border-t border-gray-500/30">
+        <div>
+          <p class="pt-4 text-xs md:text-sm pb-5">
+            Copyright 2025 © <a href="../404.html">Stackly</a>. All Right
+            Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Counter JS -->
+    <script>
+      function animateCounters() {
+        const counters = document.querySelectorAll(".counter");
+
+        counters.forEach((counter) => {
+          let target = +counter.getAttribute("data-target");
+          let count = 0;
+          let increment = target / 200; // adjust speed
+
+          function updateCounter() {
+            count += increment;
+            if (count < target) {
+              counter.innerText = Math.ceil(count);
+              requestAnimationFrame(updateCounter);
+            } else {
+              counter.innerText = target;
+            }
+          }
+
+          updateCounter();
+        });
+      }
+
+      // Trigger when section is visible
+      const section = document.querySelector("#impact");
+      const observer = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              animateCounters();
+              observer.unobserve(section); // run multiple or to set unobserve for once
+            }
+          });
+        },
+        { threshold: 0.6 }
+      );
+
+      observer.observe(section);
+    </script>
 
     <!-- Aos Animation  -->
     <script

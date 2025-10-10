@@ -1174,7 +1174,7 @@
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               animateCounters();
-              observer.unobserve(section); // run once
+              observer.unobserve(section); // run multiple or to set unobserve for once
             }
           });
         },
