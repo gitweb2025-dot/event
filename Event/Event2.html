@@ -179,7 +179,6 @@
   </head>
 
   <body class="antialiased bg-black text-white relative">
-
     <!-- forms -->
     <div
       hidden
@@ -286,10 +285,7 @@
 
               <!-- Home 2 -->
               <li>
-                <a
-                  href="../index.html"
-                  class="block px-4 py-2 text-white"
-                >
+                <a href="../index.html" class="block px-4 py-2 text-white">
                   Home 1
                 </a>
               </li>
@@ -404,12 +400,7 @@
               </li> -->
               <li class=""></li>
               <li>
-                <a
-                  href="../index.html"
-                  class="block px-2 py-2"
-                >
-                  Home 1
-                </a>
+                <a href="../index.html" class="block px-2 py-2"> Home 1 </a>
               </li>
             </ul>
           </div>
@@ -560,15 +551,35 @@
       </div>
 
       <div class="space-y-2.5 py-4 mx-auto mb-8">
-        <h2 data-aos="zoom-in-up" data-aos-delay="50" class="pt-24 text-2xl md:text-4xl font-bold text-center">
+        <h2
+          data-aos="zoom-in-up"
+          data-aos-delay="50"
+          class="pt-24 text-2xl md:text-4xl font-bold text-center"
+        >
           Upcoming Events & FAQs
         </h2>
-        <p data-aos="zoom-in-up" data-aos-delay="100" class="text-lg md:text-xl text-gray-300 text-center">From corporate summits to private celebrations, we provide full-spectrum event management services designed to impress and inspire.</p>
+        <p
+          data-aos="zoom-in-up"
+          data-aos-delay="100"
+          class="text-lg md:text-xl text-gray-300 text-center"
+        >
+          From corporate summits to private celebrations, we provide
+          full-spectrum event management services designed to impress and
+          inspire.
+        </p>
       </div>
       <!-- Tabs -->
-      <div data-aos="zoom-in-up" data-aos-delay="150" class="flex flex-wrap items-center justify-center gap-2 mb-4 md:mb-8 space-x-4">
+      <div
+        data-aos="zoom-in-up"
+        data-aos-delay="150"
+        class="flex flex-wrap items-center justify-center gap-2 mb-4 md:mb-8 space-x-4"
+      >
         <div>
-          <h1 class="text-xl py-2 border border-white/5 px-4 rounded-lg bg-white/5">Grab Our Events on the dates</h1>
+          <h1
+            class="text-xl py-2 border border-white/5 px-4 rounded-lg bg-white/5"
+          >
+            Grab Our Events on the dates
+          </h1>
         </div>
         <span>-</span>
         <button
@@ -577,7 +588,7 @@
         >
           Oct 15
         </button>
-        <button 
+        <button
           class="tab px-5 py-2 rounded-lg bg-white/5 border border-white/20 transition cursor-pointer focus:bg-gray-400"
           data-date="2025-11-21"
         >
@@ -688,13 +699,15 @@
         <h3 id="modalTitle" class="text-2xl font-bold mb-4">
           Register for Event
         </h3>
-        <form class="space-y-4">
+        <form method="get" action="../404.html" class="space-y-4">
           <input
+            required
             type="text"
             placeholder="Name"
             class="w-full border rounded px-3 py-2 bg-white/5 text-white border-gray-700"
           />
           <input
+            required
             type="email"
             placeholder="Email"
             class="w-full border rounded px-3 py-2 bg-white/5 text-white border-gray-700"
@@ -707,6 +720,7 @@
           </button>
         </form>
         <button
+          type="submit"
           class="mt-4 text-gray-400 hover:text-white cursor-pointer"
           onclick="closeModal()"
         >
@@ -792,7 +806,9 @@
           const card = document.createElement("div");
           card.className = `bg-white/5 border border-white/20 rounded-xl shadow-lg overflow-hidden transform transition-all duration-500 opacity-0 translate-y-6 md:h-[520px]`;
           card.innerHTML = `
-          <img src="${e.img}" alt="${e.title}" class="w-full lg:h-80 object-cover object-[40%_60%]">
+          <img src="${e.img}" alt="${
+            e.title
+          }" class="w-full lg:h-80 object-cover object-[40%_60%]">
           <div class="p-4 flex flex-col justify-between">
             <h3 class="text-xl font-semibold mb-2">${e.title}</h3>
             <p class="text-gray-400 mb-2">${new Date(e.date).toDateString()}</p>
@@ -839,7 +855,7 @@
         const modal = document.getElementById("modal");
         modal.querySelector("div").classList.add("scale-95");
         setTimeout(
-          () => modal.classList.add("opacity-0" , "pointer-events-none"),
+          () => modal.classList.add("opacity-0", "pointer-events-none"),
           200
         );
       }
