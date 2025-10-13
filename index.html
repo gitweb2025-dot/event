@@ -544,7 +544,10 @@
               </h2>
 
               <!-- Timer -->
-              <div class="flex justify-center items-center gap-1 md:gap-6">
+              <div
+                id="finish"
+                class="flex justify-center items-center gap-1 md:gap-6"
+              >
                 <!-- Days -->
                 <div class="bg-gray-200/10 p-2 rounded-xl">
                   <div class="md:text-3xl font-bold" id="days">00</div>
@@ -639,6 +642,7 @@
             document.querySelector("#hours").innerHTML = "00";
             document.querySelector("#minutes").innerHTML = "00";
             document.querySelector("#seconds").innerHTML = "00";
+            document.querySelector("#finish").innerHTML = "Event Completed";
             return;
           }
 
