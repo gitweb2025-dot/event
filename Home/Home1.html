@@ -79,23 +79,104 @@
         opacity: 1;
         transform: translateY(0);
       }
-      .slide {
-        animation: slide 8s linear infinite;
+      .pop {
+        animation: popup 0.5s linear forwards;
       }
 
-      @keyframes slide {
-        0% {
-          transform: translateX(100%);
+      @keyframes popup {
+        from {
+          transform: scale(0);
+          opacity: 0;
         }
+        to {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
 
-        100% {
-          transform: translateX(-100%);
+      .popout {
+        animation: popout 0.4s linear backwards;
+      }
+
+      @keyframes popout {
+        from {
+          transform: scale(1);
+          opacity: 1;
+        }
+        to {
+          transform: scale(0);
+          opacity: 0;
         }
       }
     </style>
   </head>
 
   <body class="antialiased bg-black text-white relative">
+    <!-- forms -->
+    <div
+      hidden
+      id="bookform"
+      class="fixed flex justify-center items-center bg-black/80 backdrop-blur-3xl z-100 px-4 h-screen w-full"
+    >
+      <form
+        action="../404.html"
+        method="get"
+        class="w-full max-w-xl relative mx-auto flex flex-col items-center justify-center text-sm text-white px-4 py-8 rounded-2xl border-2 border-gray-400/50"
+        data-aos="fade-up-left"
+        data-aos-delay="200"
+      >
+        <div
+          id="closex"
+          class="absolute top-5 right-5 text-white cursor-pointer text-xl font-bold transform hover:scale-95 transition-all duration-300 ease-in"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div>
+          <h1 class="text-xl md:text-4xl font-bold uppercase">
+            Book
+            <span class="">Now</span>
+          </h1>
+        </div>
+        <div class="w-full mt-5 space-y-4">
+          <div class="flex flex-col justify-center gap-3">
+            <label class="font-medium">Full Name</label>
+            <input
+              type="text"
+              class="h-full py-3 px-3 w-full outline-none bg-transparent text-gray-200 ring ring-slate-500 rounded-lg focus:ring-gray-300 transition-all placeholder:text-white/70"
+              placeholder="Enter your full name"
+              required
+            />
+          </div>
+
+          <div class="flex flex-col justify-center gap-3">
+            <label class="font-medium mt-4">Email Address</label>
+            <input
+              type="email"
+              class="h-full py-3 px-3 w-full outline-none bg-transparent text-gray-200 ring ring-slate-500 rounded-lg focus:ring-gray-300 transition-all placeholder:text-white/70"
+              placeholder="Enter your email address"
+              required
+            />
+          </div>
+
+          <div class="flex flex-col justify-center gap-3">
+            <label class="font-medium">Message</label>
+            <textarea
+              rows="4"
+              class="h-full py-3 px-3 w-full outline-none bg-transparent text-gray-200 ring ring-slate-500 rounded-lg focus:ring-gray-300 transition-all placeholder:text-white/70"
+              placeholder="Enter your message"
+              required
+            ></textarea>
+          </div>
+
+          <button
+            class="px-6 bg-gray-600 text-white py-2.5 w-fit rounded-full mt-5 cursor-pointer"
+            type="submit"
+          >
+            Book Now
+          </button>
+        </div>
+      </form>
+    </div>
     <!-- Navbar  -->
     <header
       class="fixed top-0 z-[500] border-b border-slate-200/10 bg-white/5 backdrop-blur w-full mx-auto"
@@ -114,10 +195,10 @@
           <div class="relative">
             <!-- Parent Button -->
             <button
-              id="homeToggle"
+              
               class="relative inline-block text-white after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-gray-200 after:transition-all after:duration-300 hover:after:w-full cursor-pointer"
             >
-              Home <i class="fa-solid fa-caret-down"></i>
+              <a href="./Home1.html">Home</a> <i id="homeToggle" class="fa-solid fa-caret-down"></i>
             </button>
 
             <!-- Dropdown Menu -->
@@ -138,7 +219,7 @@
               <li>
                 <a
                   href="../index.html"
-                  class="block px-4 py-2 text-white hover:bg-gray-50 hover:text-gray-800 tr"
+                  class="block px-4 py-2 text-white"
                 >
                   Home 1
                 </a>
@@ -148,7 +229,7 @@
 
           <!-- About Us -->
           <a
-            href="./About.html"
+            href="../About/About2.html"
             class="relative inline-block text-white after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-gray-200 after:transition-all after:duration-300 hover:after:w-full"
           >
             About Us
@@ -156,28 +237,28 @@
 
           <!-- Services -->
           <a
-            href="../Service/Service.html"
+            href="../Service/Service2.html"
             class="relative inline-block text-white after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-gray-200 after:transition-all after:duration-300 hover:after:w-full"
           >
             Services
           </a>
           <!-- Events -->
           <a
-            href="../Event/Event.html"
+            href="../Event/Event2.html"
             class="relative inline-block text-white after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-gray-200 after:transition-all after:duration-300 hover:after:w-full"
           >
             Events
           </a>
           <!-- Contact -->
           <a
-            href="../Contact/Contact.html"
+            href="../Contact/Contact2.html"
             class="relative inline-block text-white after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-gray-200 after:transition-all after:duration-300 hover:after:w-full"
           >
             Contact
           </a>
           <!-- Dashboard -->
           <a
-            href="../Dashboard/Dashboard.html"
+            href="../Dashboard/Dashboard2.html"
             class="relative inline-block text-white after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-gray-200 after:transition-all after:duration-300 hover:after:w-full"
           >
             Dashboard
@@ -233,10 +314,10 @@
           <!-- Home dropDown  -->
           <div class="relative">
             <button
-              id="mobileToggle"
+              
               class="flex items-center gap-1 w-full text-left hover:text-gray-800 transition-colors lg:hidden"
             >
-              Home <i class="fa-solid fa-caret-down"></i>
+              <a href="./Home1.html">Home</a> <i id="mobileToggle" class="fa-solid fa-caret-down"></i>
             </button>
 
             <!-- Dropdown Menu -->
@@ -255,10 +336,10 @@
               <li class=""></li>
               <li>
                 <a
-                  href="../404.html"
-                  class="block px-2 py-2 hover:bg-gray-50 hover:text-gray-800"
+                  href="../index.html"
+                  class="block px-2 py-2 "
                 >
-                  Home 2
+                  Home 1
                 </a>
               </li>
             </ul>
@@ -266,7 +347,7 @@
           <!-- About Us -->
           <li>
             <a
-              href="./About.html"
+              href="../About/About2.html"
               class="nav-link block hover:text-gray-800 transition-colors"
               >About Us</a
             >
@@ -274,7 +355,7 @@
           <!-- Services -->
           <li>
             <a
-              href="../Service/Service.html"
+              href="../Service/Service2.html"
               class="nav-link block hover:text-gray-800 transition-colors"
               >Services</a
             >
@@ -282,7 +363,7 @@
           <!-- Events -->
           <li>
             <a
-              href="../Event/Event.html"
+              href="../Event/Event2.html"
               class="nav-link block hover:text-gray-800 transition-colors"
               >Events</a
             >
@@ -290,7 +371,7 @@
           <!-- Contact -->
           <li>
             <a
-              href="../Contact/Contact.html"
+              href="../Contact/Contact2.html"
               class="nav-link block hover:text-gray-800 transition-colors"
               >Contact</a
             >
@@ -298,7 +379,7 @@
           <!-- Dashboard -->
           <li>
             <a
-              href="../Dashboard/Dashboard.html"
+              href="../Dashboard/Dashboard2.html"
               class="nav-link block hover:text-gray-800 transition-colors"
               >Dashboard</a
             >
@@ -421,25 +502,26 @@
     >
       <div class="py-4 space-y-6 text-center mx-auto">
         <p
+        data-aos="zoom-in-up" data-aos-delay="50"
           class="px-6 py-1.5 rounded-full border border-white/50 w-fit mx-auto mt-4"
         >
           Uniting Creative Minds
         </p>
-        <h1 class="text-2xl lg:text-4xl xl:text-6xl font-bold">
+        <h1 data-aos="zoom-in-up" data-aos-delay="100" class="text-2xl lg:text-4xl xl:text-6xl font-bold">
           Pioneering the future of innovation and design. Where creativity meets
           collaboration at global forums.
         </h1>
-        <h4 class="text-xl text-gray-400">
+        <h4 data-aos="zoom-in-up" data-aos-delay="150"  class="text-xl text-gray-400">
           Let me know if you’d like any refinements!
         </h4>
       </div>
 
       <div class="text-center py-10 space-y-4">
-        <p data-aos="fade-left" data-aos-delay="200" class="text-sm lg:text-xl">
+        <p data-aos="zoom-in-up" data-aos-delay="150" data-aos="fade-left" data-aos-delay="200" class="text-sm lg:text-xl">
           "Delivering meaningful experiences, one event at a time."
         </p>
 
-        <div class="flex items-center justify-center gap-6 z-10  mx-auto w-full">
+        <div class="flex items-center justify-center gap-6 z-10 mx-auto w-full">
           <div data-aos="fade-up" data-aos-delay="150">
             <a
               href="./Service/Service.html"
@@ -513,13 +595,14 @@
       </div>
     </section>
 
+    <!-- our teams  -->
     <section class="px-4 py-8 overflow-x-hidden">
       <div class="space-y-3 text-center py-6">
-        <h1 class="text-3xl lg:text-6xl font-bold">Our Speakers</h1>
-        <p class="text-lg text-white/55">Meet Our World’s Leading Speakers</p>
+        <h1 data-aos="zoom-in-right" data-aos-delay="50" class="text-3xl lg:text-6xl font-bold">Our Team</h1>
+        <p data-aos="zoom-in-left" data-aos-delay="100" class="text-lg text-white/55">Meet Our World’s Leading Speakers</p>
       </div>
       <div class="grid grid-cols-1 xl:grid-cols-2 gap-12">
-        <div
+        <div data-aos="zoom-in-right" data-aos-delay="50"
           class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full items-center bg-white/5 border border-white/10 px-4 py-8 rounded-2xl"
         >
           <div class="relative w-full flex items-center justify-center">
@@ -559,7 +642,7 @@
             </ul>
           </div>
         </div>
-        <div
+        <div data-aos="zoom-in-left" data-aos-delay="100"
           class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full items-center bg-white/5 border border-white/10 px-4 py-8 rounded-2xl"
         >
           <div class="relative w-full flex items-center justify-center">
@@ -599,7 +682,7 @@
             </ul>
           </div>
         </div>
-        <div
+        <div data-aos="zoom-in-right" data-aos-delay="150"
           class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full items-center bg-white/5 border border-white/10 px-4 py-8 rounded-2xl"
         >
           <div class="relative w-full flex items-center justify-center">
@@ -639,7 +722,7 @@
             </ul>
           </div>
         </div>
-        <div
+        <div data-aos="zoom-in-left" data-aos-delay="200"
           class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full items-center bg-white/5 border border-white/10 px-4 py-8 rounded-2xl"
         >
           <div class="relative w-full flex items-center justify-center">
@@ -679,7 +762,7 @@
             </ul>
           </div>
         </div>
-        <div
+        <div data-aos="zoom-in-right" data-aos-delay="250"
           class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full items-center bg-white/5 border border-white/10 px-4 py-8 rounded-2xl"
         >
           <div class="relative w-full flex items-center justify-center">
@@ -719,7 +802,7 @@
             </ul>
           </div>
         </div>
-        <div
+        <div data-aos="zoom-in-left" data-aos-delay="300"
           class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full items-center bg-white/5 border border-white/10 px-4 py-8 rounded-2xl"
         >
           <div class="relative w-full flex items-center justify-center">
@@ -786,12 +869,12 @@
             <a class="hover:text-slate-600 transition" href="./Home1.html"
               >Home</a
             >
-            <a class="hover:text-slate-600 transition" href="./About.html"
+            <a class="hover:text-slate-600 transition" href="../About/About2.html"
               >About us</a
             >
             <a
               class="hover:text-slate-600 transition"
-              href="../Service/Service.html"
+              href="../Service/Service2.html"
               >Services<span
                 class="text-xs text-white bg-gray-600 rounded-bl-xl rounded-tr-xl ml-2 px-2 py-1"
                 >New</span
@@ -799,12 +882,12 @@
             >
             <a
               class="hover:text-slate-600 transition"
-              href="../Event/Event.html"
+              href="../Event/Event2.html"
               >Events</a
             >
             <a
               class="hover:text-slate-600 transition"
-              href="../Contact/Contact.html"
+              href="../Contact/Contact2.html"
               >Contact us</a
             >
           </div>
@@ -929,6 +1012,37 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+
+    <!-- Book Now Js -->
+    <script>
+      const book = document.querySelectorAll("#book");
+      const bookform = document.querySelector("#bookform");
+      const closex = document.querySelector("#closex");
+
+      book.forEach((el) => {
+        el.addEventListener("click", function () {
+          bookform.hidden = false;
+          bookform.querySelector("form").classList.add("pop");
+        });
+      });
+
+      closex.addEventListener("click", function () {
+        bookform.querySelector("form").classList.remove("pop");
+        bookform.querySelector("form").classList.add("popout");
+
+        // Wait for animation to finish before hiding
+        bookform.addEventListener(
+          "animationend",
+          () => {
+            if (bookform.querySelector("form").classList.contains("popout")) {
+              bookform.hidden = true;
+            }
+            bookform.querySelector("form").classList.remove("popout");
+          },
+          { once: true }
+        );
+      });
+    </script>
 
     <script>
       AOS.init({

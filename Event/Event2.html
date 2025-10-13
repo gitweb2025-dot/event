@@ -430,7 +430,7 @@
           <!-- Events -->
           <li>
             <a
-              href="../Event/Event.html"
+              href="../Event/Event2.html"
               class="nav-link block hover:text-white/20 transition-colors"
               >Events</a
             >
@@ -509,8 +509,7 @@
       </script>
     </header>
 
-    <!-- SERVICES SECTION -->
-    <section class="pt-16 px-4 overflow-hidden relative">
+    <section class="pt-16 px-4 overflow-x-hidden relative mx-auto">
       <!-- bread crumb -->
       <div class="absolute top-24">
         <div class="flex items-start gap-2">
@@ -552,351 +551,320 @@
           </svg>
           <a
             class="hover:text-gray-400 transition-all duration-300 ease-in font-bold"
-            href="./Service2.html"
-            >Services</a
+            href="./Event2.html"
+            >Events</a
           >
         </div>
       </div>
-      <!-- contents with cards -->
-      <div class="pt-24 mx-auto text-center">
-        <h2 class="text-3xl lg:text-5xl font-extrabold text-white mb-6 fade-up">
-          Our Event Services
+
+      <div class="space-y-2.5 py-4 mx-auto mb-8">
+        <h2 data-aos="zoom-in-up" data-aos-delay="50" class="pt-24 text-2xl md:text-4xl font-bold text-center">
+          Upcoming Events & FAQs
         </h2>
-        <p class="text-gray-400 text-lg mb-12 max-w-3xl mx-auto fade-up">
-          From corporate galas to dream weddings — we handle every moment with
-          artistry and precision.
-        </p>
-
-        <!-- Search Bar -->
-        <div class="flex justify-center mb-10 fade-up">
-          <input
-            id="searchInput"
-            type="text"
-            placeholder="Search services..."
-            class="px-5 py-3 w-full sm:w-96 bg-white/5 border border-white/20 rounded-full text-gray-300 placeholder-gray-500 focus:outline-none focus:border-gray-500"
-          />
+        <p data-aos="zoom-in-up" data-aos-delay="100" class="text-lg md:text-xl text-gray-300 text-center">From corporate summits to private celebrations, we provide full-spectrum event management services designed to impress and inspire.</p>
+      </div>
+      <!-- Tabs -->
+      <div data-aos="zoom-in-up" data-aos-delay="150" class="flex flex-wrap items-center justify-center gap-2 mb-4 md:mb-8 space-x-4">
+        <div>
+          <h1 class="text-xl py-2 border border-white/5 px-4 rounded-lg bg-white/5">Grab Our Events on the dates</h1>
         </div>
-
-        <!-- Category Tabs -->
-        <div
-          id="tabs"
-          class="flex flex-wrap justify-center gap-3 mb-14 fade-up"
+        <span>-</span>
+        <button
+          class="tab px-5 py-2 rounded-lg bg-white/5 border border-white/20 transition cursor-pointer focus:bg-gray-400"
+          data-date="2025-10-15"
         >
-          <button
-            class="tab tab-active px-5 py-2 rounded-full border border-white/20 transition cursor-pointer"
-            data-type="all"
-          >
-            All
-          </button>
-          <button
-            class="tab px-5 py-2 rounded-full border border-white/20 transition cursor-pointer"
-            data-type="wedding"
-          >
-            Weddings
-          </button>
-          <button
-            class="tab px-5 py-2 rounded-full border border-white/20 transition cursor-pointer"
-            data-type="corporate"
-          >
-            Corporate
-          </button>
-          <button
-            class="tab px-5 py-2 rounded-full border border-white/20 transition cursor-pointer"
-            data-type="concert"
-          >
-            Concerts
-          </button>
-          <button
-            class="tab px-5 py-2 rounded-full border border-white/20 transition cursor-pointer"
-            data-type="party"
-          >
-            Private Parties
-          </button>
-          <button
-            class="tab px-5 py-2 rounded-full border border-white/20 transition cursor-pointer"
-            data-type="award"
-          >
-            Award Shows
-          </button>
-          <button
-            class="tab px-5 py-2 rounded-full border border-white/20 transition cursor-pointer"
-            data-type="catering"
-          >
-            Catering
-          </button>
-          <button
-            class="tab px-5 py-2 rounded-full border border-white/20 transition cursor-pointer"
-            data-type="fashion"
-          >
-            Fashion Shows
-          </button>
-          <button
-            class="tab px-5 py-2 rounded-full border border-white/20 transition cursor-pointer"
-            data-type="exhibition"
-          >
-            Exhibitions
-          </button>
+          Oct 15
+        </button>
+        <button
+          class="tab px-5 py-2 rounded-lg bg-white/5 border border-white/20 transition cursor-pointer"
+          data-date="2025-11-21"
+        >
+          Nov 21
+        </button>
+        <button
+          class="tab px-5 py-2 rounded-lg bg-white/5 border border-white/20 transition cursor-pointer"
+          data-date="2025-12-20"
+        >
+          Dec 20
+        </button>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 py-8">
+        <!-- Event Cards -->
+        <div id="eventContainer" class="space-y-6 lg:grid grid-cols-2 gap-6">
+          <!-- Cards injected by JS -->
         </div>
 
-        <!-- Services Grid -->
-        <div
-          id="servicesGrid"
-          class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10"
-        ></div>
+        <!-- FAQ Section -->
+        <div class="grid grid-rows-2 gap-6">
+          <div data-aos="zoom-in" data-aos-delay="150">
+            <img
+              class="w-full h-full object-cover rounded-2xl"
+              src="../assets/contact1.jpg"
+              alt=""
+            />
+          </div>
+          <div data-aos="zoom-in-left" data-aos-delay="200" class="space-y-4">
+            <h3 class="text-3xl font-bold mb-4">FAQs</h3>
+            <div class="space-y-2">
+              <div class="faq-item border-b border-gray-700 pb-2">
+                <button
+                  class="faq-question w-full text-left flex justify-between items-center py-2 text-lg"
+                >
+                  What is the registration process?<span>+</span>
+                </button>
+                <div
+                  class="faq-answer max-h-0 overflow-hidden transition-all duration-300 text-gray-400"
+                >
+                  Click Register on the event card, fill the form, and submit to
+                  register.
+                </div>
+              </div>
+              <div class="faq-item border-b border-gray-700 pb-2">
+                <button
+                  class="faq-question w-full text-left flex justify-between items-center py-2 text-lg"
+                >
+                  Are there any fees?<span>+</span>
+                </button>
+                <div
+                  class="faq-answer max-h-0 overflow-hidden transition-all duration-300 text-gray-400"
+                >
+                  Most events are free; some premium workshops may require a
+                  small fee.
+                </div>
+              </div>
+              <div class="faq-item border-b border-gray-700 pb-2">
+                <button
+                  class="faq-question w-full text-left flex justify-between items-center py-2 text-lg"
+                >
+                  Can I attend multiple events?<span>+</span>
+                </button>
+                <div
+                  class="faq-answer max-h-0 overflow-hidden transition-all duration-300 text-gray-400"
+                >
+                  Yes, you can register for multiple events on different dates.
+                </div>
+              </div>
+              <div class="faq-item border-b border-gray-700 pb-2">
+                <button
+                  class="faq-question w-full text-left flex justify-between items-center py-2 text-lg"
+                >
+                  Can I cancel my registration?<span>+</span>
+                </button>
+                <div
+                  class="faq-answer max-h-0 overflow-hidden transition-all duration-300 text-gray-400"
+                >
+                  Yes, you can cancel anytime by contacting us via email.
+                </div>
+              </div>
+              <div class="faq-item border-b border-gray-700 pb-2">
+                <button
+                  class="faq-question w-full text-left flex justify-between items-center py-2 text-lg"
+                >
+                  Will there be refreshments?<span>+</span>
+                </button>
+                <div
+                  class="faq-answer max-h-0 overflow-hidden transition-all duration-300 text-gray-400"
+                >
+                  Light refreshments will be provided for in-person events.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- MODAL -->
+    <!-- Modal -->
     <div
-      id="serviceModal"
-      class="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50"
+      id="modal"
+      class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300"
     >
       <div
-        id="modalContent"
-        class="bg-white/5 border border-white/20 rounded-3xl p-4 max-w-3xl w-full relative m-4"
+        class="bg-white/5 rounded-xl p-6 w-11/12 max-w-md transform scale-95 transition-transform duration-300"
       >
+        <h3 id="modalTitle" class="text-2xl font-bold mb-4">
+          Register for Event
+        </h3>
+        <form class="space-y-4">
+          <input
+            type="text"
+            placeholder="Name"
+            class="w-full border rounded px-3 py-2 bg-white/5 text-white border-gray-700"
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            class="w-full border rounded px-3 py-2 bg-white/5 text-white border-gray-700"
+          />
+          <button
+            type="submit"
+            class="w-full bg-gray-600 text-white px-4 py-2 rounded"
+          >
+            Submit
+          </button>
+        </form>
         <button
-          id="closeModal"
-          class="absolute top-4 right-4 text-gray-100 hover:text-white text-xl cursor-pointer"
+          class="mt-4 text-gray-400 hover:text-white cursor-pointer"
+          onclick="closeModal()"
         >
-          <i class="fa-solid fa-xmark"></i>
+          Close
         </button>
-        <img
-          id="modalImage"
-          class="w-full h-60 object-cover rounded-2xl mb-6 mt-10"
-          src=""
-          alt=""
-        />
-        <h3 id="modalTitle" class="text-3xl font-bold text-white mb-3"></h3>
-        <p id="modalDesc" class="text-gray-400 leading-relaxed mb-4"></p>
-        <ul
-          id="modalFeatures"
-          class="text-gray-300 list-disc list-inside space-y-1"
-        ></ul>
       </div>
     </div>
 
     <script>
-      // --- Service Data ---
-      const services = [
+      const events = [
         {
-          type: "corporate",
-          title: "Corporate Events",
-          image: "../assets/Home1/Corporate-Events.jpg",
-          desc: "Professional summits, launches, and conferences tailored for the impact of their journey.",
-          features: [
-            "Venue coordination",
-            "Brand theme design",
-            "Audio-visual setup",
-            "VIP management",
-          ],
-        },
-
-        {
-          type: "wedding",
-          title: "Weddings",
-          image: "../assets/Home1/wedd.jpg",
-          desc: "Elegant and romantic celebrations designed around your love story to make our jouney exotic.",
-          features: [
-            "Venue decor",
-            "Floral arrangements",
-            "Guest coordination",
-            "Luxury catering",
-          ],
+          id: "event1",
+          title: "Tech Conference",
+          date: "2025-10-15",
+          desc: "Full-day conference on tech trends.",
+          img: "../assets/Home1/Corporate-Events.jpg",
         },
         {
-          type: "concert",
-          title: "Concerts & Festivals",
-          image: "../assets/Home1/concer.png",
-          desc: "High-energy productions that deliver sound, lights, and unforgettable experiences with your colleuges.",
-          features: [
-            "Stage design",
-            "Sound & lighting",
-            "Artist management",
-            "Crowd logistics",
-          ],
+          id: "event2",
+          title: "Art Workshop",
+          date: "2025-10-15",
+          desc: "Creative painting and sketching workshop.",
+          img: "../assets/Home1/art.jpg",
         },
         {
-          type: "party",
-          title: "Private Parties",
-          image: "../assets/Home1/priv.jpg",
-          desc: "Intimate and personalized parties that define your unique style to express it effortlessly",
-          features: [
-            "Custom themes",
-            "Decor setup",
-            "Entertainment",
-            "Cocktail curation",
-            4,
-          ],
+          id: "event2",
+          title: "Wedding",
+          date: "2025-10-15",
+          desc: "Creative Designing and Sketching on event.",
+          img: "../assets/Home1/wedd.jpg",
         },
         {
-          type: "wedding",
-          title: "Weddings",
-          image: "../assets/Home1/wedd1.jpg",
-          desc: "Elegant and romantic celebrations designed around your love story to expose the both couple of moments.",
-          features: [
-            "Venue decor",
-            "Floral arrangements",
-            "Guest coordination",
-            "Luxury catering",
-          ],
+          id: "event3",
+          title: "Music Festival",
+          date: "2025-11-21",
+          desc: "Live performances from bands and artists.",
+          img: "../assets/Home1/mufest.jpg",
         },
         {
-          type: "award",
-          title: "Award Ceremonies",
-          image: "../assets/Home1/award.jpeg",
-          desc: "Glamorous and flawless ceremonies celebrating success and excellence to elaborate the event exhaustly",
-          features: [
-            "Stage lighting",
-            "Live streaming",
-            "Red carpet design",
-            "Press coordination",
-          ],
+          id: "event4",
+          title: "Photography Seminar",
+          date: "2025-11-21",
+          desc: "Learn professional photography tips.",
+          img: "../assets/Home1/photo.jpeg",
         },
         {
-          type: "catering",
-          title: "Catering & Décor",
-          image: "../assets/Home1/catering.jpg",
-          desc: "Culinary artistry paired with immersive decor experiences and enjoy our food with impressive decor.",
-          features: [
-            "Menu curation",
-            "Buffet setup",
-            "Bespoke decor",
-            "Beverage design",
-          ],
+          id: "event5",
+          title: "Holiday Gala",
+          date: "2025-12-20",
+          desc: "End-of-year celebration with music & food.",
+          img: "../assets/Home1/hd.jpg",
         },
         {
-          type: "fashion",
-          title: "Fashion Shows",
-          image: "../assets/Home1/fash.jpg",
-          desc: "Choreographed runway shows designed for brand prestige and impact the event very impressively.",
-          features: [
-            "Runway setup",
-            "Model coordination",
-            "Lighting design",
-            "Show management",
-          ],
+          id: "event6",
+          title: "New Year Workshop",
+          date: "2025-12-20",
+          desc: "Kickstart the new year with creative projects.",
+          img: "../assets/Home1/ny.jpg",
         },
         {
-          type: "exhibition",
-          title: "Exhibitions & Trade Shows",
-          image: "../assets/Home1/exh.jpg",
-          desc: "Professionally organized exhibitions that bring ideas and products to life.",
-          features: [
-            "Booth design",
-            "Brand display",
-            "Event logistics",
-            "Networking coordination",
-          ],
+          id: "event7",
+          title: "Tech Meetup",
+          date: "2025-10-15",
+          desc: "Networking for tech enthusiasts.",
+          img: "../assets/Home1/tech.jpg",
         },
         {
-          type: "corporate",
-          title: "Team Building Retreats",
-          image: "../assets/Home1/team.jpg",
-          desc: "Experiential retreats to strengthen teamwork and inspire collaboration with our team to enhanced way.",
-          features: [
-            "Outdoor activities",
-            "Icebreaker sessions",
-            "Workshops",
-            "Venue management",
-          ],
+          id: "event8",
+          title: "Digital Marketing Talk",
+          date: "2025-11-21",
+          desc: "Learn latest strategies in marketing.",
+          img: "../assets/Home1/dm.jpg",
         },
       ];
 
-      const grid = document.getElementById("servicesGrid");
-      const modal = document.getElementById("serviceModal");
-      const modalImage = document.getElementById("modalImage");
-      const modalTitle = document.getElementById("modalTitle");
-      const modalDesc = document.getElementById("modalDesc");
-      const modalFeatures = document.getElementById("modalFeatures");
-      const closeModal = document.getElementById("closeModal");
+      const eventContainer = document.getElementById("eventContainer");
+      const tabs = document.querySelectorAll(".tab");
 
-      // Render Cards
-      services.forEach((s) => {
-        const card = document.createElement("div");
-        card.className = `service-card fade-up`;
-        card.dataset.type = s.type;
-        card.dataset.name = s.title.toLowerCase();
-
-        card.innerHTML = `
-        <div class="bg-white/5 rounded-3xl overflow-hidden border border-white/20 transition-all duration-500 ">
-          <img alt="${s.title}" src="${
-          s.image
-        }" class="w-full h-56 object-cover" />
-          <div class="p-4 md:p-8 text-left">
-            <h3 class="text-2xl font-semibold text-white mb-3">${s.title}</h3>
-            <p class="text-gray-400 text-sm mb-6">${s.desc}</p>
-            <button onclick="openModal(${JSON.stringify(s).replace(
-              /"/g,
-              "&quot;"
-            )})"
-              class="px-5 py-2 bg-white text-black font-semibold rounded-full hover:bg-gray-300 transition cursor-pointer">
-              Learn More
-            </button>
+      function renderEvents(date) {
+        eventContainer.innerHTML = "";
+        const filtered = events.filter((e) => e.date === date);
+        filtered.forEach((e, i) => {
+          const card = document.createElement("div");
+          card.className = `bg-white/5 border border-white/20 rounded-xl shadow-lg overflow-hidden transform transition-all duration-500 opacity-0 translate-y-6 md:h-[520px]`;
+          card.innerHTML = `
+          <img src="${e.img}" alt="${e.title}" class="w-full lg:h-80 object-cover object-[40%_60%]">
+          <div class="p-4 flex flex-col justify-between">
+            <h3 class="text-xl font-semibold mb-2">${e.title}</h3>
+            <p class="text-gray-400 mb-2">${new Date(e.date).toDateString()}</p>
+            <p class="text-gray-300 text-sm mb-4">${e.desc}</p>
+            <button class="bg-gray-600 text-white px-4 py-2 rounded cursor-pointer" onclick="openModal('${
+              e.title
+            }')">Register</button>
           </div>
-        </div>
-      `;
-        grid.appendChild(card);
-      });
-
-      // Scroll reveal
-      const fadeElems = document.querySelectorAll(".fade-up");
-      function revealOnScroll() {
-        fadeElems.forEach((el) => {
-          const rect = el.getBoundingClientRect();
-          if (rect.top < window.innerHeight - 100) el.classList.add("show");
+        `;
+          eventContainer.appendChild(card);
+          // Smooth staggered animation
+          setTimeout(
+            () => card.classList.remove("opacity-0", "translate-y-6"),
+            i * 100
+          );
         });
       }
-      window.addEventListener("scroll", revealOnScroll);
-      revealOnScroll();
 
-      // Modal open
-      function openModal(s) {
-        modalImage.src = s.image;
-        modalTitle.textContent = s.title;
-        modalDesc.textContent = s.desc;
-        modalFeatures.innerHTML = s.features
-          .map((f) => `<li>${f}</li>`)
-          .join("");
-        modal.classList.add("active");
-      }
-      closeModal.addEventListener("click", () =>
-        modal.classList.remove("active")
-      );
-      window.addEventListener("click", (e) => {
-        if (e.target === modal) modal.classList.remove("active");
-      });
-
-      // Filters
-      const tabs = document.querySelectorAll(".tab");
-      const searchInput = document.getElementById("searchInput");
-      let activeType = "all";
       tabs.forEach((tab) => {
         tab.addEventListener("click", () => {
-          tabs.forEach((t) => t.classList.remove("tab-active"));
-          tab.classList.add("tab-active");
-          activeType = tab.dataset.type;
-          filterServices();
+          tabs.forEach((t) => t.classList.remove("bg-blue-600"));
+          tab.classList.add("bg-blue-600");
+          renderEvents(tab.dataset.date);
         });
       });
 
-      function filterServices() {
-        const value = searchInput.value.toLowerCase();
-        document.querySelectorAll(".service-card").forEach((card) => {
-          const matchType =
-            activeType === "all" || card.dataset.type === activeType;
-          const matchText = card.dataset.name.includes(value);
-          card.style.display = matchType && matchText ? "block" : "none";
-        });
+      // Default tab selected
+      tabs[0].click();
+
+      // Modal functions
+      function openModal(title) {
+        document.getElementById(
+          "modalTitle"
+        ).innerText = `Register for ${title}`;
+        const modal = document.getElementById("modal");
+        modal.classList.remove("opacity-0", "pointer-events-none");
+        setTimeout(
+          () => modal.querySelector("div").classList.remove("scale-95"),
+          10
+        );
       }
-      searchInput.addEventListener("input", filterServices);
+
+      function closeModal() {
+        const modal = document.getElementById("modal");
+        modal.querySelector("div").classList.add("scale-95");
+        setTimeout(
+          () => modal.classList.add("opacity-0" , "pointer-events-none"),
+          200
+        );
+      }
+
+      // FAQ toggle
+      document.querySelectorAll(".faq-question").forEach((q) => {
+        q.addEventListener("click", () => {
+          const answer = q.nextElementSibling;
+          const open =
+            answer.style.maxHeight && answer.style.maxHeight !== "0px";
+          document
+            .querySelectorAll(".faq-answer")
+            .forEach((a) => (a.style.maxHeight = "0px"));
+          if (!open) answer.style.maxHeight = answer.scrollHeight + "px";
+        });
+      });
     </script>
 
     <!-- footer -->
     <footer
-      class="px-4 pt-16 w-full text-gray-500 overflow-hidden overflow-x-hidden"
+      class="px-4 pt-8 w-full text-gray-500 overflow-hidden overflow-x-hidden"
     >
-      <div class="flex justify-between flex-wrap w-full md:gap-20 gap-8 pb-6">
+      <div
+        class="flex justify-between flex-wrap w-full md:gap-20 gap-8 pb-6"
+        data-aos="fade-up"
+        data-aos-delay="150"
+      >
         <div class="md:max-w-96 flex flex-col items-start space-y-2">
           <img class="h-12" src="../assets/Logo1.png" alt="logo" />
           <p class="mt-2 text-sm">
@@ -982,6 +950,8 @@
       <div>
         <!-- Google Map -->
         <div
+          data-aos="fade-up"
+          data-aos-delay="200"
           class="rounded-2xl bg-black/50 w-full overflow-hidden shadow-lg mb-3"
         >
           <iframe
