@@ -691,10 +691,10 @@
     <!-- Modal -->
     <div
       id="modal"
-      class="fixed inset-0 bg-black/90 backdrop-blur-2xl flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300"
+      class="min-h-screen w-full fixed inset-0 bg-black/80 backdrop-blur-2xl flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300 z-[100]"
     >
       <div
-        class="bg-white/5 rounded-xl p-6 w-11/12 max-w-md transform scale-95 transition-transform duration-300"
+        class="bg-white/5 border border-white/20 rounded-xl p-6 w-11/12 max-w-md transform scale-95 transition-transform duration-300"
       >
         <h3 id="modalTitle" class="text-2xl font-bold mb-4">
           Register for Event
@@ -804,7 +804,7 @@
         const filtered = events.filter((e) => e.date === date);
         filtered.forEach((e, i) => {
           const card = document.createElement("div");
-          card.className = `bg-white/5 border border-white/20 rounded-xl shadow-lg overflow-hidden transform transition-all duration-500 opacity-0 translate-y-6 md:h-[520px]`;
+          card.className = `bg-white/5 border border-white/20 rounded-xl shadow-lg overflow-hidden transform transition-all duration-500 opacity-0 translate-y-6 lg:h-[520px]`;
           card.innerHTML = `
           <img src="${e.img}" alt="${
             e.title
