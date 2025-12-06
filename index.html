@@ -137,7 +137,7 @@
     >
       <img
         class="w-full h-full object-center object-cover z-10 opacity-25"
-        src="./assets/home-bg3.jpg"
+        src="./assets/home-bg3.webp"
         alt="background"
       />
     </div>
@@ -146,7 +146,7 @@
     <div
       hidden
       id="bookform"
-      class="fixed flex justify-center items-center bg-black/80 backdrop-blur-3xl z-100 px-4 h-screen w-full"
+      class="fixed flex justify-center items-center bg-black/80 backdrop-blur-3xl z-[1000] px-4 h-screen w-full"
     >
       <form
         action="../404.html"
@@ -216,7 +216,7 @@
       <div class="flex items-center justify-between p-3">
         <!-- Logo -->
         <a class="" href="./index.html"
-          ><img class="h-10 object-cover" src="./assets/Logo1.png" alt="logo"
+          ><img class="h-10 object-cover" src="./assets/Logo1.webp" alt="logo"
         /></a>
 
         <!-- Desktop Nav -->
@@ -479,20 +479,9 @@
       class="relative text-white dark:text-white overflow-hidden overflow-x-hidden trig-grow enable-trig"
     >
       <div class="flex flex-col items-center justify-center w-full">
-        <!-- Back image  -->
-        <!-- <div
-          class="w-full h-full absolute inset-0 bg-gradient-to-r from-black to-black"
-        >
-          <img
-            class="w-full h-full object-center object-cover z-10 opacity-25"
-            src="./assets/home-bg2.jpg"
-            alt="background"
-          />
-        </div> -->
-
         <!-- content  -->
         <div
-          class="min-h-screen relative space-y-1.5 md:space-y-3 py-3 md:py-16 flex flex-col items-center w-full justify-center p-4 text-white dark:text-white z-50"
+          class="min-h-screen relative space-y-1.5 md:space-y-3 py-3 md:py-16 lg:py-20 flex flex-col items-center w-full justify-center p-4 text-white dark:text-white z-50"
         >
           <!-- top image  -->
           <div
@@ -508,18 +497,18 @@
             >
               <div class="flex items-center">
                 <img
-                  class="size-7 rounded-full border-2 border-white"
-                  src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=50"
+                  class="size-7 rounded-full object-cover object-top border-2 border-white"
+                  src="./assets/img1.webp"
                   alt="userImage1"
                 />
                 <img
-                  class="size-7 rounded-full border-2 border-white -translate-x-2"
-                  src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=50"
+                  class="size-7 rounded-full object-cover object-top border-2 border-white -translate-x-2"
+                  src="./assets/img2.webp"
                   alt="userImage2"
                 />
                 <img
-                  class="size-7 rounded-full border-2 border-white -translate-x-4"
-                  src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=50&h=50&auto=format&fit=crop"
+                  class="size-7 rounded-full object-cover object-top border-2 border-white -translate-x-4"
+                  src="./assets/img3.webp"
                   alt="userImage3"
                 />
               </div>
@@ -630,7 +619,7 @@
       <!-- Date Js  -->
       <script>
         // Set event date
-        const eventDate = new Date("Dec 01, 2025 23:59:59").getTime();
+        const eventDate = new Date("Jan 01, 2025 23:59:59").getTime();
 
         const timer = setInterval(() => {
           const now = new Date().getTime();
@@ -643,7 +632,8 @@
             document.querySelector("#minutes").innerHTML = "00";
             document.querySelector("#seconds").innerHTML = "00";
 
-            document.querySelector("#finish").innerHTML = '<div class="flex items-center" ><p class="text-gray-400 text-lg md:text-3xl font-bold">Event Completed! Next Event will Update Soon...</p></div>';
+            document.querySelector("#finish").innerHTML =
+              '<div class="flex items-center" ><p class="text-gray-400 text-lg md:text-3xl font-bold">Event Completed! Next Event will Update Soon...</p></div>';
             return;
           }
 
@@ -671,7 +661,7 @@
       >
         <img
           class="w-full h-full object-center object-cover z-10 opacity-5"
-          src="./assets/home-bg4.jpg"
+          src="./assets/home-bg4.webp"
           alt="background"
         />
       </div>
@@ -753,7 +743,7 @@
                 class="flex items-center md;justify-center gap-4 w-full lg:w-auto lg:col-span-1 py-6 px-2"
               >
                 <img
-                  src="./assets/img1.jpeg"
+                  src="./assets/img1.webp"
                   alt=""
                   class="rounded-full w-20 h-20 object-cover object-top"
                 />
@@ -765,7 +755,7 @@
             </div>
           </div>
           <!-- card 2 -->
-          <div data-aos="zoom-in-left" data-aos-delay="200">
+          <div data-aos="zoom-in-left" data-aos-delay="300">
             <div
               class="grid grid-cols-1 lg:grid-cols-6 items-center justify-around px-4 gap-8 w-full bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl"
             >
@@ -798,13 +788,13 @@
                 class="flex items-center md;justify-center gap-4 w-full lg:w-auto lg:col-span-1 py-6 px-2"
               >
                 <img
-                  src="./assets/img2.jpeg"
-                  alt=""
+                  src="./assets/img3.webp"
+                  alt="person3"
                   class="rounded-full w-20 h-20 object-cover object-top"
                 />
                 <div class="">
-                  <h6 class="">Joseph Vijay</h6>
-                  <small>Organizer &amp; Speaker</small>
+                  <h6 class="">Imran</h6>
+                  <small>Host &amp; Manager</small>
                 </div>
               </div>
             </div>
@@ -888,7 +878,7 @@
                 class="flex items-center md;justify-center gap-4 w-full lg:w-auto lg:col-span-1 py-6 px-2"
               >
                 <img
-                  src="./assets/img4.jpeg"
+                  src="./assets/img4.webp"
                   alt="person4"
                   class="rounded-full w-20 h-20 object-cover object-top"
                 />
@@ -932,7 +922,7 @@
             <div class="relative">
               <img
                 class="h-[300px] w-full lg:w-[400px] object-cover object-top rounded-2xl brightness-50"
-                src="./assets/why-1.jpg"
+                src="./assets/why-1.webp"
                 alt="card5"
               />
             </div>
@@ -956,7 +946,7 @@
             <div class="relative">
               <img
                 class="h-[300px] w-full lg:w-[400px] object-cover object-top rounded-2xl brightness-50"
-                src="./assets/why-2.jpeg"
+                src="./assets/why-2.webp"
                 alt="card2"
               />
             </div>
@@ -979,7 +969,7 @@
             <div class="relative">
               <img
                 class="h-[300px] w-full lg:w-[400px] object-cover object-top rounded-2xl brightness-50"
-                src="./assets/why-3.png"
+                src="./assets/why-3.webp"
                 alt="card3"
               />
             </div>
@@ -1002,7 +992,7 @@
             <div class="relative">
               <img
                 class="h-[300px] w-full lg:w-[400px] object-cover object-top rounded-2xl brightness-50"
-                src="./assets/why-4.jpg"
+                src="./assets/why-4.webp"
                 alt="card4"
               />
             </div>
@@ -1025,7 +1015,7 @@
             <div class="relative">
               <img
                 class="h-[300px] w-full lg:w-[400px] object-cover object-top rounded-2xl brightness-50"
-                src="./assets/why-5.jpg"
+                src="./assets/why-5.webp"
                 alt="card5"
               />
             </div>
@@ -1049,7 +1039,7 @@
             <div class="relative">
               <img
                 class="h-[300px] w-full lg:w-[400px] object-cover object-top rounded-2xl brightness-50"
-                src="./assets/why-6.jpg"
+                src="./assets/why-6.webp"
                 alt="card5"
               />
             </div>
@@ -1215,7 +1205,7 @@
           >
             <img
               class="w-36 h-36 object-cover object-top rounded-full"
-              src="./assets/img1.jpeg"
+              src="./assets/img1.webp"
               alt="userImage1"
             />
             <div class="flex flex-col items-center">
@@ -1238,7 +1228,7 @@
           >
             <img
               class="w-36 h-36 object-cover object-top rounded-full"
-              src="./assets/img2.jpeg"
+              src="./assets/img2.webp"
               alt="userImage1"
             />
             <div class="flex flex-col items-center">
@@ -1261,7 +1251,7 @@
           >
             <img
               class="w-36 h-36 object-cover object-top rounded-full"
-              src="./assets/img3.jpeg"
+              src="./assets/img3.webp"
               alt="userImage1"
             />
             <div class="flex flex-col items-center">
@@ -1284,7 +1274,7 @@
           >
             <img
               class="w-36 h-36 object-cover object-top rounded-full"
-              src="./assets/img4.jpeg"
+              src="./assets/img4.webp"
               alt="userImage1"
             />
             <div class="flex flex-col items-center">
@@ -1307,7 +1297,7 @@
           >
             <img
               class="w-36 h-36 object-cover object-top rounded-full"
-              src="./assets/img5.jpeg"
+              src="./assets/img5.webp"
               alt="userImage1"
             />
             <div class="flex flex-col items-center">
@@ -1329,7 +1319,7 @@
           >
             <img
               class="w-36 h-36 object-cover object-top rounded-full"
-              src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=400"
+              src="./assets/img6.webp"
               alt="userImage2"
             />
             <div class="flex flex-col items-center">
@@ -1353,7 +1343,7 @@
           >
             <img
               class="w-36 h-36 object-cover object-top rounded-full"
-              src="./assets/img6.jpeg"
+              src="./assets/img7.webp"
               alt="userImage6"
             />
             <div class="flex flex-col items-center">
@@ -1377,7 +1367,7 @@
           >
             <img
               class="w-36 h-36 object-cover object-top rounded-full"
-              src="./assets/img7.jpeg"
+              src="./assets/img8.webp"
               alt="userImage7"
             />
             <div class="flex flex-col items-center">
@@ -1401,7 +1391,7 @@
           >
             <img
               class="w-36 h-36 object-cover object-top rounded-full"
-              src="./assets/img8.jpeg"
+              src="./assets/img-9.webp"
               alt="userImage8"
             />
             <div class="flex flex-col items-center">
@@ -1425,7 +1415,7 @@
           >
             <img
               class="w-36 h-36 object-cover object-top rounded-full"
-              src="./assets/img-9.jpeg"
+              src="./assets/img1.webp"
               alt="userImage9"
             />
             <div class="flex flex-col items-center">
@@ -1454,7 +1444,7 @@
         data-aos-delay="150"
       >
         <div class="md:max-w-96 flex flex-col items-start space-y-2">
-          <img class="h-12" src="./assets/Logo1.png" alt="logo" />
+          <img class="h-12" src="./assets/Logo1.webp" alt="logo" />
           <p class="mt-2 text-sm">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text

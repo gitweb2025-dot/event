@@ -137,7 +137,7 @@
     <div
       hidden
       id="bookform"
-      class="fixed flex justify-center items-center bg-black/80 backdrop-blur-3xl z-100 px-4 h-screen w-full"
+      class="fixed flex justify-center items-center bg-black/80 backdrop-blur-3xl z-[1000] px-4 h-screen w-full"
     >
       <form
         action="../404.html"
@@ -206,7 +206,7 @@
       <div class="flex items-center justify-between p-3">
         <!-- Logo -->
         <a class="" href="../index.html"
-          ><img class="h-10 object-cover" src="../assets/Logo1.png" alt="logo"
+          ><img class="h-10 object-cover" src="../assets/Logo1.webp" alt="logo"
         /></a>
 
         <!-- Desktop Nav -->
@@ -239,10 +239,7 @@
 
               <!-- Home 2 -->
               <li>
-                <a
-                  href="../Home/Home1.html"
-                  class="block px-4 py-2 text-white"
-                >
+                <a href="../Home/Home1.html" class="block px-4 py-2 text-white">
                   Home 2
                 </a>
               </li>
@@ -338,7 +335,8 @@
             <button
               class="flex items-center gap-1 w-full text-left transition-colors lg:hidden"
             >
-              <a href="../index.html">Home</a> <i id="mobileToggle" class="fa-solid fa-caret-down"></i>
+              <a href="../index.html">Home</a>
+              <i id="mobileToggle" class="fa-solid fa-caret-down"></i>
             </button>
 
             <!-- Dropdown Menu -->
@@ -356,10 +354,7 @@
               </li> -->
               <li class=""></li>
               <li>
-                <a
-                  href="../Home/Home1.html"
-                  class="block px-2 py-2"
-                >
+                <a href="../Home/Home1.html" class="block px-2 py-2">
                   Home 2
                 </a>
               </li>
@@ -383,9 +378,7 @@
           </li>
           <!-- Blogs -->
           <li>
-            <a
-              href="./Event.html"
-              class="nav-link block transition-colors"
+            <a href="./Event.html" class="nav-link block transition-colors"
               >Events</a
             >
           </li>
@@ -589,7 +582,7 @@
     <!-- Popup Modal -->
     <div
       id="modal"
-      class="hidden fixed inset-0 items-center justify-center bg-black/90 backdrop-blur-sm z-50 mx-4"
+      class="hidden fixed inset-0 items-center justify-center bg-black/90 backdrop-blur-sm z-[1000] px-4"
     >
       <div class="flex flex-col gap-4 relative">
         <form
@@ -640,21 +633,21 @@
           {
             title: "Live Music Festival",
             date: "Oct 15, 2025",
-            img: "../assets/music.jpg",
+            img: "../assets/music.webp",
             desc: "An electrifying night with top performers.",
             modal: "Book your tickets for Live Music Festival!",
           },
           {
             title: "Rock Legends Tour",
             date: "Nov 20, 2025",
-            img: "../assets/Rock.jpg",
+            img: "../assets/Rock.webp",
             desc: "Feel the power of legendary rock bands.",
             modal: "Reserve your Rock Legends Tour seat.",
           },
           {
             title: "Jazz Evening",
             date: "Dec 8, 2025",
-            img: "../assets/jazz.jpeg",
+            img: "../assets/jazz.webp",
             desc: "Smooth jazz under starlit skies to dive on it.",
             modal: "Register for Jazz Evening night.",
           },
@@ -663,21 +656,21 @@
           {
             title: "Tech Innovators Summit",
             date: "Nov 3, 2025",
-            img: "../assets/tech.jpg",
+            img: "../assets/tech.webp",
             desc: "Network with innovators & leaders.",
             modal: "Join Tech Innovators Summit.",
           },
           {
             title: "Future of Mega AI Forum",
             date: "Dec 1, 2025",
-            img: "../assets/Future.jpg",
+            img: "../assets/Future.webp",
             desc: "The future of AI in one place.",
             modal: "Register for Future of AI Forum.",
           },
           {
             title: "Startup with Exotic Day",
             date: "Jan 10, 2026",
-            img: "../assets/Startup.jpg",
+            img: "../assets/Startup.webp",
             desc: "Pitch your ideas to investors.",
             modal: "Apply to Startup Pitch Day.",
           },
@@ -686,21 +679,21 @@
           {
             title: "Creative Art with Workshop",
             date: "Dec 12, 2025",
-            img: "../assets/Creative.jpeg",
+            img: "../assets/Creative.webp",
             desc: "Hands-on creative journey.",
             modal: "Join Creative Art Workshop.",
           },
           {
             title: "Photography Masterclass",
             date: "Jan 5, 2026",
-            img: "../assets/Photography.jpg",
+            img: "../assets/Photography.webp",
             desc: "Learn photography like a pro.",
             modal: "Register for Photography Masterclass.",
           },
           {
             title: "Culinary Skills Lab on Cook",
             date: "Feb 14, 2026",
-            img: "../assets/Culinary.jpg",
+            img: "../assets/Culinary.webp",
             desc: "Cook like a master chef.",
             modal: "Sign up for Culinary Skills Lab.",
           },
@@ -810,7 +803,24 @@
       // Search
       searchInput.addEventListener("input", (e) => {
         renderEvents(currentTab, e.target.value.toLowerCase());
+        showNoEventsMessage(); // 👈 add this
       });
+
+      function showNoEventsMessage() {
+        const container = document.getElementById("eventGrid");
+
+        // If container doesn't exist, stop safely
+        if (!container) return;
+
+        // If no cards exist after rendering
+        if (container.children.length === 0) {
+          container.innerHTML = `
+      <div class="w-full text-center py-10 text-gray-500 text-lg font-medium">
+        <p class='py-40 text-center'>No events found</p>
+      </div>
+    `;
+        }
+      }
 
       // Default
       renderEvents("all");
@@ -823,7 +833,7 @@
     >
       <div class="flex justify-between flex-wrap w-full md:gap-20 gap-8 pb-6">
         <div class="md:max-w-96 flex flex-col items-start space-y-2">
-          <img class="h-12" src="../assets/Logo1.png" alt="logo" />
+          <img class="h-12" src="../assets/Logo1.webp" alt="logo" />
           <p class="mt-2 text-sm">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text

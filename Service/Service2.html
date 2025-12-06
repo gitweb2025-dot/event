@@ -183,7 +183,7 @@
     <div
       hidden
       id="bookform"
-      class="fixed flex justify-center items-center bg-black/80 backdrop-blur-3xl z-100 px-4 h-screen w-full"
+      class="fixed flex justify-center items-center bg-black/80 backdrop-blur-3xl z-[1000] px-4 h-screen w-full"
     >
       <form
         action="../404.html"
@@ -252,7 +252,7 @@
       <div class="flex items-center justify-between p-3">
         <!-- Logo -->
         <a class="" href="../index.html"
-          ><img class="h-10 object-cover" src="../assets/Logo1.png" alt="logo"
+          ><img class="h-10 object-cover" src="../assets/Logo1.webp" alt="logo"
         /></a>
 
         <!-- Desktop Nav -->
@@ -285,10 +285,7 @@
 
               <!-- Home 2 -->
               <li>
-                <a
-                  href="../index.html"
-                  class="block px-4 py-2 text-white"
-                >
+                <a href="../index.html" class="block px-4 py-2 text-white">
                   Home 1
                 </a>
               </li>
@@ -403,12 +400,7 @@
               </li> -->
               <li class=""></li>
               <li>
-                <a
-                  href="../index.html"
-                  class="block px-2 py-2"
-                >
-                  Home 1
-                </a>
+                <a href="../index.html" class="block px-2 py-2"> Home 1 </a>
               </li>
             </ul>
           </div>
@@ -644,13 +636,20 @@
           id="servicesGrid"
           class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10"
         ></div>
+
+        <div
+          id="noResults"
+          class="text-center text-gray-300 text-lg py-10 hidden"
+        >
+          <p class="py-20">No services found</p>
+        </div>
       </div>
     </section>
 
     <!-- MODAL -->
     <div
       id="serviceModal"
-      class="fixed inset-0 bg-black/90 backdrop-blur-xl flex items-center justify-center z-50"
+      class="fixed inset-0 bg-black/90 backdrop-blur-xl flex items-center justify-center z-[1000] py-20 overscroll-y-auto"
     >
       <div
         id="modalContent"
@@ -664,7 +663,7 @@
         </button>
         <img
           id="modalImage"
-          class="w-full h-60 object-cover rounded-2xl mb-6 mt-10"
+          class="w-full h-30 md:h-40 object-cover rounded-2xl mb-6 mt-10"
           src=""
           alt="modal-img"
         />
@@ -683,7 +682,7 @@
         {
           type: "corporate",
           title: "Corporate Events",
-          image: "../assets/Home1/Corporate-Events.jpg",
+          image: "../assets/Home1/Corporate-Events.webp",
           desc: "Professional summits, launches, and conferences tailored for the impact of their journey.",
           features: [
             "Venue coordination",
@@ -696,7 +695,7 @@
         {
           type: "wedding",
           title: "Weddings",
-          image: "../assets/Home1/wedd.jpg",
+          image: "../assets/Home1/wedd.webp",
           desc: "Elegant and romantic celebrations designed around your love story to make our jouney exotic.",
           features: [
             "Venue decor",
@@ -708,7 +707,7 @@
         {
           type: "concert",
           title: "Concerts & Festivals",
-          image: "../assets/Home1/concer.png",
+          image: "../assets/Home1/concer.webp",
           desc: "High-energy productions that deliver sound, lights, and unforgettable experiences with your colleuges.",
           features: [
             "Stage design",
@@ -720,7 +719,7 @@
         {
           type: "party",
           title: "Private Parties",
-          image: "../assets/Home1/priv.jpg",
+          image: "../assets/Home1/priv.webp",
           desc: "Intimate and personalized parties that define your unique style to express it effortlessly",
           features: [
             "Custom themes",
@@ -733,7 +732,7 @@
         {
           type: "wedding",
           title: "Weddings",
-          image: "../assets/Home1/wedd1.jpg",
+          image: "../assets/Home1/wedd1.webp",
           desc: "Elegant and romantic celebrations designed around your love story to expose the both couple of moments.",
           features: [
             "Venue decor",
@@ -745,7 +744,7 @@
         {
           type: "award",
           title: "Award Ceremonies",
-          image: "../assets/Home1/award.jpeg",
+          image: "../assets/Home1/award.webp",
           desc: "Glamorous and flawless ceremonies celebrating success and excellence to elaborate the event exhaustly",
           features: [
             "Stage lighting",
@@ -757,7 +756,7 @@
         {
           type: "catering",
           title: "Catering & Décor",
-          image: "../assets/Home1/catering.jpg",
+          image: "../assets/Home1/catering.webp",
           desc: "Culinary artistry paired with immersive decor experiences and enjoy our food with impressive decor.",
           features: [
             "Menu curation",
@@ -769,7 +768,7 @@
         {
           type: "fashion",
           title: "Fashion Shows",
-          image: "../assets/Home1/fash.jpg",
+          image: "../assets/Home1/fash.webp",
           desc: "Choreographed runway shows designed for brand prestige and impact the event very impressively.",
           features: [
             "Runway setup",
@@ -781,7 +780,7 @@
         {
           type: "exhibition",
           title: "Exhibitions & Trade Shows",
-          image: "../assets/Home1/exh.jpg",
+          image: "../assets/Home1/exh.webp",
           desc: "Professionally organized exhibitions that bring ideas and products to life.",
           features: [
             "Booth design",
@@ -793,7 +792,7 @@
         {
           type: "corporate",
           title: "Team Building Retreats",
-          image: "../assets/Home1/team.jpg",
+          image: "../assets/Home1/team.webp",
           desc: "Experiential retreats to strengthen teamwork and inspire collaboration with our team to enhanced way.",
           features: [
             "Outdoor activities",
@@ -889,8 +888,26 @@
           const matchText = card.dataset.name.includes(value);
           card.style.display = matchType && matchText ? "block" : "none";
         });
+
+        checkNoResults(); // <-- ADD THIS
       }
       searchInput.addEventListener("input", filterServices);
+
+      function checkNoResults() {
+        const cards = document.querySelectorAll(".service-card");
+        const noResults = document.getElementById("noResults");
+
+        // Count visible cards
+        const visible = [...cards].filter(
+          (card) => card.style.display !== "none"
+        ).length;
+
+        if (visible === 0) {
+          noResults.classList.remove("hidden");
+        } else {
+          noResults.classList.add("hidden");
+        }
+      }
     </script>
 
     <!-- footer -->
@@ -899,7 +916,7 @@
     >
       <div class="flex justify-between flex-wrap w-full md:gap-20 gap-8 pb-6">
         <div class="md:max-w-96 flex flex-col items-start space-y-2">
-          <img class="h-12" src="../assets/Logo1.png" alt="logo" />
+          <img class="h-12" src="../assets/Logo1.webp" alt="logo" />
           <p class="mt-2 text-sm">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
