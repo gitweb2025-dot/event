@@ -320,23 +320,8 @@
   .z-100 {
     z-index: 100;
   }
-  .z-1000 {
-    z-index: 1000;
-  }
   .z-\[-1\] {
     z-index: -1;
-  }
-  .z-\[0\] {
-    z-index: 0;
-  }
-  .z-\[00\] {
-    z-index: 00;
-  }
-  .z-\[50\] {
-    z-index: 50;
-  }
-  .z-\[100\] {
-    z-index: 100;
   }
   .z-\[500\] {
     z-index: 500;
@@ -349,12 +334,6 @@
   }
   .z-\[1000\] {
     z-index: 1000;
-  }
-  .col-span-2 {
-    grid-column: span 2 / span 2;
-  }
-  .col-span-3 {
-    grid-column: span 3 / span 3;
   }
   .container {
     width: 100%;
@@ -382,9 +361,6 @@
   }
   .mx-2 {
     margin-inline: calc(var(--spacing) * 2);
-  }
-  .mx-4 {
-    margin-inline: calc(var(--spacing) * 4);
   }
   .mx-6 {
     margin-inline: calc(var(--spacing) * 6);
@@ -488,9 +464,6 @@
   .inline-block {
     display: inline-block;
   }
-  .table {
-    display: table;
-  }
   .aspect-square {
     aspect-ratio: 1 / 1;
   }
@@ -509,9 +482,6 @@
   .size-10 {
     width: calc(var(--spacing) * 10);
     height: calc(var(--spacing) * 10);
-  }
-  .h-0 {
-    height: calc(var(--spacing) * 0);
   }
   .h-8 {
     height: calc(var(--spacing) * 8);
@@ -539,9 +509,6 @@
   }
   .h-56 {
     height: calc(var(--spacing) * 56);
-  }
-  .h-60 {
-    height: calc(var(--spacing) * 60);
   }
   .h-72 {
     height: calc(var(--spacing) * 72);
@@ -581,9 +548,6 @@
   }
   .w-10 {
     width: calc(var(--spacing) * 10);
-  }
-  .w-11 {
-    width: calc(var(--spacing) * 11);
   }
   .w-11\/12 {
     width: calc(11/12 * 100%);
@@ -654,9 +618,6 @@
   .min-w-full {
     min-width: 100%;
   }
-  .border-collapse {
-    border-collapse: collapse;
-  }
   .-translate-x-2 {
     --tw-translate-x: calc(var(--spacing) * -2);
     translate: var(--tw-translate-x) var(--tw-translate-y);
@@ -720,9 +681,6 @@
   .cursor-pointer {
     cursor: pointer;
   }
-  .resize {
-    resize: both;
-  }
   .resize-none {
     resize: none;
   }
@@ -776,9 +734,6 @@
   }
   .justify-end {
     justify-content: flex-end;
-  }
-  .gap-0 {
-    gap: calc(var(--spacing) * 0);
   }
   .gap-0\.5 {
     gap: calc(var(--spacing) * 0.5);
@@ -923,12 +878,6 @@
   }
   .overflow-x-hidden {
     overflow-x: hidden;
-  }
-  .overflow-y-auto {
-    overflow-y: auto;
-  }
-  .overflow-y-scroll {
-    overflow-y: scroll;
   }
   .overscroll-y-auto {
     overscroll-behavior-y: auto;
@@ -1090,26 +1039,17 @@
   .bg-blue-600 {
     background-color: var(--color-blue-600);
   }
-  .bg-gray-50 {
-    background-color: var(--color-gray-50);
-  }
   .bg-gray-50\/5 {
     background-color: color-mix(in srgb, oklch(98.5% 0.002 247.839) 5%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
       background-color: color-mix(in oklab, var(--color-gray-50) 5%, transparent);
     }
   }
-  .bg-gray-200 {
-    background-color: var(--color-gray-200);
-  }
   .bg-gray-200\/10 {
     background-color: color-mix(in srgb, oklch(92.8% 0.006 264.531) 10%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
       background-color: color-mix(in oklab, var(--color-gray-200) 10%, transparent);
     }
-  }
-  .bg-gray-500 {
-    background-color: var(--color-gray-500);
   }
   .bg-gray-500\/20 {
     background-color: color-mix(in srgb, oklch(55.1% 0.027 264.364) 20%, transparent);
@@ -1215,10 +1155,6 @@
     --tw-gradient-from: var(--color-gray-700);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
-  .from-slate-950 {
-    --tw-gradient-from: var(--color-slate-950);
-    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
-  }
   .from-slate-950\/40 {
     --tw-gradient-from: color-mix(in srgb, oklch(12.9% 0.042 264.695) 40%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
@@ -1281,10 +1217,6 @@
     --tw-gradient-to: transparent;
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
-  .to-white {
-    --tw-gradient-to: var(--color-white);
-    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
-  }
   .to-white\/0 {
     --tw-gradient-to: color-mix(in srgb, #fff 0%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
@@ -1322,9 +1254,6 @@
   }
   .object-top {
     object-position: top;
-  }
-  .p-1 {
-    padding: calc(var(--spacing) * 1);
   }
   .p-1\.5 {
     padding: calc(var(--spacing) * 1.5);
@@ -1451,9 +1380,6 @@
   }
   .pb-10 {
     padding-bottom: calc(var(--spacing) * 10);
-  }
-  .pl-3 {
-    padding-left: calc(var(--spacing) * 3);
   }
   .pl-3\.5 {
     padding-left: calc(var(--spacing) * 3.5);
@@ -1653,11 +1579,11 @@
   .text-yellow-500 {
     color: var(--color-yellow-500);
   }
+  .lowercase {
+    text-transform: lowercase;
+  }
   .uppercase {
     text-transform: uppercase;
-  }
-  .underline {
-    text-decoration-line: underline;
   }
   .antialiased {
     -webkit-font-smoothing: antialiased;
@@ -1722,12 +1648,6 @@
     --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
-  .shadow-gray-600 {
-    --tw-shadow-color: oklch(44.6% 0.03 256.802);
-    @supports (color: color-mix(in lab, red, red)) {
-      --tw-shadow-color: color-mix(in oklab, var(--color-gray-600) var(--tw-shadow-alpha), transparent);
-    }
-  }
   .shadow-gray-600\/40 {
     --tw-shadow-color: color-mix(in srgb, oklch(44.6% 0.03 256.802) 40%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
@@ -1768,9 +1688,6 @@
   }
   .grayscale {
     --tw-grayscale: grayscale(100%);
-    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
-  }
-  .filter {
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
   .backdrop-blur {

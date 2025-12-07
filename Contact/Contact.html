@@ -141,7 +141,8 @@
       <form
         action="../404.html"
         method="get"
-        class="w-full max-w-xl relative mx-auto flex flex-col items-center justify-center text-sm text-white px-4 py-8 rounded-2xl border-2 border-gray-400/50"
+        id="book"
+        class="w-full max-w-xl relative mx-auto flex flex-col items-center justify-center text-sm text-white px-4 py-8 z-100 rounded-2xl border-2 border-gray-400/50"
         data-aos="fade-up-left"
         data-aos-delay="200"
       >
@@ -172,6 +173,8 @@
             <label class="font-medium mt-4">Email Address</label>
             <input
               type="email"
+              pattern=".+@gmail\.com$"
+              title="Email must end with @gmail.com"
               class="h-full py-3 px-3 w-full outline-none bg-transparent text-gray-200 ring ring-slate-500 rounded-lg focus:ring-gray-300 transition-all placeholder:text-white/70"
               placeholder="Enter your email address"
               required
@@ -196,6 +199,14 @@
           </button>
         </div>
       </form>
+
+      <!-- // book-form reset -->
+      <script>
+        const bookForm1 = document.querySelector("#book");
+        bookForm1.addEventListener("submit", () => {
+          bookForm1.reset();
+        });
+      </script>
     </div>
 
     <!-- Navbar  -->
@@ -238,10 +249,7 @@
 
               <!-- Home 2 -->
               <li>
-                <a
-                  href="../Home/Home1.html"
-                  class="block px-4 py-2 text-white"
-                >
+                <a href="../Home/Home1.html" class="block px-4 py-2 text-white">
                   Home 2
                 </a>
               </li>
@@ -337,7 +345,8 @@
             <button
               class="flex items-center gap-1 w-full text-left transition-colors lg:hidden"
             >
-              <a href="../index.html">Home</a> <i id="mobileToggle" class="fa-solid fa-caret-down"></i>
+              <a href="../index.html">Home</a>
+              <i id="mobileToggle" class="fa-solid fa-caret-down"></i>
             </button>
 
             <!-- Dropdown Menu -->
@@ -355,10 +364,7 @@
               </li> -->
               <li class=""></li>
               <li>
-                <a
-                  href="../Home/Home1.html"
-                  class="block px-2 py-2"
-                >
+                <a href="../Home/Home1.html" class="block px-2 py-2">
                   Home 2
                 </a>
               </li>
@@ -390,9 +396,7 @@
           </li>
           <!-- Contact -->
           <li>
-            <a
-              href="./Contact.html"
-              class="nav-link block transition-colors"
+            <a href="./Contact.html" class="nav-link block transition-colors"
               >Contact</a
             >
           </li>
@@ -633,6 +637,7 @@
             data-aos="zoom-in-right"
             data-aos-delay="100"
             method="get"
+            id="contact"
             action="../404.html"
             class="flex flex-col items-start text-sm px-4 bg-white/3 border border-white/10 py-10 w-full rounded-2xl"
           >
@@ -666,6 +671,8 @@
                 <label class="text-white/70">Your Email</label>
                 <input
                   placeholder="Enter your E-mail"
+                  pattern=".+@gmail\.com$"
+                  title="Email must end with @gmail.com"
                   class="h-12 p-2 mt-2 w-full border border-gray-500/30 rounded outline-none focus:border-gray-300"
                   type="email"
                   required
@@ -689,6 +696,14 @@
               Send Message
             </button>
           </form>
+
+          <!-- // contact-form reset -->
+          <script>
+            const contact = document.querySelector("#contact");
+            contact.addEventListener("submit", () => {
+              contact.reset();
+            });
+          </script>
           <div class="w-full" data-aos="zoom-in-left" data-aos-delay="200">
             <img
               class="w-full h-full object-cover rounded-2xl"
@@ -891,12 +906,15 @@
             </p>
             <form
               method="get"
+              id="connect"
               action="../404.html"
               class="flex items-center justify-center gap-2 p-2 rounded-md bg-gray-50/5"
             >
               <input
                 class="focus:ring-0 outline-none w-full max-w-64 py-2 rounded px-2 text-gray-100"
                 type="email"
+                pattern=".+@gmail\.com$"
+                title="Email must end with @gmail.com"
                 required
                 placeholder="Enter your email"
               />
@@ -907,6 +925,14 @@
                 Subscribe
               </button>
             </form>
+
+            <!-- // connect-form reset -->
+            <script>
+              const connect = document.querySelector("#connect");
+              connect.addEventListener("submit", () => {
+                connect.reset();
+              });
+            </script>
           </div>
         </div>
 

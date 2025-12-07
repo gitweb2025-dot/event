@@ -191,7 +191,8 @@
       <form
         action="../404.html"
         method="get"
-        class="w-full max-w-xl relative mx-auto flex flex-col items-center justify-center text-sm text-white px-4 py-8 rounded-2xl border-2 border-gray-400/50"
+        id="book"
+        class="w-full max-w-xl relative mx-auto flex flex-col items-center justify-center text-sm text-white px-4 py-8 z-100 rounded-2xl border-2 border-gray-400/50"
         data-aos="fade-up-left"
         data-aos-delay="200"
       >
@@ -222,6 +223,8 @@
             <label class="font-medium mt-4">Email Address</label>
             <input
               type="email"
+              pattern=".+@gmail\.com$"
+              title="Email must end with @gmail.com"
               class="h-full py-3 px-3 w-full outline-none bg-transparent text-gray-200 ring ring-slate-500 rounded-lg focus:ring-gray-300 transition-all placeholder:text-white/70"
               placeholder="Enter your email address"
               required
@@ -246,6 +249,14 @@
           </button>
         </div>
       </form>
+
+      <!-- // book-form reset -->
+      <script>
+        const bookForm1 = document.querySelector("#book");
+        bookForm1.addEventListener("submit", () => {
+          bookForm1.reset();
+        });
+      </script>
     </div>
 
     <!-- Navbar -->
@@ -682,6 +693,13 @@
         </ul>
       </div>
     </section>
+
+    <!-- FOOTER -->
+    <footer
+      class="text-center text-gray-500 py-6 border-t border-gray-800 text-sm"
+    >
+      © 2025 Stackly — Simplifying Event Management.
+    </footer>
 
     <!-- Aos Animation  -->
     <script

@@ -126,7 +126,8 @@
       <form
         action="../404.html"
         method="get"
-        class="w-full max-w-xl relative mx-auto flex flex-col items-center justify-center text-sm text-white px-4 py-8 rounded-2xl border-2 border-gray-400/50"
+        id="book"
+        class="w-full max-w-xl relative mx-auto flex flex-col items-center justify-center text-sm text-white px-4 py-8 z-100 rounded-2xl border-2 border-gray-400/50"
         data-aos="fade-up-left"
         data-aos-delay="200"
       >
@@ -157,6 +158,8 @@
             <label class="font-medium mt-4">Email Address</label>
             <input
               type="email"
+              pattern=".+@gmail\.com$"
+              title="Email must end with @gmail.com"
               class="h-full py-3 px-3 w-full outline-none bg-transparent text-gray-200 ring ring-slate-500 rounded-lg focus:ring-gray-300 transition-all placeholder:text-white/70"
               placeholder="Enter your email address"
               required
@@ -181,6 +184,14 @@
           </button>
         </div>
       </form>
+
+      <!-- // book-form reset -->
+      <script>
+        const bookForm1 = document.querySelector("#book");
+        bookForm1.addEventListener("submit", () => {
+          bookForm1.reset();
+        });
+      </script>
     </div>
 
     <!-- Navbar  -->
@@ -341,10 +352,7 @@
               </li> -->
               <li class=""></li>
               <li>
-                <a
-                  href="../Home/Home1.html"
-                  class="block px-2 py-2 "
-                >
+                <a href="../Home/Home1.html" class="block px-2 py-2">
                   Home 2
                 </a>
               </li>
@@ -352,9 +360,7 @@
           </div>
           <!-- About Us -->
           <li>
-            <a
-              href="./About.html"
-              class="nav-link block transition-colors"
+            <a href="./About.html" class="nav-link block transition-colors"
               >About Us</a
             >
           </li>
@@ -824,6 +830,7 @@
             </div>
             <div>
               <form
+                id="enquire"
                 action="../404.html"
                 method="get"
                 class="bg-white/3 border border-white/10 flex flex-col w-full p-4 rounded-2xl py-8"
@@ -839,6 +846,8 @@
                     class="w-full p-2 outline-none ring-2 ring-white/50 rounded-lg focus:ring-white"
                     required
                     type="email"
+                    pattern=".+@gmail\.com$"
+                    title="Email must end with @gmail.com"
                     placeholder="Enter Your Email"
                   />
                 </div>
@@ -858,6 +867,14 @@
                   </button>
                 </div>
               </form>
+
+              <!-- // connect-form reset -->
+              <script>
+                const enquire = document.querySelector("#enquire");
+                enquire.addEventListener("submit", () => {
+                  enquire.reset();
+                });
+              </script>
             </div>
           </div>
         </div>
@@ -1209,11 +1226,14 @@
             <form
               method="get"
               action="../404.html"
+              id="subForm"
               class="flex items-center justify-center gap-2 p-2 rounded-md bg-gray-50/5"
             >
               <input
                 class="focus:ring-0 outline-none w-full max-w-64 py-2 rounded px-2 text-gray-100"
                 type="email"
+                pattern=".+@gmail\.com$"
+                title="Email must end with @gmail.com"
                 required
                 placeholder="Enter your email"
               />
@@ -1224,6 +1244,14 @@
                 Subscribe
               </button>
             </form>
+
+            <!-- // connect-form reset -->
+            <script>
+              const subForm = document.querySelector("#subForm");
+              subForm.addEventListener("submit", () => {
+                subForm.reset();
+              });
+            </script>
           </div>
         </div>
 

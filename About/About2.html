@@ -121,7 +121,8 @@
       <form
         action="../404.html"
         method="get"
-        class="w-full max-w-xl relative mx-auto flex flex-col items-center justify-center text-sm text-white px-4 py-8 rounded-2xl border-2 border-gray-400/50"
+        id="book"
+        class="w-full max-w-xl relative mx-auto flex flex-col items-center justify-center text-sm text-white px-4 py-8 z-100 rounded-2xl border-2 border-gray-400/50"
         data-aos="fade-up-left"
         data-aos-delay="200"
       >
@@ -152,6 +153,8 @@
             <label class="font-medium mt-4">Email Address</label>
             <input
               type="email"
+              pattern=".+@gmail\.com$"
+              title="Email must end with @gmail.com"
               class="h-full py-3 px-3 w-full outline-none bg-transparent text-gray-200 ring ring-slate-500 rounded-lg focus:ring-gray-300 transition-all placeholder:text-white/70"
               placeholder="Enter your email address"
               required
@@ -176,8 +179,16 @@
           </button>
         </div>
       </form>
+
+      <!-- // book-form reset -->
+      <script>
+        const bookForm1 = document.querySelector("#book");
+        bookForm1.addEventListener("submit", () => {
+          bookForm1.reset();
+        });
+      </script>
     </div>
-    
+
     <!-- Navbar  -->
     <header
       class="fixed top-0 z-[500] border-b border-slate-200/10 bg-white/5 backdrop-blur w-full mx-auto"
@@ -218,10 +229,7 @@
 
               <!-- Home 2 -->
               <li>
-                <a
-                  href="../index.html"
-                  class="block px-4 py-2 text-white "
-                >
+                <a href="../index.html" class="block px-4 py-2 text-white">
                   Home 1
                 </a>
               </li>
@@ -336,12 +344,7 @@
               </li> -->
               <li class=""></li>
               <li>
-                <a
-                  href="../index.html"
-                  class="block px-2 py-2"
-                >
-                  Home 1
-                </a>
+                <a href="../index.html" class="block px-2 py-2"> Home 1 </a>
               </li>
             </ul>
           </div>
@@ -494,7 +497,9 @@
       </div>
 
       <!-- content  -->
-      <div class="min-h-screen grid lg:grid-cols-2 items-center justify-center overflow-hidden">
+      <div
+        class="min-h-screen grid lg:grid-cols-2 items-center justify-center overflow-hidden"
+      >
         <div class="mt-26 lg:mt-8">
           <img
             data-aos="zoom-in"
@@ -693,7 +698,7 @@
               class="flex items-center justify-center gap-2 px-6 py-3 rounded-full text-xs md:text-sm font-medium border-2 border-gray-700 text-white dark:text-white transform hover:scale-95 transition duration-200 ease-out z-10 cursor-pointer"
             >
               Register Now
-          </button>
+            </button>
           </div>
         </div>
         <div data-aos="fade-up-left" data-aos-delay="150" class="w-full">
@@ -810,7 +815,7 @@
             class="flex flex-col items-center justify-center border border-gray-300/20 bg-white/5 p-10 rounded-lg"
           >
             <img
-              class="h-20 w-20 rounded-full  object-cover object-top"
+              class="h-20 w-20 rounded-full object-cover object-top"
               src="../assets/img2.webp"
               alt="userImage2"
             />
@@ -1036,12 +1041,15 @@
             </p>
             <form
               method="get"
+              id="connect"
               action="../404.html"
               class="flex items-center justify-center gap-2 p-2 rounded-md bg-gray-50/5"
             >
               <input
                 class="focus:ring-0 outline-none w-full max-w-64 py-2 rounded px-2 text-gray-100"
                 type="email"
+                pattern=".+@gmail\.com$"
+                title="Email must end with @gmail.com"
                 required
                 placeholder="Enter your email"
               />
@@ -1052,6 +1060,14 @@
                 Subscribe
               </button>
             </form>
+
+            <!-- // connect-form reset -->
+            <script>
+              const connect = document.querySelector("#connect");
+              connect.addEventListener("submit", () => {
+                connect.reset();
+              });
+            </script>
           </div>
         </div>
 

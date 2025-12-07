@@ -135,7 +135,8 @@
       <form
         action="../404.html"
         method="get"
-        class="w-full max-w-xl relative mx-auto flex flex-col items-center justify-center text-sm text-white px-4 py-8 rounded-2xl border-2 border-gray-400/50"
+        id="book"
+        class="w-full max-w-xl relative mx-auto flex flex-col items-center justify-center text-sm text-white px-4 py-8 z-100 rounded-2xl border-2 border-gray-400/50"
         data-aos="fade-up-left"
         data-aos-delay="200"
       >
@@ -166,6 +167,8 @@
             <label class="font-medium mt-4">Email Address</label>
             <input
               type="email"
+              pattern=".+@gmail\.com$"
+              title="Email must end with @gmail.com"
               class="h-full py-3 px-3 w-full outline-none bg-transparent text-gray-200 ring ring-slate-500 rounded-lg focus:ring-gray-300 transition-all placeholder:text-white/70"
               placeholder="Enter your email address"
               required
@@ -190,6 +193,14 @@
           </button>
         </div>
       </form>
+
+      <!-- // book-form reset -->
+      <script>
+        const bookForm1 = document.querySelector("#book");
+        bookForm1.addEventListener("submit", () => {
+          bookForm1.reset();
+        });
+      </script>
     </div>
 
     <!-- Navbar  -->
@@ -329,7 +340,7 @@
           <!-- Home dropDown  -->
           <div class="relative">
             <button
-              class="flex items-center gap-1 w-full text-left  transition-colors lg:hidden"
+              class="flex items-center gap-1 w-full text-left transition-colors lg:hidden"
             >
               <a href="../index.html">Home</a>
               <i id="mobileToggle" class="fa-solid fa-caret-down"></i>
@@ -350,10 +361,7 @@
               </li> -->
               <li class=""></li>
               <li>
-                <a
-                  href="../Home/Home1.html"
-                  class="block px-2 py-2 transition"
-                >
+                <a href="../Home/Home1.html" class="block px-2 py-2 transition">
                   Home 2
                 </a>
               </li>
@@ -363,15 +371,13 @@
           <li>
             <a
               href="../About/About.html"
-              class="nav-link block  transition-colors"
+              class="nav-link block transition-colors"
               >About Us</a
             >
           </li>
           <!-- Services -->
           <li>
-            <a
-              href="./Service.html"
-              class="nav-link block  transition-colors"
+            <a href="./Service.html" class="nav-link block transition-colors"
               >Services</a
             >
           </li>
@@ -379,7 +385,7 @@
           <li>
             <a
               href="../Event/Event.html"
-              class="nav-link block  transition-colors"
+              class="nav-link block transition-colors"
               >Events</a
             >
           </li>
@@ -387,7 +393,7 @@
           <li>
             <a
               href="../Contact/Contact.html"
-              class="nav-link block  transition-colors"
+              class="nav-link block transition-colors"
               >Contact</a
             >
           </li>
@@ -395,14 +401,14 @@
           <li>
             <a
               href="../Dashboard/Dashboard.html"
-              class="nav-link block  transition-colors"
+              class="nav-link block transition-colors"
               >Dashboard</a
             >
           </li>
           <li>
             <button
               id="book"
-              class="nav-link text-gray-500 block  transition-colors"
+              class="nav-link text-gray-500 block transition-colors"
             >
               Book Now
             </button>
@@ -410,7 +416,7 @@
           <li>
             <a
               href="../Signin.html"
-              class="flex items-center gap-2 nav-link  transition-colors"
+              class="flex items-center gap-2 nav-link transition-colors"
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -821,11 +827,14 @@
             <form
               method="get"
               action="../404.html"
+              id="subForm"
               class="flex items-center justify-center gap-2 p-2 rounded-md bg-gray-50/5"
             >
               <input
                 class="focus:ring-0 outline-none w-full max-w-64 py-2 rounded px-2 text-gray-100"
                 type="email"
+                pattern=".+@gmail\.com$"
+                title="Email must end with @gmail.com"
                 required
                 placeholder="Enter your email"
               />
@@ -836,6 +845,14 @@
                 Subscribe
               </button>
             </form>
+
+            <!-- // sub-form reset -->
+            <script>
+              const subForm = document.querySelector("#subForm");
+              subForm.addEventListener("submit", () => {
+                subForm.reset();
+              });
+            </script>
           </div>
         </div>
 

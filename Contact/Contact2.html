@@ -188,7 +188,8 @@
       <form
         action="../404.html"
         method="get"
-        class="w-full max-w-xl relative mx-auto flex flex-col items-center justify-center text-sm text-white px-4 py-8 rounded-2xl border-2 border-gray-400/50"
+        id="book"
+        class="w-full max-w-xl relative mx-auto flex flex-col items-center justify-center text-sm text-white px-4 py-8 z-100 rounded-2xl border-2 border-gray-400/50"
         data-aos="fade-up-left"
         data-aos-delay="200"
       >
@@ -219,6 +220,8 @@
             <label class="font-medium mt-4">Email Address</label>
             <input
               type="email"
+              pattern=".+@gmail\.com$"
+              title="Email must end with @gmail.com"
               class="h-full py-3 px-3 w-full outline-none bg-transparent text-gray-200 ring ring-slate-500 rounded-lg focus:ring-gray-300 transition-all placeholder:text-white/70"
               placeholder="Enter your email address"
               required
@@ -243,8 +246,16 @@
           </button>
         </div>
       </form>
+
+      <!-- // book-form reset -->
+      <script>
+        const bookForm1 = document.querySelector("#book");
+        bookForm1.addEventListener("submit", () => {
+          bookForm1.reset();
+        });
+      </script>
     </div>
-    
+
     <!-- Navbar  -->
     <header
       class="fixed top-0 z-[500] border-b border-slate-200/10 bg-white/5 backdrop-blur w-full mx-auto"
@@ -597,7 +608,12 @@
             Fill out the form and our team will get back to you within 24 hours.
           </p>
 
-          <form method="get" action="../404.html" class="space-y-5">
+          <form
+            id="contact"
+            method="get"
+            action="../404.html"
+            class="space-y-5"
+          >
             <div>
               <label class="block text-gray-400 mb-1">Full Name</label>
               <input
@@ -612,6 +628,8 @@
               <input
                 required
                 type="email"
+                pattern=".+@gmail\.com$"
+                title="Email must end with @gmail.com"
                 placeholder="you@example.com"
                 class="w-full bg-white/5 text-gray-200 border border-gray-700 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-gray-500 transition"
               />
@@ -632,6 +650,14 @@
               Send Message
             </button>
           </form>
+
+          <!-- // connect-form reset -->
+          <script>
+            const contact = document.querySelector("#contact");
+            contact.addEventListener("submit", () => {
+              contact.reset();
+            });
+          </script>
         </div>
 
         <!-- Right: Contact Info -->
@@ -919,12 +945,15 @@
             </p>
             <form
               method="get"
+              id="connect"
               action="../404.html"
               class="flex items-center justify-center gap-2 p-2 rounded-md bg-gray-50/5"
             >
               <input
                 class="focus:ring-0 outline-none w-full max-w-64 py-2 rounded px-2 text-gray-100"
                 type="email"
+                pattern=".+@gmail\.com$"
+                title="Email must end with @gmail.com"
                 required
                 placeholder="Enter your email"
               />
@@ -935,6 +964,14 @@
                 Subscribe
               </button>
             </form>
+
+            <!-- // connect-form reset -->
+            <script>
+              const connect = document.querySelector("#connect");
+              connect.addEventListener("submit", () => {
+                connect.reset();
+              });
+            </script>
           </div>
         </div>
 

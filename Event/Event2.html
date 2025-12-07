@@ -188,7 +188,8 @@
       <form
         action="../404.html"
         method="get"
-        class="w-full max-w-xl relative mx-auto flex flex-col items-center justify-center text-sm text-white px-4 py-8 rounded-2xl border-2 border-gray-400/50"
+        id="book"
+        class="w-full max-w-xl relative mx-auto flex flex-col items-center justify-center text-sm text-white px-4 py-8 z-100 rounded-2xl border-2 border-gray-400/50"
         data-aos="fade-up-left"
         data-aos-delay="200"
       >
@@ -219,6 +220,8 @@
             <label class="font-medium mt-4">Email Address</label>
             <input
               type="email"
+              pattern=".+@gmail\.com$"
+              title="Email must end with @gmail.com"
               class="h-full py-3 px-3 w-full outline-none bg-transparent text-gray-200 ring ring-slate-500 rounded-lg focus:ring-gray-300 transition-all placeholder:text-white/70"
               placeholder="Enter your email address"
               required
@@ -243,6 +246,14 @@
           </button>
         </div>
       </form>
+
+      <!-- // book-form reset -->
+      <script>
+        const bookForm1 = document.querySelector("#book");
+        bookForm1.addEventListener("submit", () => {
+          bookForm1.reset();
+        });
+      </script>
     </div>
 
     <!-- Navbar  -->
@@ -613,7 +624,7 @@
           <div data-aos="zoom-in" data-aos-delay="150">
             <img
               class="w-full h-full object-cover rounded-2xl"
-              src="../assets/contact1.jpg"
+              src="../assets/contact1.webp"
               alt="card-img"
             />
           </div>
@@ -699,7 +710,12 @@
         <h3 id="modalTitle" class="text-2xl font-bold mb-4">
           Register for Event
         </h3>
-        <form method="get" action="../404.html" class="space-y-4">
+        <form
+          id="modalMail"
+          method="get"
+          action="../404.html"
+          class="space-y-4"
+        >
           <input
             required
             type="text"
@@ -710,6 +726,8 @@
             required
             type="email"
             placeholder="Email"
+            pattern=".+@gmail\.com$"
+            title="Email must end with @gmail.com"
             class="w-full border rounded px-3 py-2 bg-white/5 text-white border-gray-700"
           />
           <button
@@ -719,6 +737,14 @@
             Submit
           </button>
         </form>
+
+        <!-- // connect-form reset -->
+        <script>
+          const modalMail = document.querySelector("#modalMail");
+          modalMail.addEventListener("submit", () => {
+            modalMail.reset();
+          });
+        </script>
         <button
           type="submit"
           class="mt-4 text-gray-400 hover:text-white cursor-pointer"
@@ -935,12 +961,15 @@
             </p>
             <form
               method="get"
+              id="connect"
               action="../404.html"
               class="flex items-center justify-center gap-2 p-2 rounded-md bg-gray-50/5"
             >
               <input
                 class="focus:ring-0 outline-none w-full max-w-64 py-2 rounded px-2 text-gray-100"
                 type="email"
+                pattern=".+@gmail\.com$"
+                title="Email must end with @gmail.com"
                 required
                 placeholder="Enter your email"
               />
@@ -951,6 +980,14 @@
                 Subscribe
               </button>
             </form>
+
+            <!-- // connect-form reset -->
+            <script>
+              const connect = document.querySelector("#connect");
+              connect.addEventListener("submit", () => {
+                connect.reset();
+              });
+            </script>
           </div>
         </div>
 
